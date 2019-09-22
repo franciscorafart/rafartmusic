@@ -10,6 +10,12 @@ import category from './category'
 import post from './post'
 import author from './author'
 
+import videos from './videos'
+import forms from './forms'
+import links from './links'
+import menu from './menu'
+
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -24,6 +30,12 @@ export default createSchema({
     category,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
-    blockContent
+    blockContent,
+    // Custom Rafart ones
+    videos,
+    forms,
+    links,
+    externalLinks,
+    menu
   ])
 })
