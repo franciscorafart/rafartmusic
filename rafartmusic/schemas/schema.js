@@ -31,11 +31,10 @@ export default createSchema({
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
-    // Custom Rafart ones
+    // Custom Rafart Music ones
     videos,
-    forms,
-    links,
-    externalLinks,
-    menu
+    // forms,
+    // links,
+    // menu
   ])
 })
