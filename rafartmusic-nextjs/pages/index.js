@@ -92,7 +92,7 @@ import client from '../client'
 const Index = Container
 
 Index.getInitialProps = async function() {
-  const resources = await client.fetch('*[_type == "author" && slug.current == "francisco-rafart"][0]{title, name, profession, bio, image}')
+  const resources = await client.fetch('*[_type == "bandBio" && slug.current == "francisco-rafart"][0]{title, name, profession, bio, image}')
   const header = await client.fetch('*[_type == "images" && slug.current == "header"][0]{title, poster}')
   const social_media = await client.fetch('*[_type == "social_footer"]')
   const skillResources = await client.fetch('*[_type == "skills"][0]{title, languages, frameworks, databases}')

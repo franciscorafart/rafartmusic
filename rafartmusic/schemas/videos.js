@@ -1,13 +1,32 @@
 export default {
-    title: 'video',
-    name: 'link',
-    type: 'object',
+    name: 'video',
+    title: 'Video',
+    type: 'document',
     fields: [
-      {
-        title: 'URL',
-        name: 'href',
-        type: 'url'
-      }
+        {
+            name: 'link',
+            title: 'Link',
+            type: 'url'
+        },
+        {
+            name: 'title',
+            title: 'Title',
+            type: 'string'
+        },
+        {
+            name: 'artist',
+            title: 'Artist',
+            type: 'string'
+        },
+        {
+            name: 'description',
+            title: 'Description',
+            type: 'text'
+        },
+        {
+            name: 'thumbnail',
+            title: 'Thumbnail',
+            type: 'image'
+        }
     ]
-
 }

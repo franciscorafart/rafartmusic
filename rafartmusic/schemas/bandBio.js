@@ -1,6 +1,6 @@
 export default {
-  name: 'author',
-  title: 'Author',
+  name: 'bandBio',
+  title: 'Band Bio',
   type: 'document',
   fields: [
     {
