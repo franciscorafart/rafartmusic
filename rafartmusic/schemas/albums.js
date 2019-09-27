@@ -9,6 +9,11 @@ export default {
       type: 'string'
     },
     {
+        name: 'releaseType',
+        title: 'Type of release',
+        type: 'string'
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'text'
