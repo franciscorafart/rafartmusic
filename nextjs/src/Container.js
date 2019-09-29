@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-// import Presentation from './Presentation'
+import Cover from './Cover'
 import client from '../client'
 // import Skills from './Skills'
 // import MyContacts from './MyContacts'
@@ -28,13 +28,14 @@ class Container extends Component {
 
     render(){
         return(
-            <div>
-                <div className="portfolio_div">
-                    Hey Rafart
+            <div className="website_div">
+                <div >
+                    <span className="text">Hey Rafart</span>
                 </div>
+                <Cover urlFor={this.urlFor} coverImage={this.props.coverImage}/>
                 <style jsx>{`
-                      .portfolio_div {
-                        background-color: #F2F2F2;
+                      .website_div {
+                        background-color: black;
                       }
                       .text{
                           font-family: 'Lato', sans-serif;

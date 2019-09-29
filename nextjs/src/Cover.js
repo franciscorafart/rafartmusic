@@ -3,7 +3,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import client from '../client'
 
 
-class Presentation extends Component{
+class Cover extends Component{
 
     constructor(props){
         super(props)
@@ -13,29 +13,16 @@ class Presentation extends Component{
         return(
                 <div>
                     <section>
-                            <div className="header-bg" style = {{backgroundImage: `url(${this.props.urlFor(this.props.header.poster.asset._ref)})`}}>
-                                <div className="header-content clearfix">
-                                    <div className="bio-container">
-                                        <h1 className="text">{this.props.resources.name}</h1>
-                                        <title><h2 className="text">{this.props.resources.profession}</h2></title>
-                                        <p className="text">
-                                            {
-                                                this.props.resources.bio? this.props.resources.bio
-                                                    .map(child => child.children
-                                                        .filter(child => child._type === 'span')
-                                                        .map(
-                                                            child2 => child2.text
-                                                            )
-                                                        ).join(' ')
-                                                    : 'No description'
-                                            }
-                                        </p>
-                                    </div>
-                                    <div className="frank-container">
-                                        <img className="frank-pic" src={this.props.urlFor(this.props.resources.image.asset._ref)}/>
-                                    </div>
-                                </div>
-                            </div>
+                    {
+                        this.props.coverImage?
+                        <div className="header-bg" style = {{backgroundImage: `url(${this.props.urlFor(this.props.coverImage.mainImage.asset._ref)})`}}>
+                            {
+                                //TODO: Insert animation here
+                            }
+                        </div>:
+                        <span className="text">Loading...</span>
+                    }
+
                     </section>
                         <style jsx>{`
                             .clearfix:after {
@@ -133,4 +120,4 @@ class Presentation extends Component{
     }
 }
 
-export default Presentation
+export default Cover
