@@ -1,6 +1,7 @@
-import React, {Component} from 'react'
-import Cover from './Cover'
-import client from '../client'
+import React, {Component} from 'react';
+import Cover from './Cover';
+import Header from './Header';
+import client from '../client';
 // import Skills from './Skills'
 // import MyContacts from './MyContacts'
 // import Footer from './Footer'
@@ -32,6 +33,7 @@ class Container extends Component {
                 <div >
                     <span className="text">Hey Rafart</span>
                 </div>
+                <Header urlFor={this.urlFor} menu={this.props.menu}/>
                 <Cover urlFor={this.urlFor} coverImage={this.props.coverImage}/>
                 <style jsx>{`
                       .website_div {

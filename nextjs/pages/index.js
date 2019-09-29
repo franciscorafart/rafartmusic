@@ -7,6 +7,7 @@ Index.getInitialProps = async function() {
   const albums = await client.fetch('*[_type == "albums"]{title, name, releaseType, description, cover, spotify, soundcloud}');
   const coverImage = await client.fetch('*[_type == "generalAssets" && slug.current == "cover-img"][0]{title, mainImage}');
   const logo = await client.fetch('*[_type == "generalAssets" && slug.current == "rafart-logo"][0]{title, mainImage}')
+  const menu = await client.fetch('*[_type == "menu"]{title, order, linkString, icon, visible}');
   // const social_media = await client.fetch('*[_type == "social_footer"]')
   // const skillResources = await client.fetch('*[_type == "skills"][0]{title, languages, frameworks, databases}')
   // const liImgData = await client.fetch('*[_type == "images" && slug.current == "skills-rectangle"][0]{title, name, poster}')
@@ -20,6 +21,8 @@ Index.getInitialProps = async function() {
   return {
     albums: albums,
     coverImage: coverImage,
+    menu: menu,
+    logo: logo,
     // social_media: social_media,
     // skillResources: skillResources,
     // liImgData: liImgData,
