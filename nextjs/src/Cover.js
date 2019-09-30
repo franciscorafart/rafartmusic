@@ -17,7 +17,7 @@ class Cover extends Component{
                         this.props.coverImage?
                         <div className="header-bg" style = {{backgroundImage: `url(${this.props.urlFor(this.props.coverImage.mainImage.asset._ref)})`}}>
                             {
-                                //TODO: Insert animation here
+                                // Insert stuff on top of the cover image
                             }
                         </div>:
                         <span className="text">Loading...</span>
@@ -39,28 +39,11 @@ class Cover extends Component{
                             }
                             .header-bg {
                                 min-height:420px;
-                                background-color: #F2F2F2;
                                 background-size: cover;
-                                padding: 60px 0 0 0;
-                            }
-                            .bio-container{
-                                width: 40%;
-                                margin: 0 0 80px 5%;
-                                display: block;
-                                float: left;
-                            }
-                            .frank-container {
-                                width: 55%;
-                                display: block;
-                                float: left;
-                            }
-                            .frank-pic {
-                                width: 80%;
-                                margin-left: 10%;
-                                align-content: center;
                             }
                             .text{
                                 font-family: 'Lato', sans-serif;
+
                             }
                               h1 {
                                 font-size: 2.6em;
@@ -87,30 +70,11 @@ class Cover extends Component{
                                       background-color: #F2F2F2;
                                       padding: 30px 0 0 0;
                                   }
-                                  .bio-container{
-                                      width: 80%;
-                                      margin: 0 0 40px 10%;
-                                      float: none;
-                                  }
-                                  .frank-container {
-                                      width: 80%;
-                                      margin-left: 10%;
-                                      float: none;
-                                  }
                               }
                               @media only screen and (max-width:650px){
                                   .header-content {
                                      width: 90%;
                                      margin-left: 5%;
-                                  }
-                                  .bio-container{
-                                      width: 90%;
-                                      margin: 0 0 40px 5%;;
-                                  }
-                                  .frank-container {
-                                      width: 100%;
-                                      margin-left: 0;
-                                      float: none;
                                   }
                               }
                             `}

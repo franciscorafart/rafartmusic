@@ -10,15 +10,15 @@ class Cover extends Component{
     }
 
     render(){
-        console.log('this.props', this.props.menu)
+        // console.log(this.props.menu)
         return(
                 <div>
                     <ul>
                     {
                         this.props.menu?
-                        this.props.menu.map(item => {
+                        this.props.menu.filter(item => item.headerMenu).map(item => {
 
-                            return <li className="text"><a href={item.linkString}>{item.title}</a></li>
+                            return <li key={item.slug} className="text"><a href={item.linkString}>{item.title}</a></li>
                         })
                         :
                         <li className="text">Menu Loading...</li>

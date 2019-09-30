@@ -1,6 +1,6 @@
 export default {
-  name: 'bandBio',
-  title: 'Band Bio',
+  name: 'content',
+  title: 'content',
   type: 'document',
   fields: [
     {
@@ -26,8 +26,8 @@ export default {
       }
     },
     {
-      name: 'bio',
-      title: 'Bio',
+      name: 'text',
+      title: 'Text',
       type: 'array',
       of: [
         {
