@@ -32,6 +32,11 @@ export default {
         name: 'mainMenu',
         title: 'Main Menu',
         type: 'boolean'
+    },
+    {
+        name: 'socialMedia',
+        title: 'Social Media',
+        type: 'boolean'
     }
   ]
 }

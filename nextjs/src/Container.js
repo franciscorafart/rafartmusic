@@ -10,6 +10,8 @@ import client from '../client';
 // import OtherProjects from './OtherProjects'
 import imageUrlBuilder from '@sanity/image-url'
 
+import Head from 'next/head';
+
 const builder = imageUrlBuilder(client)
 
 class Container extends Component {
@@ -30,25 +32,24 @@ class Container extends Component {
 
     render(){
         return(
-            <div className="website_div">
-                <div >
-                    <span className="text">Hey Rafart</span>
-                </div>
-                <Header urlFor={this.urlFor} menu={this.props.menu}/>
-                <Cover urlFor={this.urlFor} coverImage={this.props.coverImage}/>
-                <MainMenu urlFor={this.urlFor} menu={this.props.menu}/>
-                <style jsx>{`
-                      .website_div {
-                        background-color: black;
-                      }
-                      .text{
-                          font-family: 'Lato', sans-serif;
-                          font-size: 4em;
-                      }
-                    `}
-                </style>
-            </div>
+            <div>
+                <Head>
+                    <title>Foo</title>
+                    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet"/>
+                </Head>
 
+                <div className="website_div">
+                    <Header urlFor={this.urlFor} menu={this.props.menu} logo={this.props.logo}/>
+                    <Cover urlFor={this.urlFor} coverImage={this.props.coverImage}/>
+                    <MainMenu urlFor={this.urlFor} menu={this.props.menu}/>
+                    <style jsx>{`
+                          .website_div {
+                            background-color: black;
+                          }
+                        `}
+                    </style>
+                </div>
+            </div>
         )
     }
 }

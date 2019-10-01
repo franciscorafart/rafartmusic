@@ -37,7 +37,7 @@ class MainMenu extends Component {
                                 padding-bottom: 40px;
                             }
                             .text{
-                                font-family: 'Lato', sans-serif;
+                                font-family: 'Encode Sans Expanded', sans-serif;
                                 color: white;
                                 text-align: center;
                             }
