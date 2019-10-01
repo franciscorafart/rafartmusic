@@ -11,21 +11,23 @@ class MainMenu extends Component {
         return(
             <div>
                 <section>
-                    <div>
+                    <div className="boxContainer">
                         {
                             this.props.menu.filter(item => item.mainMenu).map(
                                 item => {
-                                    console.log('item', item)
                                     return <div>
-                                        <a href={item.linkString}>
-                                            <h3 className="text">item.title</h3>
-                                            <div
-                                                className="boxContainer"
-                                                style = {{backgroundImage: `url(${this.props.urlFor(item.icon.asset._ref)})`}}
-                                            >
-                                            Hallo
-                                            </div>
-                                        </a>
+                                            <h3 className="text">{item.title}</h3>
+                                            <a href={item.linkString}>
+                                                {
+                                                    item.icon.asset?
+                                                    <div
+                                                        className="box"
+                                                        style = {{backgroundImage: `url(${this.props.urlFor(item.icon.asset._ref)})`}}
+                                                    ></div>
+                                                    :
+                                                    <div>{item.title}</div>
+                                                }
+                                            </a>
                                     </div>
                                 })
                         }
@@ -36,11 +38,21 @@ class MainMenu extends Component {
                             }
                             .text{
                                 font-family: 'Lato', sans-serif;
+                                color: white;
+                                text-align: center;
                             }
                             .boxContainer{
-                                display: flexbox;
-                                flex-direction: column;
-                                align-content: center;
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                justify-content: space-around;
+                                align-items: flex-start;
+                                height: 300px;
+                                margin: 80px 0 80px 0;
+                            }
+                            .box {
+                                height: 150px;
+                                width: 150px;
                             }
                             @media only screen and (max-width:650px){
                                 .skills-container {
