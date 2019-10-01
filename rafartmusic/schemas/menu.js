@@ -24,6 +24,11 @@ export default {
         type: 'image'
     },
     {
+        name: 'iconClass',
+        title: 'Icon Class',
+        type: 'string'
+    },
+    {
         name: 'headerMenu',
         title: 'Header Menu',
         type: 'boolean'

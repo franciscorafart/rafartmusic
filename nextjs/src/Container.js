@@ -36,6 +36,7 @@ class Container extends Component {
                 <Head>
                     <title>Foo</title>
                     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet"/>
+                    <script src="https://kit.fontawesome.com/0b202351e9.js" crossorigin="anonymous"></script>
                 </Head>
 
                 <div className="website_div">

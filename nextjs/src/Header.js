@@ -36,7 +36,7 @@ class Cover extends Component{
                             this.props.menu?
                             this.props.menu.filter(item => item.socialMedia).map(item => {
 
-                                return <li key={item.slug} className="text"><a href={item.linkString}><img src={this.props.urlFor(item.icon.asset._ref)}/></a></li>
+                                return <li key={item.slug} className="text"><a href={item.linkString}><i className={item.iconClass}></i></a></li>
                             })
                             :
                             <li className="text">Loading...</li>
@@ -62,8 +62,8 @@ class Cover extends Component{
                             width: 50%;
                             float: left;
                         }
-                        .menuItems img {
-                            height: 30px;
+                        .menuItems i {
+                            height: 40px;
                         }
                         a {
                             text-decoration: none;
@@ -76,6 +76,24 @@ class Cover extends Component{
                         }
                         .menuItems a:hover {
                             color: #c4ed21;
+                        }
+                        @media all and (max-width: 600px) {
+                              .menuItems {
+                                -webkit-flex-flow: column wrap;
+                                flex-flow: column wrap;
+                                padding: 0;
+                              }
+
+                              a {
+                                text-align: center;
+                                padding: 10px;
+                                border-top: 1px solid rgba(255,255,255,0.3);
+                                border-bottom: 1px solid rgba(0,0,0,0.1);
+                              }
+
+                              .menuItems li:last-of-type a {
+                                border-bottom: none;
+                              }
                         }
                         `}
                     </style>
