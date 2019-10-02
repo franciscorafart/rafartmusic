@@ -38,12 +38,8 @@ class Cover extends Component{
                                margin-left: 10%;
                             }
                             .header-bg {
-                                min-height:420px;
+                                min-height:520px;
                                 background-size: cover;
-                            }
-                            .text{
-                                font-family: 'Lato', sans-serif;
-
                             }
                               h1 {
                                 font-size: 2.6em;

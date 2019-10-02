@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import imageUrlBuilder from '@sanity/image-url'
 import client from '../client'
 
 
@@ -10,12 +9,11 @@ class Cover extends Component{
     }
 
     render(){
-        console.log(this.props)
+        // console.log(this.props)
         return(
                 <div className="header">
-                    <div className="one-quarter"
-                    style = {{backgroundImage: `url(${this.props.urlFor(this.props.logo.mainImage.asset._ref)})`}}
-                    >
+                    <div className="one-quarter">
+                        <img src={this.props.urlFor(this.props.logo.mainImage.asset._ref)}/>
                     </div>
                     <div className="half">
                         <ul className="menuItems">
@@ -45,7 +43,7 @@ class Cover extends Component{
                     </div>
                     <style jsx>{`
                         .header {
-                            height: 40px;
+                            height: 50px;
                         }
                         .text{
                             font-family: 'Encode Sans Expanded', sans-serif;
@@ -58,12 +56,13 @@ class Cover extends Component{
                             height 40px;
                             float: left;
                         }
+                        .one-quarter img{
+                            height: 30px;
+                            margin: 10px 0 0 20px;
+                        }
                         .half {
                             width: 50%;
                             float: left;
-                        }
-                        .menuItems i {
-                            height: 40px;
                         }
                         a {
                             text-decoration: none;

@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Header from './Header';
 import Cover from './Cover';
 import MainMenu from './MainMenu';
+import Intro from './Intro';
+
 import client from '../client';
 // import Skills from './Skills'
 // import MyContacts from './MyContacts'
@@ -31,6 +33,7 @@ class Container extends Component {
     }
 
     render(){
+        console.log('this.props in Container', this.props)
         return(
             <div>
                 <Head>
@@ -42,7 +45,12 @@ class Container extends Component {
                 <div className="website_div">
                     <Header urlFor={this.urlFor} menu={this.props.menu} logo={this.props.logo}/>
                     <Cover urlFor={this.urlFor} coverImage={this.props.coverImage}/>
-                    <MainMenu urlFor={this.urlFor} menu={this.props.menu}/>
+                    <Intro urlFor={this.urlFor} logo={this.props.logo}/>
+                    <MainMenu
+                        urlFor={this.urlFor}
+                        menu={this.props.menu}
+                        menuBackground={this.props.menuBackground}
+                    />
                     <style jsx>{`
                           .website_div {
                             background-color: black;

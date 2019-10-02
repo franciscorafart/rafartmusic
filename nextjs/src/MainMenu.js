@@ -8,10 +8,19 @@ class MainMenu extends Component {
     }
 
     render(){
+        console.log(this.props)
         return(
             <div>
                 <section>
-                    <div className="boxContainer">
+                    <div
+                    className="boxContainer"
+                    style = {
+                        {
+                        backgroundImage: `url(${this.props.urlFor(this.props.menuBackground.mainImage.asset._ref)})`,
+                        // opacity: 0.5;
+                        }
+                    }
+                    >
                         {
                             this.props.menu.filter(item => item.mainMenu).map(
                                 item => {
@@ -47,7 +56,7 @@ class MainMenu extends Component {
                                 flex-wrap: wrap;
                                 justify-content: space-around;
                                 align-items: flex-start;
-                                height: 300px;
+                                min-height: 500px;
                                 margin: 80px 0 80px 0;
                             }
                             .box {
