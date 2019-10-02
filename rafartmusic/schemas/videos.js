@@ -1,6 +1,6 @@
 export default {
-    name: 'video',
-    title: 'Video',
+    name: 'videos',
+    title: 'Videos',
     type: 'document',
     fields: [
         {

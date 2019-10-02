@@ -21,7 +21,12 @@ class Cover extends Component{
                             this.props.menu?
                             this.props.menu.filter(item => item.headerMenu).map(item => {
 
-                                return <li key={item.slug} className="text"><a href={item.linkString}>{item.title}</a></li>
+                                return <li
+                                    key={item.slug}
+                                    className="text"
+                                >
+                                    <a href={item.linkString}>{item.title}</a>
+                                </li>
                             })
                             :
                             <li className="text">Menu Loading...</li>
@@ -34,7 +39,14 @@ class Cover extends Component{
                             this.props.menu?
                             this.props.menu.filter(item => item.socialMedia).map(item => {
 
-                                return <li key={item.slug} className="text"><a href={item.linkString}><i className={item.iconClass}></i></a></li>
+                                return <li
+                                    key={item.slug}
+                                    className="text"
+                                >
+                                    <a href={item.linkString}>
+                                    <i className={item.iconClass}/>
+                                    </a>
+                                </li>
                             })
                             :
                             <li className="text">Loading...</li>

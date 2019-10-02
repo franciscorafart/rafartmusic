@@ -3,6 +3,7 @@ import Header from './Header';
 import Cover from './Cover';
 import MainMenu from './MainMenu';
 import Intro from './Intro';
+import Videos from './Videos';
 
 import client from '../client';
 // import Skills from './Skills'
@@ -51,6 +52,7 @@ class Container extends Component {
                         menu={this.props.menu}
                         menuBackground={this.props.menuBackground}
                     />
+                    <Videos videos={this.props.videos}/>
                     <style jsx>{`
                           .website_div {
                             background-color: black;

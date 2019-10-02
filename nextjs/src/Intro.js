@@ -11,13 +11,17 @@ class Intro extends Component {
                 <div className="intro">
                     <img src={this.props.urlFor(this.props.logo.mainImage.asset._ref)}/>
                     <h1 className="text">Chapman Stick and Electronic Prog-Rock Performer</h1>
+                    <div>
+                        <button className="callToAction text textSmall">Subscribe to my Newsletter</button>
+                    </div>
                 </div>
             <style jsx>{`
                 .intro {
                     width: 40%;
                 }
                 .intro img {
-                    width: 100%;
+                    width: 70%;
+                    margin-left: 15%;
                 }
                 .introContainer {
                     padding: 80px 0 40px 0;
@@ -29,6 +33,15 @@ class Intro extends Component {
                     font-size: 2em;
                     color: white;
                     text-align: center;
+                }
+                .textSmall {
+                    font-size: 1em;
+                }
+                .callToAction {
+                    width: 60%;
+                    margin: 20px 0 20px 20%;
+                    min-heigth: 40px;
+                    background-color: #519ead;
                 }
             `}
             </style>

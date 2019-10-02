@@ -9,9 +9,7 @@ Index.getInitialProps = async function() {
   const logo = await client.fetch('*[_type == "generalAssets" && slug.current == "rafart-logo"][0]{title, mainImage}');
   const menuBackground = await client.fetch('*[_type == "generalAssets" && slug.current == "menu-background"][0]{title, mainImage}');
   const menu = await client.fetch('*[_type == "menu"]{title, order, linkString, icon, headerMenu, mainMenu, socialMedia, iconClass}');
-  // const contacts = await client.fetch('*[_type == "social_media"]')
-
-
+  const videos = await client.fetch('*[_type == "videos"]{link, title, artist, description, title}');
 
   return {
     albums: albums,
@@ -19,6 +17,7 @@ Index.getInitialProps = async function() {
     menu: menu,
     logo: logo,
     menuBackground: menuBackground,
+    videos: videos,
     // contacts: contacts,
     };
 };
