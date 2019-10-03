@@ -19,15 +19,18 @@ class Cover extends Component{
                         <ul className="menuItems">
                         {
                             this.props.menu?
-                            this.props.menu.filter(item => item.headerMenu).map(item => {
-
-                                return <li
-                                    key={item.slug}
-                                    className="text"
-                                >
-                                    <a href={item.linkString}>{item.title}</a>
-                                </li>
-                            })
+                            this.props.menu.filter(
+                                item => item.headerMenu
+                            ).sort(
+                                (a,b) => a.order<b.order?-1:1).map(
+                                    item => {
+                                    return <li
+                                        key={item.slug}
+                                        className="text"
+                                    >
+                                        <a href={item.linkString}>{item.title}</a>
+                                    </li>
+                                })
                             :
                             <li className="text">Menu Loading...</li>
                         }
