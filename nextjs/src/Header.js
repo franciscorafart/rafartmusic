@@ -9,6 +9,7 @@ class Cover extends Component{
     }
 
     render(){
+        console.log('this.props', this.props)
         return(
                 <div className="header">
                     <div className="one-quarter">
@@ -23,11 +24,15 @@ class Cover extends Component{
                             ).sort(
                                 (a,b) => a.order<b.order?-1:1).map(
                                     item => {
+                                        console.log('item.slug',item.slug)
                                     return <li
                                         key={item.slug}
                                         className="text"
                                     >
-                                        <a href={item.linkString}>{item.title}</a>
+                                        <a
+                                            href={item.linkString}
+                                            className={item.slug === this.props.selectedPage? 'selected': ''}
+                                        >{item.title}</a>
                                     </li>
                                 })
                             :
@@ -88,6 +93,9 @@ class Cover extends Component{
                             justify-content: space-around;
                         }
                         .menuItems a:hover {
+                            color: #c4ed21;
+                        }
+                        .selected {
                             color: #c4ed21;
                         }
                         @media all and (max-width: 600px) {

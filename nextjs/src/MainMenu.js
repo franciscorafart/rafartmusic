@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import client from '../client'
-import Ul from './Ul'
 
 class MainMenu extends Component {
     constructor(props){
@@ -8,7 +7,6 @@ class MainMenu extends Component {
     }
 
     render(){
-        console.log(this.props)
         return(
             <div>
                 <section>

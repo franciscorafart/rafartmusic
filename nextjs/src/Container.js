@@ -28,19 +28,43 @@ class Container extends Component {
     }
 
     render(){
+        const page = this.props.page;
+        let content = <div></div>
+
+        if (page === 'home'){
+            content = <div>
+                <Cover urlFor={this.urlFor} coverImage={this.props.coverImage}/>
+                <Intro urlFor={this.urlFor} logo={this.props.logo}/>
+                <MainMenu
+                    urlFor={this.urlFor}
+                    menu={this.props.menu}
+                    menuBackground={this.props.menuBackground}
+                />
+                <Videos videos={this.props.videos}/>
+            </div>
+        } else if (page === 'contact'){
+            content = <div className="text">Contact perro</div>
+        } else if (page === 'albums'){
+            content = <div>Albums perro</div>
+        } else if (page === 'about'){
+            content = <div>Bio</div>
+        } else if (page === 'press'){
+            content = <div>Press</div>
+        } else if (page === 'sign-up'){
+            content = <div>Sign up</div>
+        }
+
         return(
             <div>
                 <IndexPage/>
                 <div className="website_div">
-                    <Header urlFor={this.urlFor} menu={this.props.menu} logo={this.props.logo}/>
-                    <Cover urlFor={this.urlFor} coverImage={this.props.coverImage}/>
-                    <Intro urlFor={this.urlFor} logo={this.props.logo}/>
-                    <MainMenu
+                    <Header
                         urlFor={this.urlFor}
                         menu={this.props.menu}
-                        menuBackground={this.props.menuBackground}
+                        logo={this.props.logo}
+                        selectedPage={page}
                     />
-                    <Videos videos={this.props.videos}/>
+                    {content}
                     <style jsx>{`
                           .website_div {
                             background-color: black;
