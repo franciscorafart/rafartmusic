@@ -4,16 +4,10 @@ import Cover from './Cover';
 import MainMenu from './MainMenu';
 import Intro from './Intro';
 import Videos from './Videos';
+import IndexPage from './IndexPage';
 
 import client from '../client';
-// import Skills from './Skills'
-// import MyContacts from './MyContacts'
-// import Footer from './Footer'
-// import Applications from './Applications'
-// import OtherProjects from './OtherProjects'
 import imageUrlBuilder from '@sanity/image-url'
-
-import Head from 'next/head';
 
 const builder = imageUrlBuilder(client)
 
@@ -34,15 +28,9 @@ class Container extends Component {
     }
 
     render(){
-        console.log('this.props in Container', this.props)
         return(
             <div>
-                <Head>
-                    <title>Foo</title>
-                    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet"/>
-                    <script src="https://kit.fontawesome.com/0b202351e9.js" crossorigin="anonymous"></script>
-                </Head>
-
+                <IndexPage/>
                 <div className="website_div">
                     <Header urlFor={this.urlFor} menu={this.props.menu} logo={this.props.logo}/>
                     <Cover urlFor={this.urlFor} coverImage={this.props.coverImage}/>

@@ -18,7 +18,6 @@ Index.getInitialProps = async function() {
     logo: logo,
     menuBackground: menuBackground,
     videos: videos,
-    // contacts: contacts,
     };
 };
 
