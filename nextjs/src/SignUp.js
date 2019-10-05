@@ -14,7 +14,6 @@ class SignUp extends Component {
         this.handleLastName = this.handleLastName.bind(this);
     }
     onChangeEmail(e) {
-        console.log(e)
         this.setState({email: e.target.value});
     }
 
@@ -27,7 +26,6 @@ class SignUp extends Component {
     }
 
     render(){
-        console.log('this.state.email', this.state.email)
         return (
             <div id="mc_embed_signup">
             <form action="https://gmail.us20.list-manage.com/subscribe/post?u=8c1bfb4e83f17c8efacf4d0c9&amp;id=a4c49fde59" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
