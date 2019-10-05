@@ -7,6 +7,7 @@ import Videos from './Videos';
 import IndexPage from './IndexPage';
 
 import SignUp from './SignUp';
+import Contact from './Contact';
 
 import client from '../client';
 import imageUrlBuilder from '@sanity/image-url'
@@ -45,7 +46,7 @@ class Container extends Component {
                 <Videos videos={this.props.videos}/>
             </div>
         } else if (page === 'contact'){
-            content = <div className="text">Contact perro</div>
+            content = <Contact/>
         } else if (page === 'albums'){
             content = <div>Albums perro</div>
         } else if (page === 'about'){

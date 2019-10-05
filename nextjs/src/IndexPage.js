@@ -17,21 +17,18 @@ class IndexPage extends Component {
                     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"/>
                     <style type="text/css">{`
                     	#mc_embed_signup{
-                            background:#fff;
+                            background: white;
                             clear:left;
                             font:14px Helvetica,Arial,sans-serif;
                         }
                     `}</style>
-                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-                    <script type='text/javascript'>{`
-                        (function($) {
-                            window.fnames = ['EMAIL', 'FNAME', 'LNAME', 'ADDRESS', 'PHONE', 'BIRTHDAY'];
-                            window.ftypes = ['email', 'text', 'text', 'address', 'phone', 'birthday'];
-                        }(jQuery)
-                        );
-                        var $mcj = jQuery.noConflict(true);
-                        `}
-                    </script>
+                    <style type="text/css">{`
+                    	#mc-embedded-subscribe-form input[type=checkbox]{display: inline; width: auto;margin-right: 10px;}
+                    	#mergeRow-gdpr {margin-top: 20px;}
+                    	#mergeRow-gdpr fieldset label {font-weight: normal;}
+                    	#mc-embedded-subscribe-form .mc_fieldset{border:none;min-height: 0px;padding-bottom:0px;}
+                    `}
+                    </style>
                 </Head>
             </div>
         );
