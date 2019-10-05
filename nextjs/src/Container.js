@@ -6,6 +6,8 @@ import Intro from './Intro';
 import Videos from './Videos';
 import IndexPage from './IndexPage';
 
+import SignUp from './SignUp';
+
 import client from '../client';
 import imageUrlBuilder from '@sanity/image-url'
 
@@ -51,7 +53,7 @@ class Container extends Component {
         } else if (page === 'press'){
             content = <div>Press</div>
         } else if (page === 'sign-up'){
-            content = <div>Sign up</div>
+            content = <SignUp/>
         }
 
         return(

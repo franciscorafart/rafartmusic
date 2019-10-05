@@ -13,4 +13,4 @@ SignUp.getInitialProps = async function(){
     }
 };
 
-export default About;
+export default SignUp;
