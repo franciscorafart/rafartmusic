@@ -59,7 +59,7 @@ class Container extends Component {
 
         return(
             <div>
-                <IndexPage/>
+                <IndexPage urlFor={this.urlFor}favicon={this.props.favicon}/>
                 <div className="website_div">
                     <Header
                         urlFor={this.urlFor}

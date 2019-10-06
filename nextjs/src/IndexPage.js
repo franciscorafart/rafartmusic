@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import Head from 'next/head';
 
 class IndexPage extends Component {
+    constructor(props){
+        super(props)
+    }
     render(){
         return(
             <div>
@@ -11,17 +14,19 @@ class IndexPage extends Component {
                     <meta name="keywords" content="Rafart,Chapman Stick,Electronic Rock,Progressive rock"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet"/>
+                    <link rel="shortcut icon" type="image/png" href={this.props.urlFor(this.props.favicon.mainImage.asset._ref)}/>
 
                     <script src="https://kit.fontawesome.com/0b202351e9.js" crossorigin="anonymous"></script>
-
                     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"/>
+
                     <style type="text/css">{`
                     	#mc_embed_signup{
                             background: white;
                             clear:left;
-                            font:14px Helvetica,Arial,sans-serif;
+                            font:14px 'Encode Sans Expanded', sans-serif;
                         }
                     `}</style>
+
                     <style type="text/css">{`
                     	#mc-embedded-subscribe-form input[type=checkbox]{display: inline; width: auto;margin-right: 10px;}
                     	#mergeRow-gdpr {margin-top: 20px;}

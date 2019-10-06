@@ -10,6 +10,7 @@ Index.getInitialProps = async function() {
   const menuBackground = await client.fetch('*[_type == "generalAssets" && slug.current == "menu-background"][0]{title, mainImage}');
   const menu = await client.fetch('*[_type == "menu"]{title, slug, order, linkString, icon, headerMenu, mainMenu, socialMedia, iconClass}');
   const videos = await client.fetch('*[_type == "videos"]{link, title, artist, description, title}');
+  const favicon = await client.fetch('*[_type == "generalAssets" && slug.current == "favicon"][0]{mainImage}');
 
   return {
     albums: albums,
@@ -18,7 +19,8 @@ Index.getInitialProps = async function() {
     logo: logo,
     menuBackground: menuBackground,
     videos: videos,
-    page: 'home'
+    favicon: favicon,
+    page: 'home',
     };
 };
 

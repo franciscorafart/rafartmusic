@@ -9,7 +9,6 @@ class Cover extends Component{
     }
 
     render(){
-        console.log('this.props', this.props)
         return(
                 <div className="header">
                     <div className="one-quarter">
@@ -24,7 +23,6 @@ class Cover extends Component{
                             ).sort(
                                 (a,b) => a.order<b.order?-1:1).map(
                                     item => {
-                                        console.log('item.slug',item.slug)
                                     return <li
                                         key={item.slug}
                                         className="text"

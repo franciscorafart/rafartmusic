@@ -18,6 +18,7 @@ class Videos extends Component {
                         this.props.videos.map(v => {
                             return <div className="videoBox">
                             <YoutubeVideo
+                                key={v.slug}
                                 video={v}
                                 width={"560"}
                                 height={"315"}
@@ -37,12 +38,10 @@ class Videos extends Component {
                         flex-wrap: wrap;
                         justify-content: space-around;
                         align-items: flex-start;
-                        min-height: 800px;
+
                         margin: 80px 0 80px 0;
                     }
                     .videoBox {
-                        width: 560px;
-                        height: 315px;
                         margin-bottom: 40px;
                     }
                     .text {

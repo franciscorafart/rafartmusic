@@ -12,7 +12,9 @@ class Intro extends Component {
                     <img src={this.props.urlFor(this.props.logo.mainImage.asset._ref)}/>
                     <h1 className="text">Chapman Stick and Electronic Prog-Rock Performer</h1>
                     <div>
-                        <button className="callToAction text textSmall">Subscribe to my Newsletter</button>
+                        <form action="/sign-up">
+                            <input className="callToAction text textSmall" type="submit" val={"Subscribe to my Newsletter"}/>
+                        </form>
                     </div>
                 </div>
             <style jsx>{`
@@ -40,7 +42,7 @@ class Intro extends Component {
                 .callToAction {
                     width: 60%;
                     margin: 20px 0 20px 20%;
-                    min-heigth: 40px;
+                    heigth: 100px;
                     background-color: #519ead;
                 }
             `}

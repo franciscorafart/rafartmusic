@@ -22,7 +22,7 @@ class MainMenu extends Component {
                         {
                             this.props.menu.filter(item => item.mainMenu).map(
                                 item => {
-                                    return <div>
+                                    return <div key={item.slug}>
                                             <h3 className="text">{item.title}</h3>
                                             <a href={item.linkString}>
                                                 {
