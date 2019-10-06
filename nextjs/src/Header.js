@@ -61,6 +61,7 @@ class Cover extends Component{
                     <style jsx>{`
                         .header {
                             height: 50px;
+                            width: 100%;
                         }
                         .text{
                             font-family: 'Encode Sans Expanded', sans-serif;

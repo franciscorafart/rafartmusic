@@ -14,6 +14,16 @@ export default {
         type: 'string'
     },
     {
+        name: 'year',
+        title: 'Year',
+        type: 'string'
+    },
+    {
+        name: 'slug',
+        title: 'Slug',
+        type: 'string'
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'text'
@@ -31,6 +41,11 @@ export default {
     {
         name: 'spotify',
         title: 'Spotify',
+        type: 'url'
+    },
+    {
+        name: 'bandcamp',
+        title: 'Bandcamp',
         type: 'url'
     },
     {
