@@ -14,7 +14,7 @@ class YoutubeVideo extends Component{
                     width={this.props.width}
                     height={this.props.height}
                     src={this.props.video.link}
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer;
                     encrypted-media;
                     gyroscope;

@@ -16,9 +16,8 @@ class Videos extends Component {
                 <div className="videoBoxContainer">
                     {
                         this.props.videos.map(v => {
-                            return <div className="videoBox">
+                            return <div key={v.slug} className="videoBox">
                             <YoutubeVideo
-                                key={v.slug}
                                 video={v}
                                 width={"560"}
                                 height={"315"}

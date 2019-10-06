@@ -13,7 +13,7 @@ class Intro extends Component {
                     <h1 className="text">Chapman Stick and Electronic Prog-Rock Performer</h1>
                     <div>
                         <form action="/sign-up">
-                            <input className="callToAction text textSmall" type="submit" val={"Subscribe to my Newsletter"}/>
+                            <input className="callToAction text textSmall" type="submit" value="Subscribe to my Newsletter"/>
                         </form>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ class Intro extends Component {
                 .callToAction {
                     width: 60%;
                     margin: 20px 0 20px 20%;
-                    heigth: 100px;
+                    height: 60px;
                     background-color: #519ead;
                 }
             `}
