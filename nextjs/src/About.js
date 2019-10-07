@@ -16,7 +16,6 @@ class About extends Component {
                         {this.props.about.paragraph.map(p => {
 
                             const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "text bold": "text"
-                            console.log('className', className)
                             return <p className={className}>{p.children[0]['text']}</p>
                         })}
 
