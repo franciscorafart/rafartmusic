@@ -10,8 +10,7 @@ class Contact extends Component {
                 </div>
                 <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
 
-                    <input type="hidden" name="form-name" value="contact"/>
-                    <div id="divCheckbox" style={{display: "none"}} data-netlify-recaptcha="true"/>
+                    <input type="hidden" name="form-name" value="contact" data-netlify-recaptcha="true"/>
 
                     <div className="inputContainer">
                         <p>
