@@ -30,7 +30,7 @@ class Contact extends Component {
                             <button className="callToAction text textWhite" type="submit">Send</button>
                         </p>
                     </div>
-                    <div id="divCheckbox" style="display: none;" data-netlify-recaptcha="true">
+                    <div id="divCheckbox" style="display: none;" data-netlify-recaptcha="true"/>
                 </form>
             <style jsx>
             {`
