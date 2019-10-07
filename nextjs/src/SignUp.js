@@ -43,7 +43,7 @@ class SignUp extends Component {
 
     render(){
         return (
-            <div id="mc_embed_signup">
+            <div id="mc_embed_signup" className="signupContainer">
                 <form
                 action="https://gmail.us20.list-manage.com/subscribe/post?u=8c1bfb4e83f17c8efacf4d0c9&amp;id=a4c49fde59"
                 method="post"
@@ -147,6 +147,42 @@ class SignUp extends Component {
                     </div>
                 </div>
                 </form>
+                <style jsx>{`
+                .signupContainer{
+                    padding-top: 40px;
+                    min-height: 600px;
+                    background: #fff;
+                }
+                .inputContainer {
+                    margin: 30px 0 10px 10px;
+                }
+                label {
+                    display: block;
+                    width: 20%;
+                    margin-bottom: 20px;
+                }
+                input {
+                    1px solid #ABB0B2;
+                    width: 40%;
+                    border-radius: 3px;
+                    padding: 8px 0;
+                    text-indent: 1%
+
+                }
+                .text{
+                    font-family: 'Encode Sans Expanded', sans-serif;
+                    font-size: 1em;
+                }
+                .textWhite {
+                    color: white;
+                }
+                .button {
+                    width: 20%;
+                    margin: 20px 0 20px 20%;
+                    height: 30px;
+                    background-color: #519ead;
+                }
+            `}</style>
             </div>
         );
     }
