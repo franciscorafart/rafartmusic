@@ -13,30 +13,32 @@ class Albums extends Component {
                 {this.props.albums.map(a => {
                     return <div className="album" key={a.slug}>
                         <h2 className="text albumTitle">{`${a.title} - ${a.year || ''} ${a.releaseType}`}</h2>
-                        <div className="oneThird">
-                            <img src={this.props.urlFor(a.cover.asset._ref)}/>
-                            {
-                            a.bandcamp?
-                                <form action={a.bandcamp}>
-                                    <input className="callToAction text" type="submit" value="Buy on Bandcamp"/>
-                                </form>: <div>Pico</div>
-                            }
-                            {
-                                a.spotify?
-                                <form action={a.spotify}>
-                                    <input className="callToAction text" type="submit" value="Listen on Spotify"/>
-                                </form>: <div></div>
-                            }
-                            {
-                                a.soundcloud?
-                                <form action={a.soundcloud}>
-                                    <input className="callToAction text" type="submit" value="Listen on Soundcloud"/>
-                                </form>: <div></div>
+                        <div className="albumInfo">
+                            <div className="oneThird">
+                                <img src={this.props.urlFor(a.cover.asset._ref)}/>
+                                {
+                                a.bandcamp?
+                                    <form action={a.bandcamp}>
+                                        <input className="callToAction text" type="submit" value="Buy on Bandcamp"/>
+                                    </form>: <div></div>
+                                }
+                                {
+                                    a.spotify?
+                                    <form action={a.spotify}>
+                                        <input className="callToAction text" type="submit" value="Listen on Spotify"/>
+                                    </form>: <div></div>
+                                }
+                                {
+                                    a.soundcloud?
+                                    <form action={a.soundcloud}>
+                                        <input className="callToAction text" type="submit" value="Listen on Soundcloud"/>
+                                    </form>: <div></div>
 
-                            }
-                        </div>
-                        <div className="twoThirds">
-                            <p className="description text">{a.description}</p>
+                                }
+                            </div>
+                            <div className="twoThirds">
+                                <p className="description text">{a.description}</p>
+                            </div>
                         </div>
                     </div>
                 })}
@@ -47,44 +49,46 @@ class Albums extends Component {
                         margin: 60px 0 40px 0;
                     }
                     img {
-                        width: 70%;
+                        width: 80%;
                         padding: 0;
                     }
                     .albumContainer {
                         display: flex;
                         flex-direction: column;
-                        flex-wrap: no-wrap;
-                        width: 100%;
-                        padding: 20px 20px 0 20px;
+                        padding: 0 1% 0 1%;
+
                     }
                     .album {
-                        width: 100%;
-                        padding: 10px;
                         margin: 10px 0 10px 0;
                         border: 1px solid gray;
                     }
+                    .albumInfo {
+                        width: 100%;
+                        display: flex;
+                        padding: 10px 0 10px 0;
+                        justify-content: space-around;
+                    }
                     .twoThirds {
-                        width: 70%;
-                        float: left;
+                        flex-basis: auto;
+                        width: 60%;
                         margin-top: 10px;
+                        float:left;
                     }
                     .oneThird {
                         width: 30%;
-                        float: left;
                         margin-top: 10px;
-                    }
-                    p {
-                        width: 90%;
+                        float:left;
                     }
                     .text{
                         font-family: 'Encode Sans Expanded', sans-serif;
+                        line-height: 1.5;
                         color: white;
                     }
                     .albumTitle {
                         text-align: center;
                     }
                     .callToAction {
-                        width: 70%;
+                        width: 80%;
                         height: 30px;
                         background-color: #519ead;
                         margin: 10px 0 10px 0;
