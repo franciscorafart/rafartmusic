@@ -8,28 +8,30 @@ class Contact extends Component {
                 <div className="inputContainer">
                     <h2><label className="text">Contact Form</label></h2>
                 </div>
-                <form name="contact" method="POST" data-netlify="true">
-                <div className="inputContainer">
-                    <p>
-                        <label className="text">Your Name: </label><input type="text" name="name" />
-                    </p>
-                </div>
-                <div className="inputContainer">
-                    <p>
-                        <label className="text">Your Email: </label><input type="email" name="email" />
-                    </p>
-                </div>
-                <div className="inputContainer">
-                    <p>
-                        <label className="text">Message: </label><textarea name="message"></textarea>
-                    </p>
-                </div>
-                <div className="inputContainer">
-                    <p>
-                        <button className="callToAction text textWhite" type="submit">Send</button>
-                    </p>
-                </div>
-            </form>
+                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div className="inputContainer">
+                        <p>
+                            <label className="text">Your Name: </label><input type="text" name="name" />
+                        </p>
+                    </div>
+                    <div className="inputContainer">
+                        <p>
+                            <label className="text">Your Email: </label><input type="email" name="email" />
+                        </p>
+                    </div>
+                    <div className="inputContainer">
+                        <p>
+                            <label className="text">Message: </label><textarea name="message"></textarea>
+                        </p>
+                    </div>
+                    <div className="inputContainer">
+                        <p>
+                            <button className="callToAction text textWhite" type="submit">Send</button>
+                        </p>
+                    </div>
+                    <div id="divCheckbox" style="display: none;" data-netlify-recaptcha="true">
+                </form>
             <style jsx>
             {`
                 .contactContainer{
