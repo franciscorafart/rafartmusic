@@ -9,7 +9,10 @@ class Contact extends Component {
                     <h2><label className="text">Contact Form</label></h2>
                 </div>
                 <form name="contact" method="POST" data-netlify="true">
-                    <input type="hidden" name="form-name" value="contact" />
+
+                    <input type="hidden" name="form-name" value="contact"/>
+                    <div id="divCheckbox" style={{display: "none"}} data-netlify-recaptcha="true"/>
+
                     <div className="inputContainer">
                         <p>
                             <label className="text">Your Name: </label><input type="text" name="name" />
@@ -30,7 +33,6 @@ class Contact extends Component {
                             <button className="callToAction text textWhite" type="submit">Send</button>
                         </p>
                     </div>
-                    <div id="divCheckbox" style="display: none;" data-netlify-recaptcha="true"/>
                 </form>
             <style jsx>
             {`
