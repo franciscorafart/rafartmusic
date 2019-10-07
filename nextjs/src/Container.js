@@ -9,6 +9,7 @@ import IndexPage from './IndexPage';
 import SignUp from './SignUp';
 import Contact from './Contact';
 import Albums from './Albums';
+import About from './About';
 
 import client from '../client';
 import imageUrlBuilder from '@sanity/image-url'
@@ -51,7 +52,7 @@ class Container extends Component {
         } else if (page === 'albums'){
             content = <Albums urlFor={this.urlFor} albums={this.props.albums}/>
         } else if (page === 'about'){
-            content = <div>Bio</div>
+            content = <About urlFor={this.urlFor} about={this.props.about}/>
         } else if (page === 'press'){
             content = <div>Press</div>
         } else if (page === 'sign-up'){

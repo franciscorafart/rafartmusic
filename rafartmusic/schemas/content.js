@@ -1,6 +1,6 @@
 export default {
   name: 'content',
-  title: 'content',
+  title: 'Content',
   type: 'document',
   fields: [
     {
@@ -26,8 +26,8 @@ export default {
       }
     },
     {
-      name: 'text',
-      title: 'Text',
+      name: 'paragraph',
+      title: 'Paragraph',
       type: 'array',
       of: [
         {
