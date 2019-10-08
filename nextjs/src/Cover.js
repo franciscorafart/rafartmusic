@@ -67,7 +67,7 @@ class Cover extends Component{
                                       padding: 30px 0 0 0;
                                   }
                               }
-                              @media only screen and (max-width:650px){
+                              @media all and (max-width: 750px){
                                   .header-bg {
                                      display: none;
                                   }

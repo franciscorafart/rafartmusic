@@ -39,7 +39,7 @@ class Container extends Component {
         if (page === 'home'){
             content = <div>
                 <Cover urlFor={this.urlFor} coverImage={this.props.coverImage}/>
-                <Intro urlFor={this.urlFor} logo={this.props.logo}/>
+                <Intro urlFor={this.urlFor} rafart1={this.props.rafart1} logo={this.props.logo}/>
                 <MainMenu
                     urlFor={this.urlFor}
                     menu={this.props.menu}
