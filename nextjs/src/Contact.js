@@ -8,7 +8,7 @@ class Contact extends Component {
                 <div className="inputContainer">
                     <h2><label className="text">Contact Form</label></h2>
                 </div>
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
 
                     <input type="hidden" name="form-name" value="contact" data-netlify-recaptcha="true"/>
 
@@ -32,6 +32,7 @@ class Contact extends Component {
                             <button className="callToAction text textWhite" type="submit">Send</button>
                         </p>
                     </div>
+                    <div data-netlify-recaptcha="true"/>
                 </form>
             <style jsx>
             {`
