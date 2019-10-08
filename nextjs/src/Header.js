@@ -11,10 +11,10 @@ class Cover extends Component{
     render(){
         return(
                 <div className="header">
-                    <div className="one-quarter">
+                    <div className="one-quarter logo-div">
                         <img src={this.props.urlFor(this.props.logo.mainImage.asset._ref)}/>
                     </div>
-                    <div className="half">
+                    <div className="half header-div">
                         <ul className="menuItems">
                         {
                             this.props.menu?
@@ -38,7 +38,7 @@ class Cover extends Component{
                         }
                         </ul>
                     </div>
-                    <div className="one-quarter">
+                    <div className="one-quarter header-div">
                         <ul className="menuItems">
                         {
                             this.props.menu?
@@ -60,8 +60,10 @@ class Cover extends Component{
                     </div>
                     <style jsx>{`
                         .header {
-                            height: 50px;
+                            min-height: 50px;
                             width: 100%;
+                            display: flex;
+                            flex-direction: row;
                         }
                         .text{
                             font-family: 'Encode Sans Expanded', sans-serif;
@@ -72,7 +74,6 @@ class Cover extends Component{
                         .one-quarter {
                             width: 25%;
                             height 40px;
-                            float: left;
                         }
                         .one-quarter img{
                             height: 30px;
@@ -80,7 +81,6 @@ class Cover extends Component{
                         }
                         .half {
                             width: 50%;
-                            float: left;
                         }
                         a {
                             text-decoration: none;
@@ -97,23 +97,30 @@ class Cover extends Component{
                         .selected {
                             color: #c4ed21;
                         }
-                        @media all and (max-width: 600px) {
-                              .menuItems {
-                                -webkit-flex-flow: column wrap;
-                                flex-flow: column wrap;
-                                padding: 0;
-                              }
-
-                              a {
+                        @media all and (max-width: 750px) {
+                            .header {
+                                flex-direction: column;
+                            }
+                            .header-div {
+                                width: 100%;
+                                margin: 10px 0 10px 0;
+                            }
+                            .logo-div {
+                                display: none;
+                            }
+                            .menuItems {
+                                flex-direction: row;
+                                justify-content: space-around;
+                            }
+                            a {
                                 text-align: center;
                                 padding: 10px;
                                 border-top: 1px solid rgba(255,255,255,0.3);
                                 border-bottom: 1px solid rgba(0,0,0,0.1);
-                              }
-
-                              .menuItems li:last-of-type a {
+                            }
+                            .menuItems li:last-of-type a {
                                 border-bottom: none;
-                              }
+                            }
                         }
                         `}
                     </style>

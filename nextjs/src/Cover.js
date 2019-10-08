@@ -68,9 +68,8 @@ class Cover extends Component{
                                   }
                               }
                               @media only screen and (max-width:650px){
-                                  .header-content {
-                                     width: 90%;
-                                     margin-left: 5%;
+                                  .header-bg {
+                                     display: none;
                                   }
                               }
                             `}
