@@ -21,7 +21,6 @@ class Videos extends Component {
     render(){
         // NOTE: To change size of youtube videos, set both the .videoBox
         // and the YoutubeVideo props to the same width and height.
-        console.log('smallVideo?', this.state.smallVideo)
         const width = this.state.smallVideo? "355": "560";
         const height = this.state.smallVideo? "200": "315";
 
