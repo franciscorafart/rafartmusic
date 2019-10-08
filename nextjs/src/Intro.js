@@ -7,8 +7,8 @@ class Intro extends Component {
 
     render(){
         return (
-            <div className="introContainer">
-                <div className="intro">
+            <div>
+                <div className="introContainer">
                     <img src={this.props.urlFor(this.props.logo.mainImage.asset._ref)}/>
                     <h1 className="text">Chapman Stick and Electronic Prog-Rock Performer</h1>
                     <div>
@@ -18,17 +18,17 @@ class Intro extends Component {
                     </div>
                 </div>
             <style jsx>{`
-                .intro {
-                    width: 40%;
-                }
-                .intro img {
-                    width: 70%;
-                    margin-left: 15%;
-                }
                 .introContainer {
+                    width: 50%;
+                    margin-left: 25%;
                     padding: 80px 0 40px 0;
                     display: flex;
+                    flex-direction: column;
                     justify-content: center;
+                }
+                img {
+                    width: 70%;
+                    margin-left: 15%;
                 }
                 .text{
                     font-family: 'Encode Sans Expanded', sans-serif;
@@ -44,6 +44,15 @@ class Intro extends Component {
                     margin: 20px 0 20px 20%;
                     height: 60px;
                     background-color: #519ead;
+                }
+                @media all and (max-width: 750px) {
+                    .introContainer {
+                        width: 80%;
+                        margin-left: 10%;
+                    }
+                    .intro img {
+                        width: 100%;
+                    }
                 }
             `}
             </style>
