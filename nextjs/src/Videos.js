@@ -4,11 +4,26 @@ import YoutubeVideo from './YoutubeVideo'
 class Videos extends Component {
     constructor(props){
         super(props)
+        this.state = {
+            smallVideo: false,
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener("resize", this.resize.bind(this));
+        this.resize();
+    }
+
+    resize() {
+        this.setState({smallVideo: window.innerWidth <= 750});
     }
 
     render(){
         // NOTE: To change size of youtube videos, set both the .videoBox
         // and the YoutubeVideo props to the same width and height.
+        console.log('smallVideo?', this.state.smallVideo)
+        const width = this.state.smallVideo? "355": "560";
+        const height = this.state.smallVideo? "200": "315";
 
         return (
             <div className="container">
@@ -19,8 +34,8 @@ class Videos extends Component {
                             return <div key={v.slug} className="videoBox">
                             <YoutubeVideo
                                 video={v}
-                                width={"560"}
-                                height={"315"}
+                                width={width}
+                                height={height}
                             />
                             </div>
                         })
@@ -37,7 +52,6 @@ class Videos extends Component {
                         flex-wrap: wrap;
                         justify-content: space-around;
                         align-items: flex-start;
-
                         margin: 80px 0 80px 0;
                     }
                     .videoBox {
@@ -48,6 +62,11 @@ class Videos extends Component {
                         font-size: 2em;
                         color: white;
                         text-align: center;
+                    }
+                    @media all and (max-width: 750px) {
+                        .videoBoxContainer {
+                            margin: 40px 0 40px 0;
+                        }
                     }
                 `}</style>
             </div>
