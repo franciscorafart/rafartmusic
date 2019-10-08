@@ -1,3 +1,4 @@
 /node_modules/
 /sanity.json
 production.tar.gz
+/dist

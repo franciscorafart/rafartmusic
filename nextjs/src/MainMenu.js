@@ -22,14 +22,14 @@ class MainMenu extends Component {
                         {
                             this.props.menu.filter(item => item.mainMenu).map(
                                 item => {
-                                    return <div key={item.slug}>
+                                    return <div className="box" key={item.slug}>
                                             <h3 className="text">{item.title}</h3>
                                             <a href={item.linkString}>
                                                 {
-                                                    item.icon.asset?
+                                                    item.mainImage.asset?
                                                     <div
-                                                        className="box"
-                                                        style = {{backgroundImage: `url(${this.props.urlFor(item.icon.asset._ref)})`}}
+                                                        className="pageLink"
+                                                        style = {{backgroundImage: `url(${this.props.urlFor(item.mainImage.asset._ref)})`}}
                                                     ></div>
                                                     :
                                                     <div>{item.title}</div>
@@ -58,8 +58,14 @@ class MainMenu extends Component {
                                 margin: 80px 0 80px 0;
                             }
                             .box {
-                                height: 150px;
-                                width: 150px;
+                                width:200px;
+
+                                padding: 10px;
+                            }
+                            .pageLink {
+                                height: 200px;
+                                width: 200px;
+                                background-size: 200px 200px, cover;
                             }
                             @media only screen and (max-width:650px){
                                 .skills-container {

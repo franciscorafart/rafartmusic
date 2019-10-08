@@ -24,8 +24,8 @@ export default {
         type: 'string'
     },
     {
-        name: 'icon',
-        title: 'Icon',
+        name: 'mainImage',
+        title: 'Main Image',
         type: 'image'
     },
     {
