@@ -5,15 +5,15 @@ class SignUp extends Component {
 
     componentDidMount () {
         const scriptAmazon = document.createElement("script");
-        scriptAmazon.src = "'//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'";
+        scriptAmazon.src = "//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js";
         scriptAmazon.async = true;
         document.body.appendChild(scriptAmazon);
 
-        const s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.async = true;
-        s.innerHTML = "(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);";
-        document.body.appendChild(s);
+        // const s = document.createElement('script');
+        // s.type = 'text/javascript';
+        // s.async = true;
+        // s.innerHTML = "(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);";
+        // document.body.appendChild(s);
     }
 
 
