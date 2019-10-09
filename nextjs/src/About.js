@@ -40,12 +40,10 @@ class About extends Component {
                         flex-basis: auto;
                         width: 60%;
                         margin-top: 10px;
-                        float:left;
                     }
                     .imageDiv {
                         width: 30%;
                         margin-top: 10px;
-                        float:left;
                     }
                     .text{
                         font-family: 'Encode Sans Expanded', sans-serif;
@@ -65,6 +63,9 @@ class About extends Component {
                         }
                         .textDiv {
                             width: 100%;
+                        }
+                        .text {
+                            padding: 0 10px 0 10px;
                         }
                         .imageDiv {
                             width: 100%;
