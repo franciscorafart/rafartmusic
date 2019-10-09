@@ -1,14 +1,7 @@
 import React, {Component} from 'react';
 import client from '../client';
 
-import {
-    faFacebook,
-    faSpotify,
-    faInstagram,
-    faYoutube,
-    faSoundcloud,
-    faMedium
-} from '@fortawesome/free-brands-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -50,36 +43,21 @@ class Cover extends Component{
                     </div>
                     <div className="one-quarter header-div">
                         <ul className="menuItems">
-                            <li className="text">
-                                <a className="socialMedia" href="https://www.facebook.com/fjrafart/">
-                                    <FontAwesomeIcon icon={faFacebook} size="4x"/>
-                                </a>
-                            </li>
-                            <li className="text">
-                                <a className="socialMedia" href={"https://open.spotify.com/artist/3EIxblOsWLuH54ZRWDuw1m?si=bg0n-AiKSFOhQ_cJmMszUw"}>
-                                <FontAwesomeIcon icon={faSpotify}/>
-                                </a>
-                            </li>
-                            <li className="text">
-                                <a className="socialMedia" href={"https://www.youtube.com/franciscorafart"}>
-                                <FontAwesomeIcon icon={faYoutube}/>
-                                </a>
-                            </li>
-                            <li className="text">
-                                <a className="socialMedia" href={"https://www.instagram.com/rafartstick/"}>
-                                <FontAwesomeIcon icon={faInstagram}/>
-                                </a>
-                            </li>
-                            <li className="text">
-                                <a className="socialMedia" href={"https://soundcloud.com/f-j-rafart"}>
-                                <FontAwesomeIcon icon={faSoundcloud}/>
-                                </a>
-                            </li>
-                            <li className="text">
-                                <a className="socialMedia" href={"https://medium.com/@francisco.rafart"}>
-                                <FontAwesomeIcon className="icon" icon={faMedium}/>
-                                </a>
-                            </li>
+                        {
+                            this.props.menu?
+                            this.props.menu.filter(
+                                item => item.socialMedia
+                            ).sort((a,b) => a.order<b.order?1:-1).map(
+                                    item => {
+                                    return <li className="text">
+                                            <a className="socialMedia" href={item.linkString}>
+                                                <FontAwesomeIcon icon={fab[item.iconClass]} size="4x"/>
+                                            </a>
+                                        </li>
+                                    })
+                                :<div></div>
+                        }
+
                         </ul>
                     </div>
                     <style jsx>{`
@@ -151,6 +129,9 @@ class Cover extends Component{
                             }
                             .menuItems li:last-of-type a {
                                 border-bottom: none;
+                            }
+                            ul {
+                                padding: 0;
                             }
                         }
                         `}

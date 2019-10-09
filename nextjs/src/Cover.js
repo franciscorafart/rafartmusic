@@ -4,7 +4,6 @@ import client from '../client'
 
 
 class Cover extends Component{
-
     constructor(props){
         super(props)
     }
@@ -38,8 +37,10 @@ class Cover extends Component{
                                margin-left: 10%;
                             }
                             .header-bg {
-                                min-height:520px;
+                                width: 100%;
+                                min-height:350px;
                                 background-size: cover;
+
                             }
                               h1 {
                                 font-size: 2.6em;

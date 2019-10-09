@@ -27,9 +27,6 @@ class About extends Component {
                         margin-top: 60px;
                         padding-bottom: 100px;
                     }
-                    img {
-                        width: 100%;
-                    }
                     .aboutContainer {
                         display: flex;
                         flex-direction: row;
@@ -44,6 +41,9 @@ class About extends Component {
                     .imageDiv {
                         width: 30%;
                         margin-top: 10px;
+                    }
+                    .imageDiv img {
+                        width: 100%;
                     }
                     .text{
                         font-family: 'Encode Sans Expanded', sans-serif;
@@ -72,7 +72,7 @@ class About extends Component {
                             display: flex;
                             justify-content: center;
                         }
-                        img {
+                        .imageDiv img {
                             width: 50%;
                         }
                     }
