@@ -1,8 +1,14 @@
 import React, {Component} from 'react';
 import client from '../client';
-import { Link } from 'next/link';
 
-import { faFacebook, faSpotify, faInstagram, faYoutube, faSoundcloud, faMedium } from '@fortawesome/free-brands-svg-icons'
+import {
+    faFacebook,
+    faSpotify,
+    faInstagram,
+    faYoutube,
+    faSoundcloud,
+    faMedium
+} from '@fortawesome/free-brands-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
