@@ -9,10 +9,10 @@ class About extends Component {
             <div className="container">
                 <h1 className="text title">About</h1>
                 <div className="aboutContainer">
-                    <div className="forty">
+                    <div className="imageDiv">
                         <img src={this.props.urlFor(this.props.about.image.asset._ref)}/>
                     </div>
-                    <div className="sixty">
+                    <div className="textDiv">
                         {this.props.about.paragraph.map(p => {
 
                             const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "text bold": "text"
@@ -36,13 +36,13 @@ class About extends Component {
                         padding: 0 1% 0 1%;
                         justify-content: space-around;
                     }
-                    .sixty {
+                    .textDiv {
                         flex-basis: auto;
                         width: 60%;
                         margin-top: 10px;
                         float:left;
                     }
-                    .forty {
+                    .imageDiv {
                         width: 30%;
                         margin-top: 10px;
                         float:left;
@@ -57,6 +57,23 @@ class About extends Component {
                     }
                     .title {
                         text-align: center;
+                    }
+                    @media all and (max-width: 750px) {
+                        .aboutContainer {
+                            flex-direction: column;
+                            justify-content: center;
+                        }
+                        .textDiv {
+                            width: 100%;
+                        }
+                        .imageDiv {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                        }
+                        img {
+                            width: 50%;
+                        }
                     }
                 `}</style>
             </div>
