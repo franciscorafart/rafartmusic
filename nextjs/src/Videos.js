@@ -14,6 +14,10 @@ class Videos extends Component {
         this.resize();
     }
 
+    componentWillUnmount(){
+        window.removeEventListener("resize", this.resize.bind(this));
+    }
+
     resize() {
         this.setState({smallVideo: window.innerWidth <= 750});
     }

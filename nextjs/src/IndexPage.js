@@ -15,9 +15,7 @@ class IndexPage extends Component {
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet"/>
                     <link rel="shortcut icon" type="image/png" href={this.props.urlFor(this.props.favicon.mainImage.asset._ref)}/>
-
-                    <script src="https://kit.fontawesome.com/0b202351e9.js" crossorigin="anonymous"></script>
-
+                    <script src="https://kit.fontawesome.com/0b202351e9.js" crossOrigin="anonymous"></script>
                 </Head>
             </div>
         );
