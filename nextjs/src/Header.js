@@ -1,6 +1,10 @@
-import React, {Component} from 'react'
-import client from '../client'
+import React, {Component} from 'react';
+import client from '../client';
+import { Link } from 'next/link';
 
+import { faFacebook, faSpotify, faInstagram, faYoutube, faSoundcloud, faMedium } from '@fortawesome/free-brands-svg-icons'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Cover extends Component{
 
@@ -40,22 +44,36 @@ class Cover extends Component{
                     </div>
                     <div className="one-quarter header-div">
                         <ul className="menuItems">
-                        {
-                            this.props.menu?
-                            this.props.menu.filter(item => item.socialMedia).map(item => {
-
-                                return <li
-                                    key={item.slug}
-                                    className="text"
-                                >
-                                    <a href={item.linkString}>
-                                    <i className={item.iconClass}/>
-                                    </a>
-                                </li>
-                            })
-                            :
-                            <li className="text">Loading...</li>
-                        }
+                            <li className="text">
+                                <a className="socialMedia" href="https://www.facebook.com/fjrafart/">
+                                    <FontAwesomeIcon icon={faFacebook} size="4x"/>
+                                </a>
+                            </li>
+                            <li className="text">
+                                <a className="socialMedia" href={"https://open.spotify.com/artist/3EIxblOsWLuH54ZRWDuw1m?si=bg0n-AiKSFOhQ_cJmMszUw"}>
+                                <FontAwesomeIcon icon={faSpotify}/>
+                                </a>
+                            </li>
+                            <li className="text">
+                                <a className="socialMedia" href={"https://www.youtube.com/franciscorafart"}>
+                                <FontAwesomeIcon icon={faYoutube}/>
+                                </a>
+                            </li>
+                            <li className="text">
+                                <a className="socialMedia" href={"https://www.instagram.com/rafartstick/"}>
+                                <FontAwesomeIcon icon={faInstagram}/>
+                                </a>
+                            </li>
+                            <li className="text">
+                                <a className="socialMedia" href={"https://soundcloud.com/f-j-rafart"}>
+                                <FontAwesomeIcon icon={faSoundcloud}/>
+                                </a>
+                            </li>
+                            <li className="text">
+                                <a className="socialMedia" href={"https://medium.com/@francisco.rafart"}>
+                                <FontAwesomeIcon className="icon" icon={faMedium}/>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <style jsx>{`
@@ -82,9 +100,16 @@ class Cover extends Component{
                         .half {
                             width: 50%;
                         }
+                        .socialMedia {
+                            display: block;
+                            width: 20px;
+                        }
                         a {
                             text-decoration: none;
                             color: white;
+                        }
+                        svg {
+                            aria-hidden: false;
                         }
                         .menuItems {
                             display: flex;
