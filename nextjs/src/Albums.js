@@ -6,7 +6,6 @@ class Albums extends Component {
     }
 
     render(){
-        console.log('albums', this.props.albums)
         return (
             <div className="container">
                 <h1 className="text albumTitle">Albums</h1>
