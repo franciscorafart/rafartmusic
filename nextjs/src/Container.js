@@ -23,6 +23,9 @@ class Container extends Component {
         this.urlFor = this.urlFor.bind(this)
         this.titleCase = this.titleCase.bind(this)
     }
+    // componentDidMount = () => {
+    //     document.getElementsByTagName("body")[0].className = "body";
+    // }
 
     urlFor = (source) => {
         return builder.image(source)
@@ -60,9 +63,9 @@ class Container extends Component {
         }
 
         return(
-            <div>
-                <IndexPage urlFor={this.urlFor}favicon={this.props.favicon}/>
-                <div className="website_div">
+            <div className="website_div">
+                <IndexPage urlFor={this.urlFor} favicon={this.props.favicon}/>
+                <div>
                     <Header
                         urlFor={this.urlFor}
                         menu={this.props.menu}
@@ -71,11 +74,18 @@ class Container extends Component {
                     />
                     {content}
                     <style jsx>{`
-                          .website_div {
-                            background-color: black;
-                          }
+                        .website_div{
+                            width:100%;
+                        }
                         `}
                     </style>
+                    <style jsx global>{`
+                        body {
+                            margin: 0;
+                            padding: 0;
+                            background-color: black;
+                        }
+                    `}</style>
                 </div>
             </div>
         )

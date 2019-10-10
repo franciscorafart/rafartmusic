@@ -6,7 +6,6 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Cover extends Component{
-
     constructor(props){
         super(props)
     }
@@ -49,7 +48,7 @@ class Cover extends Component{
                                 item => item.socialMedia
                             ).sort((a,b) => a.order<b.order?1:-1).map(
                                     item => {
-                                    return <li className="text">
+                                    return <li key={item.slug} className="text">
                                             <a className="socialMedia" href={item.linkString}>
                                                 <FontAwesomeIcon icon={fab[item.iconClass]} size="4x"/>
                                             </a>

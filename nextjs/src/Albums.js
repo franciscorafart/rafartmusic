@@ -14,7 +14,7 @@ class Albums extends Component {
                     return <div className="album" key={a.slug}>
                         <h2 className="text albumTitle">{`${a.title} - ${a.year || ''} ${a.releaseType}`}</h2>
                         <div className="albumInfo">
-                            <div className="oneThird">
+                            <div className="imageDiv">
                                 <img src={this.props.urlFor(a.cover.asset._ref)}/>
                                 {
                                 a.bandcamp?
@@ -36,7 +36,7 @@ class Albums extends Component {
 
                                 }
                             </div>
-                            <div className="twoThirds">
+                            <div className="textDiv">
                                 <p className="description text">{a.description}</p>
                             </div>
                         </div>
@@ -56,7 +56,6 @@ class Albums extends Component {
                         display: flex;
                         flex-direction: column;
                         padding: 0 1% 0 1%;
-
                     }
                     .album {
                         margin: 10px 0 10px 0;
@@ -65,19 +64,19 @@ class Albums extends Component {
                     .albumInfo {
                         width: 100%;
                         display: flex;
+                        flex-direction: row;
                         padding: 10px 0 10px 0;
                         justify-content: space-around;
                     }
-                    .twoThirds {
+                    .textDiv {
                         flex-basis: auto;
                         width: 60%;
                         margin-top: 10px;
-                        float:left;
+                        float: left;
                     }
-                    .oneThird {
-                        width: 30%;
+                    .imageDiv {
+                        width: 40%;
                         margin-top: 10px;
-                        float:left;
                     }
                     .text{
                         font-family: 'Encode Sans Expanded', sans-serif;
@@ -92,6 +91,21 @@ class Albums extends Component {
                         height: 30px;
                         background-color: #519ead;
                         margin: 10px 0 10px 0;
+                    }
+                    @media all and (max-width: 750px) {
+                        .albumInfo {
+                            flex-direction: column;
+                            justify-content: center;
+                        }
+                        .textDiv {
+                            width: 100%;
+                        }
+                        .imageDiv {
+                            width: 100%;
+                        }
+                        img {
+                            width: 50%;
+                        }
                     }
                 `}</style>
             </div>

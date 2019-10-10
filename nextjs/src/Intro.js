@@ -65,6 +65,10 @@ class Intro extends Component {
                     .textSmall {
                         font-size: 0.9em;
                     }
+                    .callToAction {
+                        width: 90%;
+                        margin: 20px 0 20px 5%;
+                    }
                 }
             `}
             </style>
