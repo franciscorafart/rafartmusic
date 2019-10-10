@@ -68,7 +68,7 @@ class Cover extends Component{
                         }
                         .text{
                             font-family: 'Encode Sans Expanded', sans-serif;
-                            font-size: 0.8em;
+                            font-size: 1em;
                             color: white;
                             list-style-type: none;
                         }
@@ -108,6 +108,7 @@ class Cover extends Component{
                         @media all and (max-width: 750px) {
                             .header {
                                 flex-direction: column;
+                                min-height: 160px;
                             }
                             .header-div {
                                 width: 100%;
@@ -131,6 +132,9 @@ class Cover extends Component{
                             }
                             ul {
                                 padding: 0;
+                            }
+                            .socialMedia {
+                                width: 28px;
                             }
                         }
                         `}
