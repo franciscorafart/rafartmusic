@@ -83,7 +83,18 @@ class Contact extends Component {
                     height: 30px;
                     background-color: #519ead;
                 }
-
+                @media all and (max-width: 750px) {
+                    input {
+                        width: 98%;
+                    }
+                    textarea {
+                        width: 98%;
+                    }
+                    button {
+                        width: 50%;
+                        margin: 20px 0 20px 0%;
+                    }
+                }
             `}</style>
             </div>
         );

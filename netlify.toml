@@ -7,5 +7,5 @@
 
 [build]
   base    = "nextjs"
-  publish = "/out"
+  publish = "nextjs/out"
   command = "npm run build"
