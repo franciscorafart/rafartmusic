@@ -24,9 +24,17 @@ export default {
         type: 'string'
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'text'
+      name: 'paragraph',
+      title: 'Paragraph',
+      type: 'array',
+      of: [
+        {
+          title: 'Block',
+          type: 'block',
+          styles: [{title: 'Normal', value: 'normal'}],
+          lists: []
+        }
+      ]
     },
     {
         name: 'cover',

@@ -6,6 +6,7 @@ class Albums extends Component {
     }
 
     render(){
+        console.log('albums', this.props.albums)
         return (
             <div className="container">
                 <h1 className="text albumTitle">Albums</h1>
@@ -37,7 +38,12 @@ class Albums extends Component {
                                 }
                             </div>
                             <div className="textDiv">
-                                <p className="description text">{a.description}</p>
+                                {
+                                    a.paragraph.map(p => {
+                                    const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "paragraph text bold": "paragraph text"
+                                    return <p className={className}>{p.children[0]['text']}</p>
+                                })
+                                }
                             </div>
                         </div>
                     </div>
@@ -50,7 +56,7 @@ class Albums extends Component {
                     }
                     img {
                         width: 80%;
-                        padding: 0;
+                        padding-left: 10%;
                     }
                     .albumContainer {
                         display: flex;
@@ -74,9 +80,16 @@ class Albums extends Component {
                         margin-top: 10px;
                         float: left;
                     }
+                    .paragraph {
+                        padding: 0 2% 0 2%;
+                    }
                     .imageDiv {
                         width: 40%;
                         margin-top: 10px;
+                    }
+                    form {
+                        width: 100%;
+                        padding-left: 10%;
                     }
                     .text{
                         font-family: 'Encode Sans Expanded', sans-serif;
@@ -92,6 +105,9 @@ class Albums extends Component {
                         background-color: #519ead;
                         margin: 10px 0 10px 0;
                     }
+                    .bold {
+                        font-size: 1.3em;
+                    }
                     @media all and (max-width: 750px) {
                         .albumInfo {
                             flex-direction: column;
@@ -105,6 +121,7 @@ class Albums extends Component {
                         }
                         img {
                             width: 50%;
+                            padding-left: 25%;
                         }
                     }
                 `}</style>
