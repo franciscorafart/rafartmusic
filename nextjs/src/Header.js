@@ -65,6 +65,7 @@ class Cover extends Component{
                             width: 100%;
                             display: flex;
                             flex-direction: row;
+                            background-color: black;
                         }
                         .text{
                             font-family: 'Encode Sans Expanded', sans-serif;

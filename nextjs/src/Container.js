@@ -76,6 +76,7 @@ class Container extends Component {
                     <style jsx>{`
                         .website_div{
                             width:100%;
+                            background-color: black;
                         }
                         `}
                     </style>
