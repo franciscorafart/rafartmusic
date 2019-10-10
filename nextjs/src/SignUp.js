@@ -161,6 +161,9 @@ class SignUp extends Component {
                 .indicates-required {
                     margin-bottom: 20px;
                 }
+                .mergeRow {
+                    width: 90%;
+                }
                 label {
                     display: block;
                     margin-bottom: 20px;
