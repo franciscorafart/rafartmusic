@@ -26,7 +26,6 @@ class Cover extends Component{
                                 (a,b) => a.order<b.order?-1:1
                             ).map(
                                 item => {
-                                    console.log('item.slug', item.slug)
                                 return <li
                                     key={item.slug}
                                     className="text"
