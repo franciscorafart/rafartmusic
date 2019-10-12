@@ -14,9 +14,12 @@ class Cover extends Component{
                     <section>
                     {
                         this.props.coverImage?
-                        <div className="header-bg" style = {{backgroundImage: `url(${this.props.urlFor(this.props.coverImage.mainImage.asset._ref)})`}}>
+                        <div
+                        className="header-bg"
+                        style = {{backgroundImage: `url(${this.props.urlFor(this.props.coverImage.mainImage.asset._ref)})`}}
+                        >
                             {
-                                // Insert stuff on top of the cover image
+                                // TODO: Insert stuff on top of the cover image
                             }
                         </div>:
                         <span className="text">Loading...</span>
@@ -40,7 +43,6 @@ class Cover extends Component{
                                 width: 100%;
                                 min-height:350px;
                                 background-size: cover;
-
                             }
                               h1 {
                                 font-size: 2.6em;
@@ -61,16 +63,13 @@ class Cover extends Component{
                                 line-height: 26px;
                                 text-align: justify;
                               }
-                              @media only screen and (max-width:940px){
-
-                                  .header-bg {
-                                      background-color: #F2F2F2;
-                                      padding: 30px 0 0 0;
-                                  }
-                              }
                               @media all and (max-width: 750px){
                                   .header-bg {
                                      display: none;
+                                  }
+                                  .header-bg {
+                                      background-color: #F2F2F2;
+                                      padding: 30px 0 0 0;
                                   }
                               }
                             `}

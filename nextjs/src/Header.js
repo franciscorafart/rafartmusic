@@ -23,18 +23,20 @@ class Cover extends Component{
                             this.props.menu.filter(
                                 item => item.headerMenu
                             ).sort(
-                                (a,b) => a.order<b.order?-1:1).map(
-                                    item => {
-                                    return <li
-                                        key={item.slug}
-                                        className="text"
-                                    >
-                                        <a
-                                            href={item.linkString}
-                                            className={item.slug === this.props.selectedPage? 'selected': ''}
-                                        >{item.title}</a>
-                                    </li>
-                                })
+                                (a,b) => a.order<b.order?-1:1
+                            ).map(
+                                item => {
+                                    console.log('item.slug', item.slug)
+                                return <li
+                                    key={item.slug}
+                                    className="text"
+                                >
+                                    <a
+                                        href={item.linkString}
+                                        className={item.slug === this.props.selectedPage? 'selected': ''}
+                                    >{item.title}</a>
+                                </li>
+                            })
                             :
                             <li className="text">Menu Loading...</li>
                         }

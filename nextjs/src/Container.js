@@ -10,6 +10,7 @@ import SignUp from './SignUp';
 import Contact from './Contact';
 import Albums from './Albums';
 import About from './About';
+import Posts from './Posts';
 
 import client from '../client';
 import imageUrlBuilder from '@sanity/image-url'
@@ -23,9 +24,6 @@ class Container extends Component {
         this.urlFor = this.urlFor.bind(this)
         this.titleCase = this.titleCase.bind(this)
     }
-    // componentDidMount = () => {
-    //     document.getElementsByTagName("body")[0].className = "body";
-    // }
 
     urlFor = (source) => {
         return builder.image(source)
@@ -43,6 +41,7 @@ class Container extends Component {
             content = <div>
                 <Cover urlFor={this.urlFor} coverImage={this.props.coverImage}/>
                 <Intro urlFor={this.urlFor} rafart1={this.props.rafart1} logo={this.props.logo}/>
+                <Posts urlFor={this.urlFor} posts={this.props.posts} onlyLatest={true}/>
                 <MainMenu
                     urlFor={this.urlFor}
                     menu={this.props.menu}
@@ -60,6 +59,8 @@ class Container extends Component {
             content = <div>Press</div>
         } else if (page === 'sign-up'){
             content = <SignUp/>
+        } else if (page === 'posts'){
+            content = <Posts urlFor={this.urlFor} posts={this.props.posts}/>
         }
 
         return(
@@ -73,20 +74,22 @@ class Container extends Component {
                         selectedPage={page}
                     />
                     {content}
-                    <style jsx>{`
-                        .website_div{
-                            width:100%;
-                            background-color: black;
-                        }
-                        `}
-                    </style>
                     <style jsx global>{`
                         body {
                             margin: 0;
                             padding: 0;
                             background-color: black;
                         }
-                    `}</style>
+                    `}
+                    </style>
+                    <style jsx>{`
+                        .website_div{
+                            width:100%;
+                            background-color: black;
+                        }
+                    `}
+                    </style>
+
                 </div>
             </div>
         )

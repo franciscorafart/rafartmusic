@@ -31,14 +31,27 @@ export default {
       type: 'datetime'
     },
     {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent'
+      name: 'paragraph',
+      title: 'Paragraph',
+      type: 'array',
+      of: [
+        {
+          title: 'Block',
+          type: 'block',
+          styles: [{title: 'Normal', value: 'normal'}],
+          lists: []
+        }
+      ]
     },
     {
         name: 'link',
         title: 'Link',
         type: 'url'
+    },
+    {
+        name: 'visible',
+        title: 'Visible',
+        type: 'boolean'
     }
   ],
 

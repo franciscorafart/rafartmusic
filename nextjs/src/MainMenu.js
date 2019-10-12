@@ -9,36 +9,36 @@ class MainMenu extends Component {
     render(){
         return(
             <div>
-                <section>
-                    <div
-                    className="boxContainer"
-                    style = {
-                        {
-                        backgroundImage: `url(${this.props.urlFor(this.props.menuBackground.mainImage.asset._ref)})`,
-                        // opacity: 0.5;
-                        }
+                <h2 className="text bigText">Main Menu</h2>
+                <div
+                className="boxContainer"
+                style = {
+                    {
+                    backgroundImage: `url(${this.props.urlFor(this.props.menuBackground.mainImage.asset._ref)})`,
+                    // opacity: 0.5;
                     }
-                    >
-                        {
-                            this.props.menu.filter(item => item.mainMenu).map(
-                                item => {
-                                    return <div className="box" key={item.slug}>
-                                            <h3 className="text">{item.title}</h3>
-                                            <a href={item.linkString}>
-                                                {
-                                                    item.mainImage.asset?
-                                                    <div
-                                                        className="pageLink"
-                                                        style = {{backgroundImage: `url(${this.props.urlFor(item.mainImage.asset._ref)})`}}
-                                                    ></div>
-                                                    :
-                                                    <div>{item.title}</div>
-                                                }
-                                            </a>
-                                    </div>
-                                })
-                        }
-                    </div>
+                }
+                >
+                    {
+                        this.props.menu.filter(item => item.mainMenu).map(
+                            item => {
+                                return <div className="box" key={item.slug}>
+                                        <h3 className="text">{item.title}</h3>
+                                        <a href={item.linkString}>
+                                            {
+                                                item.mainImage.asset?
+                                                <div
+                                                    className="pageLink"
+                                                    style = {{backgroundImage: `url(${this.props.urlFor(item.mainImage.asset._ref)})`}}
+                                                ></div>
+                                                :
+                                                <div>{item.title}</div>
+                                            }
+                                        </a>
+                                </div>
+                            })
+                    }
+                </div>
                     <style jsx>{`
                             .h3Container {
                                 padding-bottom: 40px;
@@ -47,6 +47,9 @@ class MainMenu extends Component {
                                 font-family: 'Encode Sans Expanded', sans-serif;
                                 color: white;
                                 text-align: center;
+                            }
+                            .bigText {
+                                font-size: 2em;
                             }
                             .boxContainer{
                                 display: flex;
@@ -59,7 +62,6 @@ class MainMenu extends Component {
                             }
                             .box {
                                 width:200px;
-
                                 padding: 10px;
                             }
                             .pageLink {
@@ -76,7 +78,6 @@ class MainMenu extends Component {
                             }
                         `}
                     </style>
-                </section>
             </div>
         )
     }

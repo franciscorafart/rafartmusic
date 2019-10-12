@@ -26,12 +26,6 @@ class IndexPage extends Component {
                     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap" rel="stylesheet"/>
                     <link rel="shortcut icon" type="image/png" href={this.props.urlFor(this.props.favicon.mainImage.asset._ref)}/>
                 </Head>
-                <style jsx>{`
-                    body {
-                        margin: 0;
-                        padding: 0;
-                    }
-                `}</style>
             </div>
         );
     }
