@@ -66,4 +66,10 @@ d. Setup a webhook for receiving build request, Netlify should build every time 
 e. Setup outgoing webhook in Sanity.io, so that Netlify builds every time content changes in Sanity.io
 
 Step 3. Mailchimp newsletter subscription
-TODO: Explanation of mailchimp setup
+Import form html from mailchimp dashboard. Adapt html to jsx syntax.
+
+
+# Commands
+$ npm run dev  // Run netlify site locally on /nextjs folder
+$ npm run start // Run Sanity locally on /rafartmusic folder
+$ sanity deploy // Deploy assets and schemas to Sanity CMS

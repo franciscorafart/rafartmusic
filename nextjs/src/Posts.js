@@ -16,7 +16,7 @@ class Posts extends Component {
 
                     return dateA<dateB? 1: -1;
             });
-            
+
             allPosts = onlyLatest && allPosts.length>0? [allPosts[0]]: allPosts;
         }
 
@@ -57,6 +57,11 @@ class Posts extends Component {
                                 }
                             </div>
                         </div>
+                        {post.link? <div>
+                            <form action={post.link}>
+                                <input className="callToAction text mediumText" type="submit" value="Check it out"/>
+                            </form>
+                        </div>: <div></div>}
                     </div>
                 })}
                 {
@@ -114,6 +119,9 @@ class Posts extends Component {
                     line-height: 1.5;
                     color: white;
                 }
+                .mediumText {
+                    font-size: 1em;
+                }
                 .bigText {
                     font-size: 2em;
                 }
@@ -129,6 +137,12 @@ class Posts extends Component {
                 .bold {
                     font-size: 1.3em;
                 }
+                .callToAction {
+                    width: 20%;
+                    margin: 20px 0 20px 65%;
+                    height: 60px;
+                    background-color: #519ead;
+                }
                 @media all and (max-width: 750px) {
                     .albumInfo {
                         flex-direction: column;
@@ -143,6 +157,9 @@ class Posts extends Component {
                     img {
                         width: 50%;
                         padding-left: 25%;
+                    }
+                    .callToAction {
+                        margin: 20px 0 20px 30%;
                     }
                 }
             `}</style>
