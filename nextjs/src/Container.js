@@ -5,6 +5,7 @@ import MainMenu from './MainMenu';
 import Intro from './Intro';
 import Videos from './Videos';
 import IndexPage from './IndexPage';
+import Footer from './Footer';
 
 import SignUp from './SignUp';
 import Contact from './Contact';
@@ -74,6 +75,10 @@ class Container extends Component {
                         selectedPage={page}
                     />
                     {content}
+                    <Footer
+                        urlFor={this.urlFor}
+                        menu={this.props.menu}
+                    />
                     <style jsx global>{`
                         body {
                             margin: 0;

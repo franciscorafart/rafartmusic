@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import client from '../client';
 
 import { fab } from '@fortawesome/free-brands-svg-icons'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Cover extends Component{
@@ -57,7 +56,6 @@ class Cover extends Component{
                                     })
                                 :<div></div>
                         }
-
                         </ul>
                     </div>
                     <style jsx>{`
@@ -66,7 +64,7 @@ class Cover extends Component{
                             width: 100%;
                             display: flex;
                             flex-direction: row;
-                            background-color: black;
+                            background-color: #14171F;
                         }
                         .text{
                             font-family: 'Encode Sans Expanded', sans-serif;

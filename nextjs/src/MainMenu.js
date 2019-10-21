@@ -8,16 +8,11 @@ class MainMenu extends Component {
 
     render(){
         return(
-            <div>
+            <div className="mainMenu">
                 <h2 className="text bigText">Main Menu</h2>
                 <div
                 className="boxContainer"
-                style = {
-                    {
-                    backgroundImage: `url(${this.props.urlFor(this.props.menuBackground.mainImage.asset._ref)})`,
-                    // opacity: 0.5;
-                    }
-                }
+
                 >
                     {
                         this.props.menu.filter(item => item.mainMenu).map(
@@ -40,6 +35,10 @@ class MainMenu extends Component {
                     }
                 </div>
                     <style jsx>{`
+                            .mainMenu {
+                                background-color: #14171F;
+                                padding-top: 60px;
+                            }
                             .h3Container {
                                 padding-bottom: 40px;
                             }

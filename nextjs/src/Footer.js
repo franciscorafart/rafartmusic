@@ -1,84 +1,92 @@
-import React, {Component} from 'react'
-import imageUrlBuilder from '@sanity/image-url'
-import client from '../client'
-import HoverIcon from './HoverIcon'
+import React, {Component} from 'react';
+import client from '../client';
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Footer extends Component {
-
     constructor(props){
         super(props)
     }
 
     render(){
+        console.log('this.props', this.props)
         return(
             <div className="footer-bg">
-                <footer>
-                    <div className="footer-content">
-                        <div className="nameDiv">
-                            <h1 className="text">{this.props.resources.name}</h1>
-                            <h2 className="text">{this.props.resources.profession}</h2>
-                        </div>
-                        <div className="middleDiv">
+                <footer className="footer-content">
+                    <div className="one-third">
+                        <p className="text">This is a custom made website. Check out the code on GitHub: <a className="socialMedia" href="www.github.com"><FontAwesomeIcon icon={fab['faGithub']} size="4x"/></a>
+                        </p>
+                    </div>
+                    <div className="one-third">
 
-                        </div>
-                        <div className="contacts">
-                            <div className="icons">
-                                {
-                                this.props.social_media.map(icon => {
-                                    return <HoverIcon
-                                        key={icon.name}
-                                        noHover={this.props.urlFor(icon.image.asset._ref)}
-                                        hover={this.props.urlFor(icon.image_hover.asset._ref)}
-                                        link={icon.link}
-                                    />
-                                })
-                                }
-                            </div>
-                        </div>
+                    </div>
+                    <div className="one-third">
+                        <h3 className="text">Follow me on Social Media:</h3>
+                        <ul className="menuItems">
+                        {
+                            this.props.menu?
+                            this.props.menu.filter(
+                                item => item.socialMedia
+                            ).sort((a,b) => a.order<b.order?1:-1).map(
+                                    item => {
+                                    return <li key={item.slug} className="text">
+                                            <a className="socialMedia" href={item.linkString}>
+                                                <FontAwesomeIcon icon={fab[item.iconClass]} size="4x"/>
+                                            </a>
+                                        </li>
+                                    })
+                                :<div></div>
+                        }
+                        </ul>
                     </div>
                 </footer>
                 <style jsx>{`
                     .footer-bg {
-                        background-color: #4F4F4F;
-                        min-height: 80px;
+                        background-color: #14171F;
+                        min-height: 200px;
                     }
                     .footer-content {
-                        width: 80%;
-                        margin-left: 10%;
                         display: flex;
+                        flex-direction:row;
+                        justify-content: space-around;
                     }
-                    .text{
-                        font-family: 'Lato', sans-serif;
+                    .text {
+                        font-family: 'Encode Sans Expanded', sans-serif;
+                        font-size: 1em;
+                        color: white;
+                        list-style-type: none;
                     }
-                    .nameDiv{
-                        flex: 7;
-                    }
-                    .contacts {
+                    .one-third {
+                        padding: 40px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
                         flex: 1;
                     }
-                    .icons {
+                    .menuItems {
                         display: flex;
-                        padding-top: 20px;
+                        flex-direction: row;
+                        justify-content: space-between;
                     }
-                    h1 {
-                        font-size: 1.2em;
-                        font-weigth: 900;
-                        color: #FFFFFF;
+                    .socialMedia {
+                        display: block;
+                        width: 20px;
                     }
-                    h2 {
-                        color: #AAAAAA;
-                        font-size: 0.8em;
+                    a {
+                        margin-top: 20px;
+                        text-decoration: none;
+                        color: white;
                     }
-                    @media only screen and (max-width:650px){
+                    ul {
+                        margin: 0px;
+                        padding: 0px;
+                    }
+                    @media all and (max-width: 750px){
                         .footer-content {
-                            width: 90%;
-                            margin-left: 5%;
+                            flex-direction: column;
                         }
-                        .nameDiv{
-                            flex: 2;
-                        }
-                        .contacts {
-                            flex: 1;
+                        .one-third {
+                            padding: 10px 20px 10px 20px;
                         }
                     }
                 `}</style>
