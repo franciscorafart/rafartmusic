@@ -12,6 +12,7 @@ import Contact from './Contact';
 import Albums from './Albums';
 import About from './About';
 import Posts from './Posts';
+import ShopRafart from './ShopRafart';
 
 import client from '../client';
 import imageUrlBuilder from '@sanity/image-url'
@@ -37,7 +38,7 @@ class Container extends Component {
     render(){
         const page = this.props.page;
         let content = <div></div>
-
+        console.log('this.props', this.props)
         if (page === 'home'){
             content = <div>
                 <Cover urlFor={this.urlFor} coverImage={this.props.coverImage}/>
@@ -62,6 +63,8 @@ class Container extends Component {
             content = <SignUp/>
         } else if (page === 'posts'){
             content = <Posts urlFor={this.urlFor} posts={this.props.posts}/>
+        } else if (page === 'shop-rafart'){
+            content = <ShopRafart urlFor={this.urlFor} posts={this.props.posts}/>
         }
 
         return(
