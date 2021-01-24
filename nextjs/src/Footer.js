@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import client from '../client';
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -9,17 +8,16 @@ class Footer extends Component {
     }
 
     render(){
-        console.log('this.props', this.props)
         return(
             <div className="footer-bg">
                 <footer className="footer-content">
-                    <div className="one-third">
-                        <p className="text">This is a custom made website. Check out the code on GitHub: <a className="socialMedia" href="www.github.com"><FontAwesomeIcon icon={fab['faGithub']} size="4x"/></a>
-                        </p>
-                    </div>
-                    <div className="one-third">
-
-                    </div>
+                    {
+                        !this.props.isMobile &&
+                        <div className="one-third">
+                            <p className="text">This website is built with JAMstack. Check out the code on GitHub: <a className="socialMedia" href="www.github.com"><FontAwesomeIcon icon={fab['faGithub']} size="4x"/></a></p>
+                        </div>
+                    }
+                    <div className="one-third" />
                     <div className="one-third">
                         <h3 className="text">Follow me on Social Media:</h3>
                         <ul className="menuItems">

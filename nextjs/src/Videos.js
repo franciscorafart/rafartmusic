@@ -28,9 +28,9 @@ class Videos extends Component {
         const width = this.state.smallVideo? "355": "560";
         const height = this.state.smallVideo? "200": "315";
 
+        // TODO: Sort videos by date added and slice 4 latest
         return (
             <div className="container">
-                <h2 className="text">Latest Videos</h2>
                 <div className="videoBoxContainer">
                     {
                         this.props.videos.map(v => {

@@ -15,16 +15,16 @@ Index.getInitialProps = async function() {
   const posts = await client.fetch('*[_type == "post"]{title, slug, mainImage, publishedAt, paragraph, link, visible}');
 
   return {
-    albums: albums,
-    coverImage: coverImage,
-    menu: menu,
-    logo: logo,
-    menuBackground: menuBackground,
-    videos: videos,
-    favicon: favicon,
-    rafart1: rafart1,
-    posts: posts,
-    page: 'home',
+      albums: albums,
+      coverImage: coverImage,
+      menu: menu,
+      logo: logo,
+      menuBackground: menuBackground,
+      videos: videos,
+      favicon: favicon,
+      rafart1: rafart1,
+      posts: posts,
+      page: 'home',
     };
 };
 

@@ -1,82 +1,99 @@
-import React, {Component} from 'react'
-import imageUrlBuilder from '@sanity/image-url'
-import client from '../client'
+import React, {useState, Fragment} from 'react'
+import {Button, Box, Drawer, Typography} from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles({
+    headerBg: {
+        width: '100%',
+        minHeight: props => props.isMobile? '200px' : '420px',
+        backgroundSize: 'cover',
+        display: 'flex',
+        justifyContent: 'space-between',
+    },
+    introContainer: {
+        width: props => props.isMobile ? '55%': '30%',
+        marginLeft: props => props.isMobile ? '10px' : '20px',
+        display: 'flex',
+        flexDirection: 'column',
+    },
+    logo: {
+        maxHeight: '100px',
+    },
+    menuButton: {
+        color: '#FFFFFF',
+        width: '45px',
+        height: '45px',
+    },
+    paper: {
+        padding: '32px 0 0 24px',
+        backgroundColor: '#14171F',
+        width: props => props.isMobile ? '100%' : '300px',
+    },
+    text: {
+        fontFamily: 'Encode Sans Expanded',
+        fontSize: '1em',
+        color: 'white',
+        textAlign: 'center',
+        textDecoration: 'None',
 
-class Cover extends Component{
-    constructor(props){
-        super(props)
+        '&:hover': {
+            color: '#c4ed21',
+        }
     }
+});
 
-    render(){
-        return(
-                <div>
-                    <section>
-                    {
-                        this.props.coverImage?
-                        <div
-                        className="header-bg"
-                        style = {{backgroundImage: `url(${this.props.urlFor(this.props.coverImage.mainImage.asset._ref)})`}}
-                        >
-                            {
-                                // TODO: Insert stuff on top of the cover image
-                            }
-                        </div>:
-                        <span className="text">Loading...</span>
-                    }
-
-                    </section>
-                        <style jsx>{`
-                            .clearfix:after {
-                                 content: ".";
-                                 display: block;
-                                 clear: both;
-                                 visibility: hidden;
-                                 line-height: 0;
-                                 height: 0;
-                            }
-                            .header-content {
-                               width: 80%;
-                               margin-left: 10%;
-                            }
-                            .header-bg {
-                                width: 100%;
-                                min-height:350px;
-                                background-size: cover;
-                            }
-                              h1 {
-                                font-size: 2.6em;
-                                letter-spacing: 1px;
-                                font-weight: 900;
-                                line-height: 45px;
-                              	color: #FFFFFF;
-                              }
-                              h2 {
-                                 font-size: 1.6em;
-                                 font-weight: 600;
-                                 color: #AAAAAA;
-                              }
-                              p {
-                                font-size: 0.8em;
-                                color: #FFFFFF;
-                                font-weight: 200;
-                                line-height: 26px;
-                                text-align: justify;
-                              }
-                              @media all and (max-width: 750px){
-                                  .header-bg {
-                                     display: none;
-                                  }
-                                  .header-bg {
-                                      background-color: #F2F2F2;
-                                      padding: 30px 0 0 0;
-                                  }
-                              }
-                            `}
-                        </style>
-                </div>
-        )
-    }
+const Cover = props => {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const classes = useStyles({isMobile: props.isMobile});
+    return(
+            <div>
+                <section>
+                {
+                    props.coverImage?
+                    <div
+                        className={classes.headerBg}
+                        style = {{backgroundImage: `url(${props.urlFor(props.coverImage.mainImage.asset._ref)})`}}
+                    > 
+                        <Box pt='20px' pl='2%' className={classes.introContainer}>
+                            <img className={classes.logo} src={props.urlFor(props.logo.mainImage.asset._ref)}/>
+                            <Typography className={classes.text}>Chapman Stick and Electronic Prog-Rock</Typography>
+                        </Box>
+                        {!menuOpen && <Box p='20px'>
+                                <Button onClick={() => setMenuOpen(true)}>
+                                    <span className={classes.menuButton}><FontAwesomeIcon icon={faBars}/>Menu</span>
+                                </Button>
+                            </Box>
+                        }
+                        
+                        <Fragment>
+                            <Drawer 
+                                anchor={props.isMobile ? 'bottom': 'right'}
+                                open={menuOpen} 
+                                classes={{
+                                    paper: classes.paper,
+                                }}
+                                onClose={() => {
+                                    setMenuOpen(false);
+                                }}
+                            >
+                                {props.menu.filter(item => item.mainMenu || item.headerMenu).map(
+                                    item => <Box mb='15px'>
+                                        <a className={classes.text} href={item.linkString}>
+                                            {item.title}
+                                        </a>
+                                    </Box>
+                                    )
+                                } 
+                            </Drawer>
+                        </Fragment>
+                    </div>:
+                    <span className={classes.text}>Loading...</span>
+                }
+                </section>
+            </div>
+    )
 }
 
 export default Cover

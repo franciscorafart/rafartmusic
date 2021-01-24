@@ -21,8 +21,8 @@ class SignUp extends Component {
         this.onChangeEmail = this.onChangeEmail.bind(this);
         this.handleName = this.handleName.bind(this);
         this.handleLastName = this.handleLastName.bind(this);
-        console.log('on constructor')
     }
+
     onChangeEmail(e) {
         this.setState({email: e.target.value});
     }
@@ -39,18 +39,17 @@ class SignUp extends Component {
         return (
             <div id="mc_embed_signup" className="signupContainer">
                 <form
-                action="https://gmail.us20.list-manage.com/subscribe/post?u=8c1bfb4e83f17c8efacf4d0c9&amp;id=a4c49fde59"
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                className="validate"
-                target="_blank"
-                noValidate
+                    action="https://gmail.us20.list-manage.com/subscribe/post?u=8c1bfb4e83f17c8efacf4d0c9&amp;id=a4c49fde59"
+                    method="post"
+                    id="mc-embedded-subscribe-form"
+                    name="mc-embedded-subscribe-form"
+                    className="validate"
+                    target="_blank"
+                    noValidate
                 >
                 <div id="mc_embed_signup_scroll">
-                	<h2 className="text textWhite">Subscribe</h2>
                     <div className="indicates-required text textWhite"><span className="asterisk">*</span> indicates required</div>
-                    <div className="mc-field-group">
+                    <div>
                     	<label className="text textWhite" htmlFor="mce-EMAIL">Email Address  <span className="asterisk">*</span></label>
                     	<input
                         type="email"
@@ -61,7 +60,7 @@ class SignUp extends Component {
                         id="mce-EMAIL"
                         />
                     </div>
-                    <div className="mc-field-group">
+                    <div>
                     	<label className="text textWhite" htmlFor="mce-FNAME">First Name </label>
                     	<input
                         type="text textWhite"
@@ -72,7 +71,7 @@ class SignUp extends Component {
                         id="mce-FNAME"
                         />
                     </div>
-                    <div className="mc-field-group">
+                    <div>
                     	<label className="text textWhite" htmlFor="mce-LNAME">Last Name </label>
                     	<input
                         type="text textWhite"
@@ -83,30 +82,27 @@ class SignUp extends Component {
                         id="mce-LNAME"
                         />
                     </div>
-                    <div id="mergeRow-gdpr" className="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+                    <div id="mergeRow-gdpr" className="mergeRow">
                         <div className="content__gdpr">
                             <label className="text textWhite">Language</label>
                             <p className="text textWhite">Please select your prefered language for newsletters:</p>
                             <fieldset className="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
-                    		<label
-                            className="checkbox subfield"
-                            htmlFor="gdpr_31913"
-                            >
+                    		<label className="language" htmlFor="gdpr_31913">
                                 <input
-                                type="checkbox"
-                                id="gdpr_31913"
-                                name="gdpr[31913]"
-                                value="Y" className="av-checkbox "
+                                    type="checkbox"
+                                    id="gdpr_31913"
+                                    name="gdpr[31913]"
+                                    value="Y" className="av-checkbox"
                                 />
                                 <span className="text textWhite">English</span>
                             </label>
-                            <label className="checkbox subfield" htmlFor="gdpr_31917">
+                            <label className="language" htmlFor="gdpr_31917">
                                 <input
-                                type="checkbox"
-                                id="gdpr_31917"
-                                name="gdpr[31917]"
-                                value="Y"
-                                className="av-checkbox "
+                                    type="checkbox"
+                                    id="gdpr_31917"
+                                    name="gdpr[31917]"
+                                    value="Y"
+                                    className="av-checkbox"
                                 />
                                 <span className="text textWhite">Español</span>
                             </label>
@@ -122,22 +118,24 @@ class SignUp extends Component {
                 		<div className="response" id="mce-success-response" style={{display:"none"}}></div>
                 	</div>
                     <div
-                    style={{position: "absolute", left: "-5000px"}}
-                    aria-hidden="true"
+                        style={{position: "absolute", left: "-5000px"}}
+                        aria-hidden="true"
                     >
                         <input
-                        type="text textWhite"
-                        name="b_8c1bfb4e83f17c8efacf4d0c9_a4c49fde59"
-                        tabIndex="-1"
-                        val={""}/>
+                            type="text textWhite"
+                            name="b_8c1bfb4e83f17c8efacf4d0c9_a4c49fde59"
+                            tabIndex="-1"
+                            val={""}
+                        />
                     </div>
                     <div className="clear">
                         <input
-                        type="submit"
-                        value="Subscribe"
-                        name="subscribe"
-                        id="mc-embedded-subscribe"
-                        className="button text textSmall textWhite"/>
+                            type="submit"
+                            value="Subscribe"
+                            name="subscribe"
+                            id="mc-embedded-subscribe"
+                            className="button text textSmall textWhite"
+                        />
                     </div>
                 </div>
                 </form>
@@ -146,8 +144,9 @@ class SignUp extends Component {
                     width: 60%;
                     margin-left: 20%;
                     min-height: 600px;
-                    background: #fff;
                     background-color: black;
+                    padding: 16px 3% 16px 3%;
+                    border: 1px solid gray;
                 }
                 .asterisk {
                     color: red;
@@ -180,16 +179,29 @@ class SignUp extends Component {
                 .textWhite {
                     color: white;
                 }
+                .language {
+                    display: flex;
+                    flex-align: start;
+                    margin-bottom: 0;
+                }
+                .av-checkbox {
+                    width: auto;
+                }
                 .button {
+                    cursor: pointer;
                     width: 20%;
+                    padding: 0;
                     margin: 20px 0 20px 1%;
                     height: 30px;
-                    background-color: #519ead;
+                    background-color: #1db954;
                 }
                 @media all and (max-width: 750px) {
                     .signupContainer {
                         width: 100%;
                         margin: 40px 2% 40px 2%;
+                    }
+                    .button {
+                        width: 30%;
                     }
                 }
             `}</style>

@@ -7,3 +7,7 @@ https://cobwwweb.com/what-you-need-to-know-about-netlify-forms
 
 - Font Awesome in React
 https://www.npmjs.com/package/@fortawesome/react-fontawesome
+
+
+- Stylesheet injection issue solution for MaterialUI
+https://developerhandbook.com/react/how-to-set-up-nextjs-material-ui/

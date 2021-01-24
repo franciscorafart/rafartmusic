@@ -23,13 +23,7 @@ class Posts extends Component {
         return (
             <div className="container">
             <div>
-                {
-
-                    onlyLatest?
-                        allPosts.length>0?
-                            <div><h2 className="text bigText centeredTitle">Latest news</h2></div>
-                        :
-                            <div></div>
+                { onlyLatest? <div></div>
                     :
                         <div><h2 className="text bigText centeredTitle">Posts and News</h2></div>
                 }
@@ -112,7 +106,8 @@ class Posts extends Component {
                 }
                 form {
                     width: 100%;
-                    padding-left: 10%;
+                    display: flex;
+                    justify-content: flex-end;
                 }
                 .text{
                     font-family: 'Encode Sans Expanded', sans-serif;
@@ -128,20 +123,15 @@ class Posts extends Component {
                 .centeredTitle {
                     text-align: center;
                 }
-                .callToAction {
-                    width: 80%;
-                    height: 30px;
-                    background-color: #519ead;
-                    margin: 10px 0 10px 0;
-                }
                 .bold {
                     font-size: 1.3em;
                 }
                 .callToAction {
                     width: 20%;
-                    margin: 20px 0 20px 65%;
+                    margin: 20px 20px 20px 0;
                     height: 60px;
-                    background-color: #519ead;
+                    background-color: #1db954;
+                    cursor: pointer;
                 }
                 @media all and (max-width: 750px) {
                     .albumInfo {
@@ -158,8 +148,12 @@ class Posts extends Component {
                         width: 50%;
                         padding-left: 25%;
                     }
+                    form {
+                        justify-content: center;
+                    }
                     .callToAction {
-                        margin: 20px 0 20px 30%;
+                        margin: 20px 0 20px 0;
+                        width: 40%;
                     }
                 }
             `}</style>
