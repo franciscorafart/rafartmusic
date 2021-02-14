@@ -24,6 +24,7 @@ const useStyles = makeStyles({
         borderTop: '1px solid white',
     },
     summary: {
+        height: '80px',
         '&.MuiAccordionSummary-content': {
             display: 'flex',
             padding: props => props.isMobile? '0 0 0 0' : '0 10px 0 10px',
@@ -71,7 +72,7 @@ const Page = props => {
     // TODO: Add
     // Upcoming shows section
     const boxPadding = isMobile? 0 : 8;
-    const boxMargin = isMobile? 8 : 10;
+    const boxMargin = isMobile? 4 : 6;
     if (page === 'home'){
         content = <Box pl={boxPadding} pr={boxPadding} pt={boxPadding/2} mt={boxMargin} mb={boxMargin}>
             <Accordion className={classes.accordion} expanded={expanded === 'panel1'} onChange={() => setExpanded(expanded === 'panel1' ? '' : 'panel1')}>

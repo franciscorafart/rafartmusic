@@ -13,18 +13,19 @@ const useStyles = makeStyles({
         justifyContent: 'space-between',
     },
     introContainer: {
-        width: props => props.isMobile ? '55%': '30%',
+        maxWidth: props => props.isMobile ? '50%': '30%',
         marginLeft: props => props.isMobile ? '10px' : '20px',
         display: 'flex',
         flexDirection: 'column',
     },
     logo: {
-        maxHeight: '100px',
+        maxHeight: props => props.isMobile? '60px' : '80px',
+        maxWidth: props => props.isMobile? '200px' : '320px',
     },
     menuButton: {
         color: '#FFFFFF',
-        width: '45px',
-        height: '45px',
+        width: props => props.isMobile? '35px' : '45px',
+        height: props => props.isMobile? '35px' : '45px',
     },
     paper: {
         padding: '32px 0 0 24px',
@@ -33,10 +34,15 @@ const useStyles = makeStyles({
     },
     text: {
         fontFamily: 'Encode Sans Expanded',
-        fontSize: '1em',
         color: 'white',
         textAlign: 'center',
         textDecoration: 'None',
+    },
+    subHeader: {
+        fontSize: props => props.isMobile? '0.7em' : '1em',
+    },
+    menuText: {
+        fontSize: props => props.isMobile? '1.2em' : '1.4em',
 
         '&:hover': {
             color: '#c4ed21',
@@ -58,11 +64,11 @@ const Cover = props => {
                     > 
                         <Box pt='20px' pl='2%' className={classes.introContainer}>
                             <img className={classes.logo} src={props.urlFor(props.logo.mainImage.asset._ref)}/>
-                            <Typography className={classes.text}>Chapman Stick and Electronic Prog-Rock</Typography>
+                            <Typography className={`${classes.text} ${classes.subHeader}`}>Chapman Stick and Electronic Prog-Rock</Typography>
                         </Box>
                         {!menuOpen && <Box p='20px'>
                                 <Button onClick={() => setMenuOpen(true)}>
-                                    <span className={classes.menuButton}><FontAwesomeIcon icon={faBars}/>Menu</span>
+                                    <span className={classes.menuButton}><FontAwesomeIcon icon={faBars}/></span>
                                 </Button>
                             </Box>
                         }
@@ -80,7 +86,7 @@ const Cover = props => {
                             >
                                 {props.menu.filter(item => item.mainMenu || item.headerMenu).map(
                                     item => <Box mb='15px'>
-                                        <a className={classes.text} href={item.linkString}>
+                                        <a className={`${classes.text} ${classes.menuText}`} href={item.linkString}>
                                             {item.title}
                                         </a>
                                     </Box>
