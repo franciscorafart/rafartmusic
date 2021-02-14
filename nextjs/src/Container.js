@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Accordion, AccordionSummary, AccordionDetails, Box, Typography} from '@material-ui/core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faChevronLeft, faChevronDown} from '@fortawesome/free-solid-svg-icons';
+import {Box, Typography} from '@material-ui/core';
 
 import Cover from './Cover';
 import IndexPage from './IndexPage';
@@ -19,33 +17,13 @@ import imageUrlBuilder from '@sanity/image-url'
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
-    accordion: {
-        backgroundColor: 'transparent',
-        borderTop: '1px solid white',
-    },
-    summary: {
-        height: '80px',
-        '&.MuiAccordionSummary-content': {
-            display: 'flex',
-            padding: props => props.isMobile? '0 0 0 0' : '0 10px 0 10px',
-        }
-    },
-    last: {
-        borderBottom: '1px solid white',
-    },
     text: {
         fontFamily: 'Encode Sans Expanded',
-        fontSize: props => props.isMobile? '1em': '1.8em',
+        fontSize: props => props.isMobile? '1.4em': '1.8em',
         color: 'white',
         textAlign: 'center',
         textDecoration: 'None',
     },
-    chevron: {
-        color: 'white',
-        width: '20px',
-        height: '20px',
-        margin: props => props.isMobile? '3px 0 0 3px' : '15px 0 0 5px',
-    }
 });
 
 const builder = imageUrlBuilder(client)
@@ -55,12 +33,18 @@ const Page = props => {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        function handleResize() {
-          setIsMobile(window.innerWidth < 450)
+        if (typeof window !== 'undefined') {
+            function handleResize() {
+                setIsMobile(window.innerWidth < 450);
+            }
+
+            window.addEventListener('resize', handleResize, {passive: true});
+
+            handleResize();
+
+            return () => window.removeEventListener("resize", handleResize);
         }
-    
-        window.addEventListener('resize', handleResize)
-    })
+    }, []);
 
     const urlFor = source => builder.image(source);
 
@@ -71,37 +55,17 @@ const Page = props => {
 
     // TODO: Add
     // Upcoming shows section
-    const boxPadding = isMobile? 0 : 8;
-    const boxMargin = isMobile? 4 : 6;
+    const boxPadding = isMobile? 0 : 2;
+    const boxMargin = isMobile? 5 : 6;
+
     if (page === 'home'){
         content = <Box pl={boxPadding} pr={boxPadding} pt={boxPadding/2} mt={boxMargin} mb={boxMargin}>
-            <Accordion className={classes.accordion} expanded={expanded === 'panel1'} onChange={() => setExpanded(expanded === 'panel1' ? '' : 'panel1')}>
-                <AccordionSummary className={classes.summary}>
-                    <Typography className={classes.text}>Latest News</Typography>
-                    <FontAwesomeIcon className={classes.chevron} icon={expanded === 'panel1' ? faChevronDown : faChevronLeft}/>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Posts urlFor={urlFor} posts={props.posts} onlyLatest={true}/>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion className={classes.accordion} expanded={expanded === 'panel2'} onChange={() =>  setExpanded(expanded === 'panel2' ? '' : 'panel2')}>
-                <AccordionSummary className={classes.summary}>
-                    <Typography className={classes.text}>Latest Videos</Typography>
-                    <FontAwesomeIcon className={classes.chevron} icon={expanded === 'panel2' ? faChevronDown : faChevronLeft}/>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Videos videos={props.videos}/>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion className={`${classes.accordion} ${classes.last}`} expanded={expanded === 'panel3'} onChange={() =>  setExpanded(expanded === 'panel3' ? '' : 'panel3')}>
-                <AccordionSummary className={classes.summary}>
-                    <Typography className={classes.text}>Sign up Newsletter</Typography>
-                    <FontAwesomeIcon className={classes.chevron} icon={expanded === 'panel3' ? faChevronDown : faChevronLeft}/>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <SignUp/>
-                </AccordionDetails>
-            </Accordion>
+            <Typography className={classes.text}>Latest News</Typography>
+            <Posts urlFor={urlFor} posts={props.posts} onlyLatest={true}/>
+            <Typography className={classes.text}>Latest Videos</Typography>
+            <Videos videos={props.videos}/>
+            <Typography className={classes.text}>Sign up Newsletter</Typography>
+            <SignUp/>
         </Box>
     } else if (page === 'contact'){
         content = <Contact/>

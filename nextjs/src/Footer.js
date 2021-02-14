@@ -19,7 +19,6 @@ class Footer extends Component {
                     }
                     <div className="one-third" />
                     <div className="one-third">
-                        <h3 className="text">Follow me on Social Media:</h3>
                         <ul className="menuItems">
                         {
                             this.props.menu?
