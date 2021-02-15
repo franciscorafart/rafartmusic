@@ -84,7 +84,7 @@ const Cover = props => {
                                     setMenuOpen(false);
                                 }}
                             >
-                                {props.menu.filter(item => item.mainMenu || item.headerMenu).map(
+                                {props.menu.filter(item => item.headerMenu).sort((a,b) => a < b ? 1 : -1).map(
                                     (item, idx)=> <Box mb='15px' key={`${item.title}-${idx}`}>
                                         <a className={`${classes.text} ${classes.menuText}`} href={item.linkString}>
                                             {item.title}
