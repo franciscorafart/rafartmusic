@@ -12,7 +12,7 @@ class Contact extends Component {
                     method="POST"
                     data-netlify="true"
                     netlify-honeypot="bot-field"
-                    data-netlify-recaptcha="true"
+                    // data-netlify-recaptcha="true"
                 >
 
                     <input type="hidden" name="bot-field"/>
@@ -32,7 +32,7 @@ class Contact extends Component {
                             <label className="text">Message: </label><textarea name="message"></textarea>
                         </p>
                     </div>
-                    <div data-netlify-recaptcha="true"></div>
+                    {/* <div data-netlify-recaptcha="true"></div> */}
                     <div className="inputContainer">
                         <p>
                             <button className="callToAction text textWhite" type="submit">Send</button>
