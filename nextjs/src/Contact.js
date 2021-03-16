@@ -9,13 +9,13 @@ class Contact extends Component {
                     <h2><label className="text">Contact Form</label></h2>
                 </div>
                 <form name="contact"
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                data-netlify-recaptcha="true"
+                    method="POST"
+                    data-netlify="true"
+                    netlify-honeypot="bot-field"
+                    data-netlify-recaptcha="true"
                 >
 
-                    <input type="hidden" name="form-name" value="contact" data-netlify-recaptcha="true"/>
+                    <input type="hidden" name="bot-field"/>
 
                     <div className="inputContainer">
                         <p>
@@ -32,12 +32,12 @@ class Contact extends Component {
                             <label className="text">Message: </label><textarea name="message"></textarea>
                         </p>
                     </div>
+                    <div data-netlify-recaptcha="true"></div>
                     <div className="inputContainer">
                         <p>
                             <button className="callToAction text textWhite" type="submit">Send</button>
                         </p>
                     </div>
-                    <div data-netlify-recaptcha="true"/>
                 </form>
             <style jsx>
             {`
