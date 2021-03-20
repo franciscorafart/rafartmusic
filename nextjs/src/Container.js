@@ -6,8 +6,9 @@ import IndexPage from './IndexPage';
 import Contact from './Contact';
 import Albums from './Albums';
 import About from './About';
-import Posts from './Posts';
+import FastLinks from './FastLinks';
 import Footer from './Footer';
+import Posts from './Posts';
 import SignUp from './SignUp';
 import Videos from './Videos';
 
@@ -29,7 +30,6 @@ const useStyles = makeStyles({
 const builder = imageUrlBuilder(client)
 
 const Page = props => {
-    const [expanded, setExpanded] = useState('');
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -51,23 +51,30 @@ const Page = props => {
     const classes = useStyles({isMobile});
 
     const page = props.page;
-    let content = <div></div>;
 
     // TODO: Add
     // Upcoming shows section
     const boxPadding = isMobile? 0 : 2;
     const boxMargin = isMobile? 5 : 6;
 
-    if (page === 'home'){
-        content = <Box pl={boxPadding} pr={boxPadding} pt={boxPadding/2} mt={boxMargin} mb={boxMargin}>
-            <Typography className={classes.text}>Latest News</Typography>
-            <Posts urlFor={urlFor} posts={props.posts} onlyLatest={true}/>
-            <Typography className={classes.text}>Latest Videos</Typography>
-            <Videos videos={props.videos}/>
-            <Typography className={classes.text}>Sign up Newsletter</Typography>
-            <SignUp/>
-        </Box>
-    } else if (page === 'contact'){
+    let content = <Box pl={boxPadding} pr={boxPadding} pt={boxPadding/2} mt={boxMargin} mb={boxMargin}>
+        <Typography className={classes.text}>Latest News</Typography>
+        <Posts urlFor={urlFor} posts={props.posts} onlyLatest={true}/>
+        <Typography className={classes.text}>Latest Videos</Typography>
+        <Videos videos={props.videos}/>
+        <Typography className={classes.text}>Sign up Newsletter</Typography>
+        <SignUp/>
+    </Box>;
+
+    let cover = <Cover
+        urlFor={urlFor}
+        coverImage={props.coverImage}
+        rafart1={props.rafart1}
+        menu={props.menu}
+        logo={props.logo}
+        isMobile={isMobile}
+    />
+    if (page === 'contact'){
         content = <Contact/>
     } else if (page === 'albums'){
         content = <Albums urlFor={urlFor} albums={props.albums}/>
@@ -75,20 +82,16 @@ const Page = props => {
         content = <About urlFor={urlFor} about={props.about}/>
     } else if (page === 'posts'){
         content = <Posts urlFor={urlFor} posts={props.posts}/>
+    } else if (page === 'fast-links'){
+        content = <FastLinks urlFor={urlFor} logo={props.logo} />
+        cover = null;
     }
 
     return(
         <div className="website_div">
             <IndexPage urlFor={urlFor} favicon={props.favicon}/>
             <div>
-                <Cover 
-                    urlFor={urlFor} 
-                    coverImage={props.coverImage}
-                    rafart1={props.rafart1}
-                    menu={props.menu}
-                    logo={props.logo}
-                    isMobile={isMobile}
-                />
+                {cover}
                 {content}
                 <Footer
                     urlFor={urlFor}
