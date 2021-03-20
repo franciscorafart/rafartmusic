@@ -53,7 +53,7 @@ const Contact = (props) => {
                     margin-bottom: 50px;
                 }
                 @media all and (max-width: 750px) {
-                    .linkContainer {
+                    .anchorContainer {
                         width: 70%;
                     }
                 }
