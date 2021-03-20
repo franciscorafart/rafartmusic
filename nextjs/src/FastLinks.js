@@ -14,16 +14,16 @@ const Contact = (props) => {
         ];
 
         return (
-            <div className="fastLinkContainer">
+            <div className="instagramContainer">
                 <img className='logo' src={props.urlFor(props.logo.mainImage.asset._ref)}/>
                 {links.map(link => (
-                    <a href={link.url} target="_blank" className='linkContainer' key={link.url}>
+                    <a href={link.url} target="_blank" className='anchorContainer' key={link.url}>
                         <span className="text">{link.label}</span>
                     </a>
                 ))}
             <style jsx>
             {`
-                .fastLinkContainer{
+                .instagramContainer{
                     padding-top: 40px;
                     min-height: 500px;
                     background: black;
@@ -31,13 +31,13 @@ const Contact = (props) => {
                     flex-direction: column; 
                     align-items: center;
                 }
-                .linkContainer {
+                .anchorContainer {
                     display: block;
                     margin-bottom: 30px;
                     padding: 10px;
                     border: 1px solid white;
                     width: 30%;
-
+                    text-decoration: none;
                     display: flex;
                     justify-content: center;
                 }

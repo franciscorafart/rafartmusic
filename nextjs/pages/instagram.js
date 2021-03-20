@@ -14,7 +14,7 @@ FastLinks.getInitialProps = async function(){
         menu: menu,
         coverImage: coverImage,
         favicon: favicon,
-        page: 'fast-links'
+        page: 'instagram'
     }
 };
 

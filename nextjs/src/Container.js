@@ -83,7 +83,7 @@ const Page = props => {
         content = <About urlFor={urlFor} about={props.about}/>
     } else if (page === 'posts'){
         content = <Posts urlFor={urlFor} posts={props.posts}/>
-    } else if (page === 'fast-links'){
+    } else if (page === 'instagram'){
         content = <FastLinks urlFor={urlFor} logo={props.logo} />
         cover = null;
     }
