@@ -33,7 +33,7 @@ class Videos extends Component {
             <div className="container">
                 <div className="videoBoxContainer">
                     {
-                        this.props.videos.map(v => {
+                        this.props.videos && this.props.videos.map(v => {
                             return <div key={v.slug} className="videoBox">
                             <YoutubeVideo
                                 video={v}

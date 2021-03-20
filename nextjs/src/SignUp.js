@@ -108,7 +108,7 @@ class SignUp extends Component {
                                     <span className="text textWhite">Español</span>
                                 </label>
                                 </fieldset>
-                                <p className="text textWhite textSmall">You can change your mind at any time by clicking the unsubscribe link in the footer of any email you receive from us, or by contacting us at rafart@rafartmusic.com. We will treat your information with respect. For more information about our privacy practices please visit our website. By clicking below, you agree that we may process your information in accordance with these terms.</p>
+                                <p className="text textWhite textSmall">You can change your mind at any time by clicking the unsubscribe link in the footer of any email you receive from us. We will treat your information with respect. For more information about our privacy practices please visit our website. By clicking below, you agree that we may process your information in accordance with these terms.</p>
                             </div>
                             <div className="content__gdprLegal">
                                 <p className="text textWhite textSmall">We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/" target="_blank">Learn more about Mailchimp's privacy practices here.</a></p>
@@ -217,6 +217,3 @@ class SignUp extends Component {
 }
 
 export default SignUp;
-
-
-// <script type='text/javascript'></script>
