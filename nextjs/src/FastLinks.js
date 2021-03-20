@@ -17,11 +17,9 @@ const Contact = (props) => {
             <div className="fastLinkContainer">
                 <img className='logo' src={props.urlFor(props.logo.mainImage.asset._ref)}/>
                 {links.map(link => (
-                    <div key={link.url}>
-                        <a href={link.url} target="_blank" className='linkContainer'>
-                            <span className="text">{link.label}</span>
-                        </a>
-                    </div>
+                    <a href={link.url} target="_blank" className='linkContainer' key={link.url}>
+                        <span className="text">{link.label}</span>
+                    </a>
                 ))}
             <style jsx>
             {`
