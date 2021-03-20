@@ -74,6 +74,7 @@ const Page = props => {
         logo={props.logo}
         isMobile={isMobile}
     />
+    
     if (page === 'contact'){
         content = <Contact/>
     } else if (page === 'albums'){
