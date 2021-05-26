@@ -5,6 +5,8 @@ const Contact = (props) => {
         
         // TODO: Replace with CMS content
         const links = [
+            // {url: 'https://app.rafartmusic.com', label: 'The Great Refusal stream'},
+            {url: 'https://www.youtube.com/watch?v=kIdGkHos1pk', label: 'Eros - Live Looping video'},
             {url: 'https://open.spotify.com/album/0VtCqZSkEXMNVWCkvhTlNB?', label: 'Andes Haze'},
             {url: '/', label: 'Rafart Website'},
             {url: 'https://www.youtube.com/franciscorafart', label: 'Youtube'},
