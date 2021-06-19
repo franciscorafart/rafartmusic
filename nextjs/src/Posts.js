@@ -32,7 +32,7 @@ class Posts extends Component {
                     allPosts.map(post => {
 
                     let date = post.publishedAt;
-                    date = date.length>0? date.substring(0,10).split('-').join('-'): '';
+                    date = date && date.length > 0? date.substring(0,10).split('-').join('-'): '';
 
                     return <div className="album" key={post.slug}>
                         <h3 className="text centeredTitle">{post.title}</h3>
