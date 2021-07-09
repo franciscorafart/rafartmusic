@@ -5,13 +5,13 @@ const Contact = (props) => {
         
         // TODO: Replace with CMS content
         const links = [
-            {url: 'https://app.rafartmusic.com', label: 'The Great Refusal stream'},
+            {url: 'https://youtu.be/gxdjRbtHzfQ', label: 'Why Coders Musicians? (video)'},
             {url: '/', label: 'Rafart Website'},
-            {url: 'https://www.youtube.com/watch?v=kIdGkHos1pk', label: 'Eros - Live Looping video'},
+            {url: 'https://app.rafartmusic.com', label: 'The Great Refusal (live stream)'},
+            {url: 'https://www.youtube.com/watch?v=kIdGkHos1pk', label: 'Eros - Live Looping (video)'},
             {url: 'https://www.youtube.com/franciscorafart', label: 'Youtube'},
             {url: 'https://open.spotify.com/artist/3EIxblOsWLuH54ZRWDuw1m?si=bg0n-AiKSFOhQ_cJmMszUw&nd=1', label: 'Spotify'},
             {url: 'https://www.facebook.com/fjrafart/', label: 'Facebook'},
-            {url: 'https://www.ampled.com/artist/rafart', label: 'Support me on Ampled'},
         ];
 
         return (
