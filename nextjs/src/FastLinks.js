@@ -5,6 +5,7 @@ const Contact = (props) => {
         
         // TODO: Replace with CMS content
         const links = [
+            {url: 'https://www.youtube.com/watch?v=FEe-SowgTHg', label: 'Artist or Entertainer? (video)'},
             {url: 'https://youtu.be/gxdjRbtHzfQ', label: 'Why Coders Musicians? (video)'},
             {url: '/', label: 'Rafart Website'},
             {url: 'https://app.rafartmusic.com', label: 'The Great Refusal (live stream)'},
