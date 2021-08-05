@@ -2,14 +2,13 @@
 import React from 'react';
 
 const Contact = (props) => {
-        
         // TODO: Replace with CMS content
         const links = [
+            {url: 'https://youtu.be/TMHYHvFAf9o', label: 'Spinetta - Tu Nombre Sobre Mi Nombre (video)'},
             {url: 'https://www.youtube.com/watch?v=FEe-SowgTHg', label: 'Artist or Entertainer? (video)'},
             {url: 'https://youtu.be/gxdjRbtHzfQ', label: 'Why Coders Musicians? (video)'},
             {url: '/', label: 'Rafart Website'},
             {url: 'https://app.rafartmusic.com', label: 'The Great Refusal (live stream)'},
-            {url: 'https://www.youtube.com/watch?v=kIdGkHos1pk', label: 'Eros - Live Looping (video)'},
             {url: 'https://www.youtube.com/franciscorafart', label: 'Youtube'},
             {url: 'https://open.spotify.com/artist/3EIxblOsWLuH54ZRWDuw1m?si=bg0n-AiKSFOhQ_cJmMszUw&nd=1', label: 'Spotify'},
             {url: 'https://www.facebook.com/fjrafart/', label: 'Facebook'},
