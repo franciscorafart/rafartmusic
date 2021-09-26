@@ -32,6 +32,6 @@ export default {
             name: 'thumbnail',
             title: 'Thumbnail',
             type: 'image'
-        }
+        },
     ]
 }

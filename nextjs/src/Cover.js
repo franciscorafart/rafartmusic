@@ -50,20 +50,20 @@ const useStyles = makeStyles({
     }
 });
 
-const Cover = props => {
+const Cover = (props = {}) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const classes = useStyles({isMobile: props.isMobile});
     return(
             <div>
                 <section>
                 {
-                    props.coverImage?
+                    props && props.coverImage ?
                     <div
                         className={classes.headerBg}
                         style = {{backgroundImage: `url(${props.urlFor(props.coverImage.mainImage.asset._ref)})`}}
                     > 
                         <Box pt='20px' pl='2%' className={classes.introContainer}>
-                            <img className={classes.logo} src={props.urlFor(props.logo.mainImage.asset._ref)}/>
+                            <img className={classes.logo} src={props.urlFor(props.logo.mainImage.asset._ref).url()}/>
                             <Typography className={`${classes.text} ${classes.subHeader}`}>Chapman Stick and Electronic Prog-Rock</Typography>
                         </Box>
                         {!menuOpen && <Box p='20px'>
@@ -99,7 +99,7 @@ const Cover = props => {
                 }
                 </section>
             </div>
-    )
-}
+    );
+};
 
-export default Cover
+export default Cover;

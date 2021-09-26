@@ -24,11 +24,6 @@ export default {
         type: 'string'
     },
     {
-        name: 'mainImage',
-        title: 'Main Image',
-        type: 'image'
-    },
-    {
         name: 'iconClass',
         title: 'Icon Class',
         type: 'string'
@@ -36,11 +31,6 @@ export default {
     {
         name: 'headerMenu',
         title: 'Header Menu',
-        type: 'boolean'
-    },
-    {
-        name: 'mainMenu',
-        title: 'Main Menu',
         type: 'boolean'
     },
     {

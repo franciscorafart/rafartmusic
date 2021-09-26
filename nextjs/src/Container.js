@@ -13,23 +13,23 @@ import SignUp from './SignUp';
 import Videos from './Videos';
 
 import client from '../client';
-import imageUrlBuilder from '@sanity/image-url'
+import imageUrlBuilder from '@sanity/image-url';
 
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     text: {
         fontFamily: 'Encode Sans Expanded',
-        fontSize: props => props.isMobile? '1.4em': '1.8em',
+        fontSize: props => props && props.isMobile ? '1.4em': '1.8em',
         color: 'white',
         textAlign: 'center',
         textDecoration: 'None',
     },
 });
 
-const builder = imageUrlBuilder(client)
+const builder = imageUrlBuilder(client);
 
-const Page = props => {
+const Page = (props = {}) => {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -52,10 +52,9 @@ const Page = props => {
 
     const page = props.page;
 
-    // TODO: Add
-    // Upcoming shows section
-    const boxPadding = isMobile? 0 : 2;
-    const boxMargin = isMobile? 5 : 6;
+    // TODO: Add Upcoming shows section
+    const boxPadding = isMobile ? 0 : 2;
+    const boxMargin = isMobile ? 5 : 6;
 
     let content = <Box pl={boxPadding} pr={boxPadding} pt={boxPadding/2} mt={boxMargin} mb={boxMargin}>
         <Typography className={classes.text}>Latest News</Typography>
@@ -73,24 +72,24 @@ const Page = props => {
         menu={props.menu}
         logo={props.logo}
         isMobile={isMobile}
-    />
+    />;
     
     if (page === 'contact'){
-        content = <Contact/>
+        content = <Contact/>;
     } else if (page === 'albums'){
-        content = <Albums urlFor={urlFor} albums={props.albums}/>
+        content = <Albums urlFor={urlFor} albums={props.albums}/>;
     } else if (page === 'about'){
-        content = <About urlFor={urlFor} about={props.about}/>
+        content = <About urlFor={urlFor} about={props.about}/>;
     } else if (page === 'posts'){
-        content = <Posts urlFor={urlFor} posts={props.posts}/>
+        content = <Posts urlFor={urlFor} posts={props.posts}/>;
     } else if (page === 'instagram'){
-        content = <FastLinks urlFor={urlFor} logo={props.logo} />
+        content = <FastLinks urlFor={urlFor} logo={props.logo} />;
         cover = null;
     }
 
     return(
         <div className="website_div">
-            <IndexPage urlFor={urlFor} favicon={props.favicon}/>
+            {props.favicon && urlFor && <IndexPage urlFor={urlFor} favicon={props.favicon}/>}
             <div>
                 {cover}
                 {content}
@@ -116,7 +115,7 @@ const Page = props => {
 
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Page;

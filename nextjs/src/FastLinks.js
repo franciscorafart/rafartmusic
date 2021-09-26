@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-const Contact = (props) => {
+const Contact = (props = {}) => {
         // TODO: Replace with CMS content
         const links = [
             {url: 'https://youtu.be/9VIp6o1nzR8', label: 'Too old for Music?'},
@@ -61,6 +61,6 @@ const Contact = (props) => {
             `}</style>
             </div>
         );
-}
+};
 
 export default Contact;
