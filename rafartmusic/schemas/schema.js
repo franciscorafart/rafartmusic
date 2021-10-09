@@ -1,17 +1,18 @@
 // First, we must import the schema creator
-import createSchema from 'part:@sanity/base/schema-creator'
+import createSchema from 'part:@sanity/base/schema-creator';
 
 // Then import schema types from any plugins that might expose them
-import schemaTypes from 'all:part:@sanity/base/schema-type'
+import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // We import object and document schemas
-import blockContent from './blockContent'
-import albums from './albums'
-import post from './post'
-import content from './content'
-import generalAssets from './generalAssets'
-import videos from './videos'
-import menu from './menu'
+import blockContent from './blockContent';
+import albums from './albums';
+import post from './post';
+import content from './content';
+import generalAssets from './generalAssets';
+import videos from './videos';
+import menu from './menu';
+import instagram from './instagram';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,5 +30,6 @@ export default createSchema({
     generalAssets,
     menu,
     blockContent,
+    instagram,
   ])
 })
