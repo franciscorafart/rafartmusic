@@ -2,7 +2,7 @@ import React from 'react';
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Footer = (props = {}) => {
+const Footer = props => {
     return(
         <div className="footer-bg">
             <footer className="footer-content">
@@ -25,7 +25,7 @@ const Footer = (props = {}) => {
                                         <a className="socialMedia" href={item.linkString}>
                                             <FontAwesomeIcon icon={fab[item.iconClass]} size="4x"/>
                                         </a>
-                                    </li>
+                                    </li>;
                                 })
                             :<div></div>
                     }
@@ -84,6 +84,6 @@ const Footer = (props = {}) => {
             `}</style>
         </div>
     );
-}
+};
 
-export default Footer
+export default Footer;

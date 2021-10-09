@@ -1,19 +1,19 @@
 import React, {useEffect, useState} from 'react';
-import YoutubeVideo from './YoutubeVideo'
+import YoutubeVideo from './YoutubeVideo';
 
-const Videos = (props = {}) => {
+const Videos = props => {
     const [smallVideo, setSmallVideo] = useState(false);
 
     const resize = () => {
         setSmallVideo(window.innerWidth <= 750);
-    }
+    };
 
     useEffect(() => {
         window.addEventListener("resize", resize);
 
         return () => {
             return window.removeEventListener("resize", resize);
-        }
+        };
     }, []);
 
     // NOTE: To change size of youtube videos, set both the .videoBox
@@ -33,7 +33,7 @@ const Videos = (props = {}) => {
                             width={width}
                             height={height}
                         />
-                        </div>
+                        </div>;
                     })
                 }
             </div>
@@ -66,7 +66,7 @@ const Videos = (props = {}) => {
                 }
             `}</style>
         </div>
-    )
-}
+    );
+};
 
 export default Videos;

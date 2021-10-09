@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Albums = (props = {}) => {
+const Albums = props => {
     return (
         <div className="container">
             <h1 className="text albumTitle">Albums</h1>
@@ -35,7 +35,7 @@ const Albums = (props = {}) => {
                             {
                                 a.paragraph.map(p => {
                                 const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "paragraph text bold": "paragraph text"
-                                return <p className={className}>{p.children[0]['text']}</p>
+                                return <p className={className}>{p.children[0]['text']}</p>;
                             })
                             }
                         </div>

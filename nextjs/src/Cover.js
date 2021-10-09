@@ -50,7 +50,7 @@ const useStyles = makeStyles({
     }
 });
 
-const Cover = (props = {}) => {
+const Cover = props => {
     const [menuOpen, setMenuOpen] = useState(false);
     const classes = useStyles({isMobile: props.isMobile});
     return(

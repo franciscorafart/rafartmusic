@@ -1,6 +1,6 @@
 import React from 'react';
 
-const YoutubeVideo = (props = {}) => {
+const YoutubeVideo = props => {
     return <div>
         {props.video && props.height && props.width && <div>
             <h3 className="text">{props.video.title}</h3>
@@ -25,7 +25,7 @@ const YoutubeVideo = (props = {}) => {
             }
 
         `}</style>
-    </div>
-}
+    </div>;
+};
 
 export default YoutubeVideo;

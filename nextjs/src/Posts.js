@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Posts = (props = {}) => {
+const Posts = props => {
     const onlyLatest = props.onlyLatest || false;
     let allPosts = [];
     if (props.posts && props.posts.length>0){
@@ -41,7 +41,7 @@ const Posts = (props = {}) => {
                                 post.paragraph.map(p => {
                                 // NOTE: is exposing _key safe?
                                 const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "paragraph text bold": "paragraph text";
-                                return <p key={p._key} className={className}>{p.children[0]['text']}</p>
+                                return <p key={p._key} className={className}>{p.children[0]['text']}</p>;
                             })
                             }
                         </div>
@@ -154,6 +154,6 @@ const Posts = (props = {}) => {
         `}</style>
         </div>
     );
-}
+};
 
 export default Posts;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-const IndexPage = (props = {}) =>  {
+const IndexPage = props =>  {
     return(
         <div>
             <Head>

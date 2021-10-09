@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 
 const builder = imageUrlBuilder(client);
 
-const Page = (props = {}) => {
+const Page = props => {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
