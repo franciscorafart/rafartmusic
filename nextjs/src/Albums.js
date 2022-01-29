@@ -5,7 +5,8 @@ const Albums = props => {
         <div className="container">
             <h1 className="text albumTitle">Releases</h1>
             <div className="albumContainer">
-            {props && props.albums && props.albums.map(a => {
+            {props && props.albums && props.albums.sort((a, b) => Number(a.year) < Number(b.year) ? 1 : -1).map(a => {
+                console.log('a',a.year)
                 return <div className="album" key={a.slug}>
                     <h2 className="text albumTitle">{`${a.title} - ${a.year || ''} ${a.releaseType}`}</h2>
                     <div className="albumInfo">
