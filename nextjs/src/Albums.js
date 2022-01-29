@@ -3,7 +3,7 @@ import React from 'react';
 const Albums = props => {
     return (
         <div className="container">
-            <h1 className="text albumTitle">Albums</h1>
+            <h1 className="text albumTitle">Releases</h1>
             <div className="albumContainer">
             {props && props.albums && props.albums.map(a => {
                 return <div className="album" key={a.slug}>

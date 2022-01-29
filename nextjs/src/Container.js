@@ -9,7 +9,7 @@ import About from './About';
 import FastLinks from './FastLinks';
 import Footer from './Footer';
 import Posts from './Posts';
-import SignUp from './SignUp';
+// import SignUp from './SignUp'; 
 import Videos from './Videos';
 
 import client from '../client';
@@ -61,8 +61,8 @@ const Page = props => {
         <Posts urlFor={urlFor} posts={props.posts} onlyLatest={true}/>
         <Typography className={classes.text}>Latest Videos</Typography>
         <Videos videos={props.videos}/>
-        <Typography className={classes.text}>Sign up Newsletter</Typography>
-        <SignUp/>
+        {/* <Typography className={classes.text}>Sign up Newsletter</Typography> */}
+        {/* <SignUp/> */}
     </Box>;
 
     let cover = <Cover

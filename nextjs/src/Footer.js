@@ -9,7 +9,12 @@ const Footer = props => {
                 {
                     !props.isMobile &&
                     <div className="one-third">
-                        <p className="text">This website is built with JAMstack. Check out the code on GitHub: <a className="socialMedia" href="www.github.com"><FontAwesomeIcon icon={fab['faGithub']} size="4x"/></a></p>
+                        <p className='text'>Join my personal Discord</p><a className="socialMedia" href='https://discord.gg/RWF8P7yHaJ'><FontAwesomeIcon style={{display: 'inline'}} icon={fab['faDiscord']} size="4x"/></a>
+                        {/* <p className="text">
+                            This website is built with JAMstack. <a className="socialMedia" href="https://github.com/franciscorafart/rafartmusic">
+                                <FontAwesomeIcon icon={fab['faGithub']} size="4x"/>
+                            </a>
+                        </p> */}
                     </div>
                 }
                 <div className="one-third" />
@@ -61,8 +66,9 @@ const Footer = props => {
                     justify-content: space-between;
                 }
                 .socialMedia {
-                    display: block;
                     width: 20px;
+                    height: 20px;
+                    display: block;
                 }
                 a {
                     margin-top: 20px;
