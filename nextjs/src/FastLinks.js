@@ -4,6 +4,7 @@ import React from 'react';
 const Contact = props => {
         // TODO: Replace with CMS content
         const links = [
+            {url: 'https://discord.gg/RWF8P7yHaJ', label: 'Join my Discord'},
             {url: 'https://app.rafartmusic.com/alienation-dance', label: 'Alienation Dance Web Song'},
             {url: '/', label: 'Rafart Website'},
             {url: 'https://www.youtube.com/franciscorafart', label: 'Youtube'},
