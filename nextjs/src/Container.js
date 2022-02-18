@@ -11,6 +11,7 @@ import Footer from './Footer';
 import Posts from './Posts';
 // import SignUp from './SignUp'; 
 import Videos from './Videos';
+import Nfts from './Nfts';
 
 import client from '../client';
 import imageUrlBuilder from '@sanity/image-url';
@@ -85,6 +86,8 @@ const Page = props => {
     } else if (page === 'instagram'){
         content = <FastLinks urlFor={urlFor} logo={props.logo} />;
         cover = null;
+    } else if (page === 'nfts') {
+        content = <Nfts urlFor={urlFor} logo={props.logo}/>;
     }
 
     return(

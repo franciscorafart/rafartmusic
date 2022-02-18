@@ -10,6 +10,7 @@ const IndexPage = props =>  {
                 <meta name="keywords" content="Rafart,Chapman Stick,Electronic Rock,Progressive rock"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79781872-1"></script>
+                <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script>
 
                 <script>{`
                     window.dataLayer = window.dataLayer || [];
