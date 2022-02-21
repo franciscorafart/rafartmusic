@@ -30,6 +30,13 @@ const Albums = props => {
                                 </form>: <div></div>
 
                             }
+                            {
+                                a.nft?
+                                <form action={a.nft}>
+                                    <input className="callToAction text" type="submit" value="Get the NFT"/>
+                                </form>: <div></div>
+
+                            }
                         </div>
                         <div className="textDiv">
                             {
@@ -84,6 +91,9 @@ const Albums = props => {
                 form {
                     width: 100%;
                     padding-left: 10%;
+                }
+                input {
+                    cursor: pointer;
                 }
                 .text{
                     font-family: 'Encode Sans Expanded', sans-serif;
