@@ -60,6 +60,11 @@ export default {
         name: 'soundcloud',
         title: 'Soundcloud',
         type: 'url'
+    },
+    {
+      name: 'nft',
+      title: 'NFT',
+      type: 'url'
     }
   ]
 }
