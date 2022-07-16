@@ -4,6 +4,7 @@ import React from 'react';
 const Contact = props => {
         // TODO: Replace with CMS content
         const links = [
+            {url: 'https://share.amuse.io/track/rafart-roll-the-dice', label: 'Roll The Dice - Pre-Save link'},
             {url: 'https://discord.gg/RWF8P7yHaJ', label: 'Join my Discord'},
             {url: 'https://app.rafartmusic.com/alienation-dance', label: 'Alienation Dance Web Song'},
             {url: '/', label: 'Rafart Website'},
@@ -26,7 +27,7 @@ const Contact = props => {
                     min-height: 500px;
                     background: black;
                     display: flex;
-                    flex-direction: column; 
+                    flex-direction: column;
                     align-items: center;
                 }
                 .anchorContainer {
