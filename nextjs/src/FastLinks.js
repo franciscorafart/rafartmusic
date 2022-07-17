@@ -5,6 +5,7 @@ const Contact = props => {
         // TODO: Replace with CMS content
         const links = [
             {url: 'https://share.amuse.io/track/rafart-roll-the-dice', label: 'Roll The Dice - Pre-Save link'},
+            {url: 'https://open.spotify.com/track/5f01lFvmGSfNa9zQnx7CQI?si=83e26868605b4a7c', label: 'Void (Song)'},
             {url: 'https://discord.gg/RWF8P7yHaJ', label: 'Join my Discord'},
             {url: 'https://app.rafartmusic.com/alienation-dance', label: 'Alienation Dance Web Song'},
             {url: '/', label: 'Rafart Website'},
