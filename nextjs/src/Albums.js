@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Albums = props => {
-    const sortedAlbums = props && props.albums && props.albums.sort((a, b) => Number(a.year) < Number(b.year) ? 1 : -1);
+    const sortedAlbums = props && props.albums && [...props.albums].sort((a, b) => Number(a.year) < Number(b.year) ? 1 : -1);
     return (
         <div className="container">
             <h1 className="text albumTitle">Releases</h1>
@@ -41,9 +41,9 @@ const Albums = props => {
                         </div>
                         <div className="textDiv">
                             {
-                                a.paragraph.map(p => {
+                                a.paragraph.map((p, idx) => {
                                 const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "paragraph text bold": "paragraph text";
-                                return <p className={className}>{p.children[0]['text']}</p>;
+                                return <p key={`${a.slug}-paragraph-${idx}`} className={className}>{p.children[0]['text']}</p>;
                             })
                             }
                         </div>
