@@ -1,11 +1,12 @@
 import React from 'react';
 
 const Albums = props => {
+    const sortedAlbums = props && props.albums && props.albums.sort((a, b) => Number(a.year) < Number(b.year) ? 1 : -1);
     return (
         <div className="container">
             <h1 className="text albumTitle">Releases</h1>
             <div className="albumContainer">
-            {props && props.albums && props.albums.sort((a, b) => Number(a.year) < Number(b.year) ? 1 : -1).map(a => {
+            {sortedAlbums && sortedAlbums.map(a => {
                 return <div className="album" key={a.slug}>
                     <h2 className="text albumTitle">{`${a.title} - ${a.year || ''} ${a.releaseType}`}</h2>
                     <div className="albumInfo">
@@ -41,11 +42,13 @@ const Albums = props => {
                         <div className="textDiv">
                             {
                                 a.paragraph.map(p => {
-                                const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "paragraph text bold": "paragraph text"
+                                const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "paragraph text bold": "paragraph text";
                                 return <p className={className}>{p.children[0]['text']}</p>;
                             })
                             }
                         </div>
+                    {/* <iframe src="https://stream.resonate.coop/embed/track/256" frameborder="0" width="400px" height="600" style={{margin:0, border:'none', width:'400px', height:'600px', border: '1px solid #000'}}></iframe> */}
+
                     </div>
                 </div>;
             })}
