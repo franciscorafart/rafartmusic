@@ -4,7 +4,7 @@ import React from 'react';
 const Contact = props => {
         // TODO: Replace with CMS content
         const links = [
-            {url: 'https://share.amuse.io/track/rafart-zappateada-ii', label: 'Zappateada II (Pre-release save)'},
+            {url: 'https://open.spotify.com/album/1fL2QgDiPrtoGAtJm8t7EQ?si=jAZA7wXCRu6Vz583GAkirg', label: 'Zappateada II (Instrumental)'},
             {url: 'https://open.spotify.com/album/6rQlALTD5i5udd3BXTsHMe?si=N_4JhQJdQ56AL11RJJ1IYQ', label: 'Roll The Dice (Song)'},
             // {url: 'https://discord.gg/RWF8P7yHaJ', label: 'Join my Discord'},
             {url: 'https://app.rafartmusic.com/alienation-dance', label: 'Alienation Dance Web Song'},
