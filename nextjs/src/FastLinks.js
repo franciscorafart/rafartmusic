@@ -4,6 +4,8 @@ import React from 'react';
 const Contact = props => {
         // TODO: Replace with CMS content
         const links = [
+            {url: 'https://open.spotify.com/track/7dNB3n5q67Yr4bkt6HZPXv?si=1998f79ec05c44f9', label: 'Thanatos (Intrumental)'},
+            {url: 'https://open.spotify.com/track/1GDq44rl1KaqFHTP7lAMaF?si=11a8e7261a114b8d', label: 'Synapsis III (Franciscart)'},
             {url: 'https://open.spotify.com/album/1fL2QgDiPrtoGAtJm8t7EQ?si=jAZA7wXCRu6Vz583GAkirg', label: 'Zappateada II (Instrumental)'},
             {url: 'https://open.spotify.com/album/6rQlALTD5i5udd3BXTsHMe?si=N_4JhQJdQ56AL11RJJ1IYQ', label: 'Roll The Dice (Song)'},
             // {url: 'https://discord.gg/RWF8P7yHaJ', label: 'Join my Discord'},
