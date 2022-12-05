@@ -9,7 +9,7 @@ const Footer = props => {
                 {
                     !props.isMobile &&
                     <div className="one-third">
-                        <p className='text'>Join my personal Discord</p><a className="socialMedia" href='https://discord.gg/RWF8P7yHaJ'><FontAwesomeIcon style={{display: 'inline'}} icon={fab['faDiscord']} size="4x"/></a>
+                        {/* <p className='text'>Join my personal Discord</p><a className="socialMedia" href='https://discord.gg/RWF8P7yHaJ'><FontAwesomeIcon style={{display: 'inline'}} icon={fab['faDiscord']} size="4x"/></a> */}
                         {/* <p className="text">
                             This website is built with JAMstack. <a className="socialMedia" href="https://github.com/franciscorafart/rafartmusic">
                                 <FontAwesomeIcon icon={fab['faGithub']} size="4x"/>
