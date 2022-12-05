@@ -11,6 +11,7 @@ import Footer from './Footer';
 import Posts from './Posts';
 // import SignUp from './SignUp'; 
 import Videos from './Videos';
+import Catalogue from './Catalogue';
 
 import client from '../client';
 import imageUrlBuilder from '@sanity/image-url';
@@ -84,6 +85,9 @@ const Page = props => {
         content = <Posts urlFor={urlFor} posts={props.posts}/>;
     } else if (page === 'instagram'){
         content = <FastLinks urlFor={urlFor} logo={props.logo} />;
+        cover = null;
+    } else if (page === 'catalogue'){
+        content = <Catalogue urlFor={urlFor} logo={props.logo} />;
         cover = null;
     }
 
