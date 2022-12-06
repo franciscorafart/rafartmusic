@@ -2,8 +2,7 @@
 import React from 'react';
 
 const makeRows = (rows) => rows.map(
-    r => <tr className='tr'>
-        <td></td>
+    r => <tr>
         <td>{r.title}</td>
         <td>{r.year}</td>
         <td>{r.type}</td>
@@ -129,7 +128,6 @@ const Catalogue = props => {
                 <img className='logo' src={props.urlFor(props.logo.mainImage.asset._ref)}/>
                 <table>
                     <tr className='firstTr'>
-                        <th>Category</th>
                         <th>Title</th>
                         <th>Year</th>
                         <th>Type</th>
@@ -162,7 +160,7 @@ const Catalogue = props => {
                     </tr>
                     {makeRows(coverVideos)}
                     <tr>
-                        <td className='headerText'>Ensemble music (Franciscart)</td>
+                        <td className='headerText'>Ensemble music</td>
                     </tr>
                     {makeRows(ensemble)}
                     <tr>
@@ -185,6 +183,9 @@ const Catalogue = props => {
                 </table>
             <style jsx>
             {`
+                th, td {
+                    padding: 10px 0;
+                }
                 .catalogueContainer{
                     padding: 80px 0;
                     min-height: 500px;
@@ -218,9 +219,7 @@ const Catalogue = props => {
                     margin-bottom: 50px;
                 }
                 @media all and (max-width: 750px) {
-                    .anchorContainer {
-                        width: 70%;
-                    }
+                    font-size: 0.5em;
                 }
             `}</style>
             </div>
