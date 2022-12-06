@@ -17,45 +17,45 @@ const Catalogue = props => {
         ];
 
         const eps = [
-            { title: "The Dark Night of the Soul", year: 2014, type: "Recording", link: "https://open.spotify.com/album/4NmmX3KvSsi13dUBS11Lz7?si=HKQYgVHjSRafk01Txpp8qw"},
-            { title: "Get in the grid", year: 2015, type: "Recording", link: "https://soundcloud.com/f-j-rafart/sets/get-in-the-grid-ep-2015"},
             { title: "Dasein", year: 2019, type: "Recording", link: "https://open.spotify.com/album/2e7gnYHaf0YMJ8xd9pK4N5?si=Xr7QtBLqRGKQ6HWminE3SQ"},
+            { title: "Get in the grid", year: 2015, type: "Recording", link: "https://soundcloud.com/f-j-rafart/sets/get-in-the-grid-ep-2015"},
+            { title: "The Dark Night of the Soul", year: 2014, type: "Recording", link: "https://open.spotify.com/album/4NmmX3KvSsi13dUBS11Lz7?si=HKQYgVHjSRafk01Txpp8qw"},
         ];
 
         const singles = [
-            { title: "Magic Concepts", year: 2016, type: "Recording", link: "https://open.spotify.com/track/0rJDvosJZuKHC7II10LwT4?si=8a3559de0bf141e9"},
-            { title: "Caminito del Turia", year: 2018, type: "Recording", link: "https://open.spotify.com/track/79iwCjIs6Il2f1MI2iTiFf?si=261ff06d470044b6"},
-            { title: "Andes Haze", year: 2021, type: "Recording", link: "https://open.spotify.com/album/0VtCqZSkEXMNVWCkvhTlNB?si=tCifaeB1R66E-W1ajekxLg"},
-            { title: "Organized Sound", year: 2018, type: "Recording", link: "https://open.spotify.com/track/6XOUG9VbJ6fxlWLUhcyUsD?si=662ca83d8eb44c46"},
-            { title: "Zappateada II", year: 2022, type: "Recording", link: "https://open.spotify.com/track/1Pd1N8DPRJ6D9xMpvV191B?si=60d64756c8b243b9"},
             { title: "Thanatos", year: 2012, type: "Recording", link: "https://open.spotify.com/track/7dNB3n5q67Yr4bkt6HZPXv?si=6504257582204c86"},
+            { title: "Zappateada II", year: 2022, type: "Recording", link: "https://open.spotify.com/track/1Pd1N8DPRJ6D9xMpvV191B?si=60d64756c8b243b9"},
+            { title: "Andes Haze", year: 2021, type: "Recording", link: "https://open.spotify.com/album/0VtCqZSkEXMNVWCkvhTlNB?si=tCifaeB1R66E-W1ajekxLg"},
             { title: "Roll The Dice", year: 2022, type: "Recording", link: "https://open.spotify.com/album/6rQlALTD5i5udd3BXTsHMe?si=mAsv0u1vRnuR-jfEJgyneQ"},
             { title: "Void", year: 2022, type: "Recording", link: "https://open.spotify.com/track/5f01lFvmGSfNa9zQnx7CQI?si=a395171e094040af"},
+            { title: "Magic Concepts", year: 2016, type: "Recording", link: "https://open.spotify.com/track/0rJDvosJZuKHC7II10LwT4?si=8a3559de0bf141e9"},
+            { title: "Caminito del Turia", year: 2018, type: "Recording", link: "https://open.spotify.com/track/79iwCjIs6Il2f1MI2iTiFf?si=261ff06d470044b6"},
+            { title: "Organized Sound", year: 2018, type: "Recording", link: "https://open.spotify.com/track/6XOUG9VbJ6fxlWLUhcyUsD?si=662ca83d8eb44c46"},
         ];
+
         const unreleased = [
-            { title: "Infected Mushroom - Demons Of Pain", year: null, type: "Remix", link: "https://soundcloud.com/f-j-rafart/infected-mushroom-demons-of-pain-remix-by-rafart"},
-            { title: "Sunken Living area - Heathered Pearls", year: null, type: "Remix", link: "https://soundcloud.com/f-j-rafart/sunken-living-area-by-heathered-pearls-remix-by-rafart"},
+            { title: "Infected Mushroom - Demons Of Pain", year: 2017, type: "Remix", link: "https://soundcloud.com/f-j-rafart/infected-mushroom-demons-of-pain-remix-by-rafart"},
+            { title: "Sunken Living area - Heathered Pearls", year: 2015, type: "Remix", link: "https://soundcloud.com/f-j-rafart/sunken-living-area-by-heathered-pearls-remix-by-rafart"},
             { title: "Staring Into The Distance - TheSource & Rafart", year: 2014, type: "Recording", link: "https://soundcloud.com/f-j-rafart/thesource-rafart-staring-into"},
             { title: "Solea - Flamenco", year: null, type: "Recording", link: "https://soundcloud.com/f-j-rafart/solea-flamenco-on-the-chapman-stick"},
         ];
 
         const ensemble = [
             { title: "Synapsis III - for saxophone quartet (2009)", year: 2022, type: "Recording", link: "https://open.spotify.com/track/1GDq44rl1KaqFHTP7lAMaF?si=e8f73d22cf61487b"},
-            { title: "Sinapsis II - for chamber orchestra", year: 2007, type: "Performance Video", link: "https://youtu.be/NTujjr6vqWI"},
-            { title: "Continuum - solo guitar", year: 2009, type: "Performance", link: "https://youtu.be/5b5Ijk2G-dg"},
             { title: "Inefable - for Jazz Ensemble", year: 2012, type: "Recording", link: "https://youtu.be/ail_Ao3xJns"},
             { title: "Zappateada I", year: 2011, type: "Live Performance", link: "https://youtu.be/M39U-1Wh58I"},
             { title: "Quinteto - for Piano and string quartet", year: 2010, type: "Live Performance", link: "https://youtu.be/WAIkc1ZgNKw"},
+            { title: "Continuum - solo guitar", year: 2009, type: "Performance", link: "https://youtu.be/5b5Ijk2G-dg"},
+            { title: "Sinapsis II - for chamber orchestra", year: 2007, type: "Performance Video", link: "https://youtu.be/NTujjr6vqWI"},
         ];
         
         const scores = [
-            { title: "Continuum - for solo Guitar", year: 2009, type: "Score", link: "https://www.risingtidemusicpress.com/catalog/p/continuum"},
             { title: "Ecce Hommo - for ensemble", year: 2011, type: "Score", link: "https://www.risingtidemusicpress.com/catalog/p/ecce-homo"},
+            { title: "Zappateada II - for Jazz ensemble", year: 2010, type: "Score", link: "https://www.risingtidemusicpress.com/catalog/p/zappateada-ii"},
+            { title: "Sinapsis IV - for Ensemble", year: 2010, type: "Score", link: "https://www.risingtidemusicpress.com/catalog/p/sinapsis-iv"},
             { title: "Inefable - for Jazz ensemble", year: 2010, type: "Score", link: "https://www.risingtidemusicpress.com/catalog/p/inefable"},
-            { title: "Quinteto - for Piano and string quartet", year: 2016, type: "Score", link: "https://www.risingtidemusicpress.com/catalog/p/rafart-quinteto"},
-            { title: "Zappateada II - for Jazz ensemble", year: 2016, type: "Score", link: "https://www.risingtidemusicpress.com/catalog/p/zappateada-ii"},
-            { title: "Sinapsis IV - for Ensemble", year: 2016, type: "Score", link: "https://www.risingtidemusicpress.com/catalog/p/sinapsis-iv"},
-            { title: "", year: 2016, type: "Score", link: ""},
+            { title: "Continuum - for solo Guitar", year: 2009, type: "Score", link: "https://www.risingtidemusicpress.com/catalog/p/continuum"},
+            { title: "Quinteto - for Piano and string quartet", year: 2009, type: "Score", link: "https://www.risingtidemusicpress.com/catalog/p/rafart-quinteto"},
         ];
 
         const apps = [
@@ -75,7 +75,6 @@ const Catalogue = props => {
             { title: "Solea - Flamenco", year: 2016, type: "Recording", link: "https://youtu.be/JRXdL8ifLPk"},
             { title: "Roll the Dice", year: 2016, type: "Playthrough", link: "https://youtu.be/oGYiFY5h5Lg"},
             { title: "La Cumparsita", year: 2016, type: "Playthrough", link: "https://youtu.be/EXXO9UG8DIE"},
-            { title: "", year: 2016, type: "Recording", link: ""},
             { title: "Get In the Grid", year: 2016, type: "Live Performance", link: "https://youtu.be/4D_x0C-ToMo"},
             { title: "Red Bull skiing", year: 2016, type: "Musicalization", link: "https://youtu.be/GtrdPYexc4c"},
             { title: "Isochronic - Innovation en Vivo - feat. DJ kTunes ", year: 2014, type: "Live Performance", link: "https://youtu.be/X5WT5mylZdU"},
@@ -89,7 +88,6 @@ const Catalogue = props => {
             { title: "Pepperoni Atmosphere", year: 2016, type: "Playthrough", link: "https://youtu.be/1dBxc1CIkeA"},
             { title: "Chironex Fleckeri", year: 2013, type: "Music video", link: "https://youtu.be/AdLdGm8GGbY"},
             { title: "Escombrock", year: 2016, type: "Playthrough", link: "https://youtu.be/lEtlWaTTpoQ"},
-            // { title: "", year: 2016, type: "Recording", link: ""},
         ];
 
         const philosophyVideos = [
@@ -114,10 +112,8 @@ const Catalogue = props => {
             { title: "Demons of Pain - Infected Mushroom", year: 2016, type: "Cover video", link: "https://youtu.be/6e8NT0Lg0VU"},
             { title: "Papel de Plata - Andean Folk", year: 2018, type: "Cover video", link: "https://youtu.be/LEhKcpY5lHk"},
             { title: "Himno de Chile", year: 2016, type: "Cover", link: "https://youtu.be/r74s6CuT2q8"},
-            // { title: "", year: 2016, type: "Recording", link: ""},
-            // { title: "", year: 2016, type: "Recording", link: ""},
-            // { title: "", year: 2016, type: "Recording", link: ""},
         ];
+
         const tutorials = [
             { title: "Kurku Demo - Hooking up to Ableton Live", year: 2022, type: "Demo", link: "https://youtu.be/ilXhMrsUQ7w"},
             { title: "Alienation Dance  - Interactive web song", year: 2021, type: "Demo", link: "https://youtu.be/W56Tg-YsIiM"},
@@ -127,8 +123,6 @@ const Catalogue = props => {
             { title: "How I Produced Caminito del Turia", year: 2015, type: "Tutorial", link: "https://youtu.be/OvOH4zvrp9Y"},
             { title: "The Stick Sustainer", year: 2015, type: "Demo", link: "https://youtu.be/9vGIzDSwyNQ"},
         ];
-
-
 
         return (
             <div className="catalogueContainer text">
