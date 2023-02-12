@@ -12,6 +12,7 @@ import Posts from './Posts';
 // import SignUp from './SignUp'; 
 import Videos from './Videos';
 import Catalogue from './Catalogue';
+import Franciscart from './Franciscart';
 
 import client from '../client';
 import imageUrlBuilder from '@sanity/image-url';
@@ -86,6 +87,8 @@ const Page = props => {
     } else if (page === 'instagram'){
         content = <FastLinks urlFor={urlFor} logo={props.logo} />;
         cover = null;
+    } else if (page === 'franciscart') {
+        content = <Franciscart urlFor={urlFor} logo={props.logo} about={props.about} />;
     } else if (page === 'catalogue'){
         content = <Catalogue urlFor={urlFor} logo={props.logo} />;
         cover = null;

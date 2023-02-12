@@ -5,7 +5,7 @@ const IndexPage = props =>  {
     return(
         <div>
             <Head>
-                <title>Rafartmusic</title>
+                <title>RafartMusic</title>
                 <meta name="description" content="Rafart Champan stick music"/>
                 <meta name="keywords" content="Rafart,Chapman Stick,Electronic Rock,Progressive rock"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
