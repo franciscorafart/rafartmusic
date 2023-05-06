@@ -9,23 +9,13 @@ const Franciscart = props => {
                     {props && props.urlFor && <img src={props.urlFor(props.about.image.asset._ref)}/>}
                 </div>
                 <div className="textDiv">
-                    {
-                        <>
-                        <p className='text'>Before the Rafart project came to life, I studied academic music composition at P. Universidad Catolica de Chile
-                        between 2005 and 2009. While pursuing a classical composer path n those formative years, I wrote several scores for orchestras, ensembles,
-                        quartets, and solo instrumentalists. These pieces were primarily written in an atonal language but with a strong sense of harmony.</p>
-                            
-                        <p className='text'>Due to a lack of access to performers that could play my music and the costs of recordings in those days, most of those pieces never got performed or recorded.
-                        The ones that got recorded needed better audio quality. Most ended up many years kept in a drawer.</p>
-                        
-                        <p className='text'>Eventually, my classical composer path ended as I got frustrated with writing pieces and never seeing them performed, as well as the elitism and cultural deafness of academic music.</p>
-                        <p className='text'>I have started the slow process of recreating those pieces digitally with the help of virtual orchestration and the lower cost of recording we have access to these days.
-                        The purpose of this is personal - to document my early explorations and try to understand my evolution as a musician.</p>
-                        
-                        <p className='text'>I decided to publish them under the name <strong>Franciscart</strong>, my first and last name combined.</p>
-                        <span className='text'>Check out the scores <a href="">here</a></span>
-                        <br /><span className='text'>Follow Franciscart on Spotify <a href="">here</a></span></>
-                    }
+                    {props && props.about && props.about.paragraph.map(p => {
+
+                        const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "text bold": "text"
+                        return <p className={className}>{p.children[0]['text']}</p>;
+                    })}
+                    <span className='text'>Check out the scores <a className='text' href="https://www.risingtidemusicpress.com/composer-roster/francisco-rafart">here</a></span>
+                    <br /><span className='text'>Follow Franciscart on Spotify <a className='text' href="https://open.spotify.com/artist/6R3qYhViTiAF0QWoabzbLy?si=D6F9eg7bTdKR9hz8BjS0Kw">here</a></span>
                 </div>
             </div>
             <style jsx>{`

@@ -13,6 +13,7 @@ import generalAssets from './generalAssets';
 import videos from './videos';
 import menu from './menu';
 import instagram from './instagram';
+import catalogue from './catalogue';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -31,5 +32,6 @@ export default createSchema({
     menu,
     blockContent,
     instagram,
+    catalogue,
   ])
 })
