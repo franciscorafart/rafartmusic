@@ -6,6 +6,7 @@ import IndexPage from './IndexPage';
 import Contact from './Contact';
 import Albums from './Albums';
 import About from './About';
+import Blog from './Blog';
 import FastLinks from './FastLinks';
 import Footer from './Footer';
 import Posts from './Posts';
@@ -75,7 +76,7 @@ const Page = props => {
         logo={props.logo}
         isMobile={isMobile}
     />;
-    
+
     if (page === 'contact'){
         content = <Contact/>;
     } else if (page === 'albums'){
@@ -91,6 +92,9 @@ const Page = props => {
         content = <Franciscart urlFor={urlFor} logo={props.logo} about={props.about} />;
     } else if (page === 'catalogue'){
         content = <Catalogue urlFor={urlFor} logo={props.logo} />;
+        cover = null;
+    } else if (page.startsWith('blog')) {
+        content = <Blog urlFor={urlFor} articles={props.articles}/>;
         cover = null;
     }
 

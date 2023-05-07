@@ -10,7 +10,7 @@ Netlify is hooked to track changes on any of the two apps code, rebuilding the s
 
 Step 1 - Create Sanity application (headless CMS)
 
-Run $npm install on root folder.
+Run $npm install on `/sanity` directory.
 Create a Sanity application in Sanity.io Follow documentation install for detailed explanation https://www.sanity.io/docs/introduction/getting-started
 Write in your sanity app credentials in sanity.json
 Modify the schemas in this project to suit your website's needs

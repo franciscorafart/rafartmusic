@@ -11,7 +11,7 @@ const Franciscart = props => {
                 <div className="textDiv">
                     {props && props.about && props.about.paragraph.map(p => {
 
-                        const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "text bold": "text"
+                        const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "text bold": "text";
                         return <p className={className}>{p.children[0]['text']}</p>;
                     })}
                     <span className='text'>Check out the scores <a className='text' href="https://www.risingtidemusicpress.com/composer-roster/francisco-rafart">here</a></span>
@@ -76,6 +76,6 @@ const Franciscart = props => {
             `}</style>
         </div>
     );
-}
+};
 
 export default Franciscart;

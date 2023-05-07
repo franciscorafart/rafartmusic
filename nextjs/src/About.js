@@ -75,6 +75,6 @@ const About = props => {
             `}</style>
         </div>
     );
-}
+};
 
 export default About;
