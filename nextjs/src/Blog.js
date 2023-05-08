@@ -5,54 +5,54 @@ const Blog = props => {
     const router = useRouter();
     const slug = router.query.slug;
     
-    const filterdArticles = slug ? props.articles.filter(a => a.slug.current === slug) : props.articles;
+    const filterdArticles = props.articles.filter(a => a.slug.current === slug);
     const article = filterdArticles.length ? filterdArticles[0] : null;
-
-    // TODO: No article send 404
 
     return(
         <div className="container">
-            {slug ? 
-            <>
-                <h1 className="text title">{article.name}</h1>
-                <div className="blogContainer">
-                    {article.image && <div className="imageDiv">
-                        {props && props.urlFor && <img src={props.urlFor(article.image.asset._ref)}/>}
-                    </div>}
-                    {article && <div className="textDiv">
-                        {article.paragraph.map(p => {
-                            
-                            const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "text bold": "text";
-                            return <p className={className}>{p.children[0]['text']}</p>;
-                        })}
+            <h1 className="text title">Blog</h1>
+            <div className='contentContainer'>
+            {slug &&
+                <>
+                    <div className="blogContainer">
+                        <h2 className="text title">{article.name}</h2>
+                        {article.image && <div className="imageDiv">
+                            {props && props.urlFor && <img src={props.urlFor(article.image.asset._ref)}/>}
+                        </div>}
+                        {article && <div className="textDiv">
+                            {article.paragraph.map(p => {
+                                const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "text bold": "text";
+                                return <p key={p.children[0]['text'].split(0,10)} className={className}>{p.children[0]['text']}</p>;
+                            })}
+                        </div>}
+                    </div>
+                </>}
+                <div className="articleDiv">
+                    <h3 className='text title'>Articles</h3>
+                    {props.articles.map(a => {
+                        return <a key={`${a.slug.current}-link`} className='text article' href={`${slug ? '' : 'blog/'}${a.slug.current}`}>{a.name}</a>;
+                    })}
+                </div>
+            </div>
 
-                    </div>}
-                </div> 
-            </>
-            : 
-            <>
-                <h1 className="text title">Blog</h1>
-                <div className="blogContainer">
-                    {<div className="articleDiv">
-                        {filterdArticles.map(a => {
-                            return <a href={`blog/${a.slug.current}`} className=''><div className='article'>{a.name}</div></a>;
-                        })}
-
-                    </div>}
-                </div> 
-            </>
-
-                }
             <style jsx>{`
                 .container {
-                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     margin-top: 60px;
                     padding-bottom: 100px;
+                }
+                .contentContainer {
+                    display: flex;
+                    gap: 40px;
+                    width: 60%;
                 }
                 .blogContainer {
                     display: flex;
                     flex-direction: column;
-                    padding: 0 1% 0 1%;
+                    align-items: center;
+                    flex: 2;
                     justify-content: space-around;
                 }
                 .textDiv {
@@ -60,22 +60,21 @@ const Blog = props => {
                     margin-top: 10px;
                 }
                 a {
-                    display: block;
-                    width: 100%;
-                }
-                .articleDiv {
-                    display: flex;
-                    // flex-direction: column:
-                    gap: 8px;
-                }
-                .article {
-                    height: 30px;
-                    width: 60%;
+                    padding: 10px;
+                    text-decoration: none;
                     border: 1px solid white;
                     border-radius: 8px;
+                    height: 40px;
+                }
+                .articleDiv {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
                 }
                 .imageDiv {
                     margin-top: 10px;
+                    width: 300px;
                 }
                 .imageDiv img {
                     width: 100%;
@@ -92,15 +91,24 @@ const Blog = props => {
                     text-align: center;
                 }
                 @media all and (max-width: 750px) {
+                    .container {
+                        margin-top: 0;
+                        width: 100%;
+                    }
+                    .contentContainer {
+                        flex-direction: column;
+                        width: 100%;
+                    }
                     .blogContainer {
                         flex-direction: column;
                         justify-content: center;
+                        padding: 0 10px;
+                    }
+                    .articleDiv {
+                        padding: 0 10px;
                     }
                     .textDiv {
                         width: 100%;
-                    }
-                    .text {
-                        padding: 0 10px 0 10px;
                     }
                     .imageDiv {
                         width: 100%;

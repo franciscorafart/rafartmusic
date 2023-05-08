@@ -95,7 +95,6 @@ const Page = props => {
         cover = null;
     } else if (page.startsWith('blog')) {
         content = <Blog urlFor={urlFor} articles={props.articles}/>;
-        cover = null;
     }
 
     return(
