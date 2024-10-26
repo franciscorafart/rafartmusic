@@ -9,7 +9,7 @@ import About from './About';
 import FastLinks from './FastLinks';
 import Footer from './Footer';
 import Posts from './Posts';
-// import SignUp from './SignUp'; 
+// import SignUp from './SignUp';
 import Videos from './Videos';
 import Catalogue from './Catalogue';
 import Franciscart from './Franciscart';
