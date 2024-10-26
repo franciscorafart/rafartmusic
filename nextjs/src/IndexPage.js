@@ -18,12 +18,15 @@ const IndexPage = props =>  {
                     gtag('js', new Date());
                     gtag('config', 'G-3F3QGZG209');
                 `}
-</script>
+                </script>
 
                 <link href={`https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap`} rel="stylesheet"/>
                 {props.urlFor && props.favicon && <link rel="shortcut icon" type="image/png" href={`${props.urlFor(props.favicon.mainImage.asset._ref).url()}`}/>}
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827136611762793"
-     crossorigin="anonymous"></script>
+                <script 
+                    async 
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827136611762793"
+                    crossOrigin="anonymous">
+                </script>
             </Head>
         </div>
     );
