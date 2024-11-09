@@ -7,11 +7,9 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/styles';
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
-// import client from "../client";
-// import imageUrlBuilder from '@sanity/image-url'
+import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
-const theme = responsiveFontSizes(createMuiTheme());
+const theme = responsiveFontSizes(createTheme());
 
 class MyDocument extends Document {
   render() {

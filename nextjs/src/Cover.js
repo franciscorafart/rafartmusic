@@ -1,3 +1,5 @@
+'use client'
+
 import React, {useState} from 'react'
 import {Button, Drawer, Typography} from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,7 +22,7 @@ const useStyles = makeStyles({
         padding: '0 40px'
     },
     introContainer: {
-        maxWidth: props => props.isMobile ? '50%': '30%',
+        maxWidth: props => props.isMobile ? '80%': '30%',
         marginLeft: props => props.isMobile ? '20px' : '40px',
         marginTop: props => props.isMobile ? '20px' : '40px',
         display: 'flex',

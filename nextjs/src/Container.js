@@ -1,3 +1,5 @@
+'use client'
+
 import React, {useState, useEffect} from 'react';
 import {Box, Typography} from '@material-ui/core';
 
@@ -5,11 +7,9 @@ import Cover from './Cover';
 import IndexPage from './IndexPage';
 import Contact from './Contact';
 import Albums from './Albums';
-import About from './About';
 import FastLinks from './FastLinks';
 import Footer from './Footer';
 import Posts from './Posts';
-// import SignUp from './SignUp';
 import Videos from './Videos';
 import Catalogue from './Catalogue';
 import Franciscart from './Franciscart';
@@ -63,8 +63,6 @@ const Page = props => {
         <Posts urlFor={urlFor} posts={props.posts} onlyLatest={true}/>
         <Typography className={classes.text}>Latest Videos</Typography>
         <Videos videos={props.videos}/>
-        {/* <Typography className={classes.text}>Sign up Newsletter</Typography> */}
-        {/* <SignUp/> */}
     </Box>;
 
     let cover = <Cover
@@ -80,8 +78,6 @@ const Page = props => {
         content = <Contact/>;
     } else if (page === 'albums'){
         content = <Albums urlFor={urlFor} albums={props.albums}/>;
-    } else if (page === 'about'){
-        content = <About urlFor={urlFor} about={props.about}/>;
     } else if (page === 'posts'){
         content = <Posts urlFor={urlFor} posts={props.posts}/>;
     } else if (page === 'instagram'){
