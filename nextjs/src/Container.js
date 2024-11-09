@@ -37,7 +37,7 @@ const Page = props => {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             function handleResize() {
-                setIsMobile(window.innerWidth < 450);
+                setIsMobile(window.innerWidth < 800);
             }
 
             window.addEventListener('resize', handleResize, {passive: true});
@@ -46,7 +46,7 @@ const Page = props => {
 
             return () => window.removeEventListener("resize", handleResize);
         }
-    }, []);
+    }, []); 
 
     const urlFor = source => builder.image(source);
 

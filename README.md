@@ -1,12 +1,14 @@
-#Portfolio - Static website with Next JS, React, Sanity.io and Netlify Check it out at: https://www.franciscorafat.com
+# Portfolio 
+Static website with Next JS, React, Sanity.io and Netlify Check it out at: https://www.rafartmusic.com
 
-#Description Static website for my personal portfolio created with React, NextJS for static site building and server side rendering, Sanity.io headless CMS for content resources, and Netlify for automatic deployment.
+## Description 
+Static website for my personal portfolio created with React, NextJS for static site building and server side rendering, Sanity.io headless CMS for content resources, and Netlify for automatic deployment.
 
 This project is two apps in one. The /rafartmusic folder has the Sanity schemas and resources to build the headless CMS. The React/NextJS front end portion is in the /nextjs folder. Both apps have to be deployed separately.
 
 Netlify is hooked to track changes on any of the two apps code, rebuilding the static resources for the site whenever code is pushed to the repository. Also, Netlify is hooked to Sanity via a webhook. It will rebuild when any content is changed or updated in the Sanity deployed CMS.
 
-#How to build?
+## How to build?
 
 Step 1 - Create Sanity application (headless CMS)
 
@@ -19,7 +21,8 @@ Deploy CMS with $sanity deploy
 Upload content to your deployed content management system
 
 Step 2. Build site with Next JS and React
-a. Run $npm install on nextjs folder. Follow Next JS documentation for detailed explanation https://nextjs.org/learn/ b. Modify client.js file for sanity configs in next.js
+a. Run $npm install on nextjs folder. Follow Next JS documentation for detailed explanation https://nextjs.org/learn/ 
+b. Modify client.js file for sanity configs in next.js
 
     export default sanityClient({
         projectId: 'your-project-id',

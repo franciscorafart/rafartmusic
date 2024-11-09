@@ -28,7 +28,7 @@ const Footer = props => {
                                 item => {
                                 return <li key={item.slug} className="text">
                                         <a className="socialMedia" href={item.linkString}>
-                                            <FontAwesomeIcon icon={fab[item.iconClass]} size="4x"/>
+                                            <FontAwesomeIcon icon={fab[item.iconClass]} size="xl"/>
                                         </a>
                                     </li>;
                                 })
@@ -66,9 +66,7 @@ const Footer = props => {
                     justify-content: space-between;
                 }
                 .socialMedia {
-                    width: 20px;
-                    height: 20px;
-                    display: block;
+                
                 }
                 a {
                     margin-top: 20px;
