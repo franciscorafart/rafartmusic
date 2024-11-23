@@ -1,0 +1,11 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/* Component-specific Styles */
+.website_div {
+    width: 100%;
+}
