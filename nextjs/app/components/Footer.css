@@ -1,12 +1,13 @@
 .footer-bg {
     background-color: #14171F;
-    min-height: 200px;
+    /* min-height: 200px; */
 }
 
 .footer-content {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 80px 80px;
 }
 
 .text {
@@ -16,17 +17,10 @@
     list-style-type: none;
 }
 
-.one-third {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex: 1;
-}
-
 .menuItems {
     display: flex;
     flex-direction: row;
+    gap: 30px;
     justify-content: space-between;
 }
 
