@@ -1,5 +1,5 @@
 import React from 'react';
-import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, fab } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import client from "../../client";
 import './Footer.css'
@@ -23,19 +23,18 @@ const Footer = async props => {
                 }
                 <div className="one-third" />
                 <div className="one-third">
+                
                     <ul className="menuItems">
                     {
                         sanityProps.menu?.filter(
                             item => item.socialMedia
                         ).sort((a,b) => a.order<b.order?1:-1).map(
                                 item => {
-                                return <li key={item.slug} className="text">
-                                        <a className="socialMedia" href={item.linkString}>
-                                            <FontAwesomeIcon icon={fab[item.iconClass]} size="xl"/>
-                                        </a>
-                                    </li>;
+                                const icon = fab[item.iconClass];
+                                return (<li className="socialMedia" key={item.slug}>
+                                        <a  href={item.linkString}><FontAwesomeIcon icon={icon} size='xs'/></a>
+                                    </li>);
                                 })
-                        || null
                     }
                     </ul>
                 </div>

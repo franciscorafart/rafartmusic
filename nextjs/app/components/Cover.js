@@ -12,10 +12,12 @@ const stringScrollScript =`
     
     window.addEventListener('scroll', () => {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            navbar.classList.add('hidden');
-        } else {
-            navbar.classList.remove('hidden');
+        if (navabar) {
+            if (scrollTop > lastScrollTop) {
+                navbar.classList.add('hidden');
+            } else {
+                navbar.classList.remove('hidden');
+            }
         }
         lastScrollTop = scrollTop;
     });
