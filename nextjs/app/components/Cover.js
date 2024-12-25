@@ -22,7 +22,7 @@ const stringScrollScript =`
 `
 
 const Cover = async props => {
-    const sanityProps = await getInitialProps()
+    const sanityProps = await getSanityProps()
 
     return(
         <div>
@@ -77,7 +77,7 @@ const Cover = async props => {
 };
 
 
-const getInitialProps = async () => {
+const getSanityProps = async () => {
     const logo = await client.fetch('*[_type == "generalAssets" && slug.current == "rafart-logo"][0]{title, mainImage}');
     const coverImage = await client.fetch('*[_type == "generalAssets" && slug.current == "cover-img"][0]{title, mainImage}');
     const menu = await client.fetch('*[_type == "menu"]{title, slug, order, linkString, headerMenu, socialMedia, iconClass}');
