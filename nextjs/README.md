@@ -9,8 +9,5 @@ https://cobwwweb.com/what-you-need-to-know-about-netlify-forms
 https://www.npmjs.com/package/@fortawesome/react-fontawesome
 
 
-- Stylesheet injection issue solution for MaterialUI
-https://developerhandbook.com/react/how-to-set-up-nextjs-material-ui/
-
 - Screen detection server side rendered
 https://stackoverflow.com/questions/63406435/how-to-detect-window-size-in-next-js-ssr-using-react-hook
