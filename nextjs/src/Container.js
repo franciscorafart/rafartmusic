@@ -78,8 +78,6 @@ const Page = props => {
         content = <Contact/>;
     } else if (page === 'albums'){
         content = <Albums urlFor={urlFor} albums={props.albums}/>;
-    } else if (page === 'posts'){
-        content = <Posts urlFor={urlFor} posts={props.posts}/>;
     } else if (page === 'instagram'){
         content = <FastLinks urlFor={urlFor} logo={props.logo} />;
         cover = null;

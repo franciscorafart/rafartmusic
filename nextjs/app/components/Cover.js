@@ -30,7 +30,7 @@ const Cover = async props => {
                 {stringScrollScript}
             </Script>
             <section>
-                {!props.isMobile && <div className={"menuBar"}>
+                {!props.mobile && <div className={"menuBar"}>
                         {
                             sanityProps.menu.filter(item => item.headerMenu).sort((a,b) => a.order > b.order ? 1 : -1).map(
                             (item, idx) => <div key={`${item.title}-${idx}`}>
@@ -45,7 +45,7 @@ const Cover = async props => {
                 {
                     sanityProps && sanityProps.coverImage ?
                     <>
-                        {props.isMobile &&
+                        {props.mobile &&
                             <div 
                                 className='paper' 
                             >

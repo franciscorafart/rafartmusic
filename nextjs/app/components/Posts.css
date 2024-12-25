@@ -1,0 +1,93 @@
+.background {
+    width: 100%;
+    margin: 60px 0 40px 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+img {
+    width: 80%;
+    padding-left: 10%;
+}
+.postsContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1% 0 1%;
+    width: 60%;
+}
+.album {
+    margin: 10px 0 10px 0;
+    border: 1px solid gray;
+}
+.albumInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 10px 0;
+    align-items: center;
+}
+.textDiv {
+    flex-basis: auto;
+    margin-top: 10px;
+    float: left;
+}
+.paragraph {
+    padding: 0 2% 0 2%;
+}
+.imageDiv {
+    width: 360px;
+}
+form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.text{
+    font-family: 'Encode Sans Expanded', sans-serif;
+    line-height: 1.5;
+    color: white;
+}
+.mediumText {
+    font-size: 1em;
+}
+.bigText {
+    font-size: 2em;
+}
+.centeredTitle {
+    text-align: center;
+}
+.bold {
+    font-size: 1.3em;
+}
+.callToAction {
+    min-width: 160px;
+    margin: 20px 20px 20px 0;
+    height: 60px;
+    background-color: #1db954;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media all and (max-width: 750px) {
+    .textDiv {
+        width: 100%;
+    }
+    .imageDiv {
+        width: 100%;
+    }
+    img {
+        width: 50%;
+        padding-left: 25%;
+    }
+    form {
+        justify-content: center;
+    }
+    .callToAction {
+        margin: 20px 0 20px 0;
+        width: 40%;
+    }
+    .postsContainer {
+        width: 100%;
+    }
+}

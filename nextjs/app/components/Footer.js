@@ -11,7 +11,7 @@ const Footer = async props => {
         <div className="footer-bg">
             <footer className="footer-content">
                 {
-                    !props.isMobile &&
+                    !props.mobile &&
                     <div className="one-third">
                         {/* <p className='text'>Join my personal Discord</p><a className="socialMedia" href='https://discord.gg/RWF8P7yHaJ'><FontAwesomeIcon style={{display: 'inline'}} icon={fab['faDiscord']} size="4x"/></a> */}
                         {/* <p className="text">
