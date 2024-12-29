@@ -1,5 +1,5 @@
 .container {
-    background: black;
+    background: #000c12;
 }
 .videoBoxContainer{
     display: flex;
@@ -11,12 +11,6 @@
 }
 .videoBox {
     margin-bottom: 40px;
-}
-.text {
-    font-family: 'Encode Sans Expanded', sans-serif;
-    font-size: 2em;
-    color: white;
-    text-align: center;
 }
 
 @media all and (max-width: 750px) {

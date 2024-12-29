@@ -127,7 +127,7 @@ const SignUp = () => {
                     width: 60%;
                     margin: 80px 0 80px 0;
                     min-height: 600px;
-                    background-color: black;
+                    background-color: #000c12;
                     padding: 16px 0 16px 3%;
                     border: 1px solid gray;
                 }
@@ -160,7 +160,7 @@ const SignUp = () => {
                     font-size: 0.8em;
                 }
                 .textWhite {
-                    color: white;
+                    color: #d5dbde;
                 }
                 .language {
                     display: flex;

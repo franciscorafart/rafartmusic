@@ -37,11 +37,13 @@ export default async function RootLayout({ children, deviceType }) {
 
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-3F3QGZG209"></script>
           <script>{`
+            if (window != undefined) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-3F3QGZG209');
-          `}
+            }
+              `}
           </script>
 
           <link href={`https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap`} rel="stylesheet"/>

@@ -29,7 +29,7 @@
 }
 
 .menuButton {
-    color: #FFFFFF; /* Todo: Change color */
+    color: #d5dbde;
 }
 
 .paper {
@@ -43,23 +43,20 @@
 .hidden {
     display: none;
 }
-.mobileMenuItem {
-    /* flex-basis: 2; */
-}
 
 .text {
     font-family: 'Encode Sans Expanded', sans-serif;
-    color: white; /* TODO: Change text color to be less aggressive */
+    color: #d5dbde;
     text-align: center;
     text-decoration: none;
 }
 
 .subHeader {
-    font-size: 1em;
+    font-size: 2em;
 }
 
 .menuText {
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 .menuText:hover {

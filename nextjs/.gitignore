@@ -3,4 +3,5 @@
 .next/
 .env
 package-lock.json
-images
+public/images
+public/audio

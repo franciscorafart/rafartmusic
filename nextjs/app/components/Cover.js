@@ -9,18 +9,19 @@ import { urlFor } from '../utils';
 const stringScrollScript =`
     let lastScrollTop = 0;
     const navbar = document.querySelector('.paper');
-    
-    window.addEventListener('scroll', () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (navabar) {
+    if (window != undefined){
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (navabar) {
             if (scrollTop > lastScrollTop) {
                 navbar.classList.add('hidden');
-            } else {
-                navbar.classList.remove('hidden');
+                } else {
+                    navbar.classList.remove('hidden');
+                }
             }
-        }
-        lastScrollTop = scrollTop;
-    });
+            lastScrollTop = scrollTop;
+        });
+    }
 `
 
 const Cover = async props => {

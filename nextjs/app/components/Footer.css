@@ -10,10 +10,9 @@
     padding: 80px 80px;
 }
 
-.text {
+.text-footer {
     font-family: 'Encode Sans Expanded', sans-serif;
-    font-size: 1em;
-    color: white;
+    color: #d5dbde;
     list-style-type: none;
 }
 
@@ -27,14 +26,14 @@
 .socialMedia {
     /* Add styles if needed */
     list-style: none;
-    color: white;
+    color: #d5dbde;
     height: 40px;
     width: 40px;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: #d5dbde;
 }
 
 ul {

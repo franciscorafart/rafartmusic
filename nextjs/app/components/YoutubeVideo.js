@@ -1,8 +1,10 @@
+import './YoutubeVideo.css';
+
 const YoutubeVideo = ({ video, width, height }) => {
     return <div>
         {video && height && width && <div>
-            <h3 className="text">{video.title}</h3>
-            <h4 className="text">{video.artist}</h4>
+            <h3 className="text-videos">{video.title}</h3>
+            <h4 className="text-videos">{video.artist}</h4>
             <iframe
                 width={width}
                 height={height}

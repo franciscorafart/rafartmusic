@@ -1,7 +1,7 @@
 .instagramContainer{
     padding-top: 40px;
     min-height: 500px;
-    background: black;
+    background: #000c12;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +10,7 @@
     display: block;
     margin-bottom: 30px;
     padding: 10px;
-    border: 1px solid white;
+    border: 1px solid #d5dbde;
     width: 30%;
     text-decoration: none;
     display: flex;
@@ -19,8 +19,8 @@
 .text{
     font-family: 'Encode Sans Expanded', sans-serif;
     font-size: 1em;
-    color: white;
-    align-text: center;
+    color: #d5dbde;
+    text-align: center;
 }
 .logo{
     max-width: 200px;
