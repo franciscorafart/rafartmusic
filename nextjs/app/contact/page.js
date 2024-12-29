@@ -39,6 +39,6 @@ const Contact = () => {
                 </form>
             </div>
         );
-}
+};
 
 export default Contact;

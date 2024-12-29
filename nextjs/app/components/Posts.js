@@ -51,7 +51,7 @@ const Posts = props => {
                                 <input className="callToAction text text-posts mediumText" type="submit" value="Check it out"/>
                             </form>
                         </div>: <div></div>}
-                    </div>
+                    </div>;
                 })
                 }
                 {
