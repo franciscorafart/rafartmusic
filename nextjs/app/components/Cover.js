@@ -1,6 +1,6 @@
-'use server'
+'use server';
 
-import React from 'react'
+import React from 'react';
 import Script from 'next/script';
 import './Cover.css';
 import client from "../../client";
@@ -22,10 +22,10 @@ const stringScrollScript =`
             lastScrollTop = scrollTop;
         });
     
-`
+`;
 
 const Cover = async ({ mobile }) => {
-    const sanityProps = await getSanityProps()
+    const sanityProps = await getSanityProps();
 
     return(
         <div>

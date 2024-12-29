@@ -14,7 +14,7 @@ const Home = async (props) => {
             <h3 className="text text-cover">Latest Videos</h3>
             <Videos videos={videos} />
         </div>
-    ) 
-}
+    ); 
+};
 
 export default Home;

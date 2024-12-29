@@ -5,9 +5,9 @@ import { headers } from "next/headers";
 import './Videos.css';
 
 const Videos = async ({ videos }) => {
-    const hds = await headers()
+    const hds = await headers();
     const userAgent = hds.get("user-agent") || "";
-    const mobile = isMobile(userAgent)
+    const mobile = isMobile(userAgent);
     const smallVideo = mobile;
 
     // NOTE: To change size of youtube videos, set both the .videoBox

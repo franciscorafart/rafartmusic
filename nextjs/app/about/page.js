@@ -1,14 +1,14 @@
-'use server'
+'use server';
 
 import React from 'react';
 import client from '../../client';
 import { urlFor } from '../utils';
 
-import './style.css'
+import './style.css';
 
 const About = async () => {
     const sanityProps = await getInitialProps();
-    const imageURL = urlFor(sanityProps.about.image.asset._ref)
+    const imageURL = urlFor(sanityProps.about.image.asset._ref);
     
     return(
             <div className="container">

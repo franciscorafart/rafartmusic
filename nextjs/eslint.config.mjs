@@ -1,8 +1,3 @@
-import { FlatCompat } from "@eslint/eslintrc";
-
-
-const compat = new FlatCompat();
-
 export default [
   // Environment settings
   {
@@ -30,11 +25,11 @@ export default [
   },
 
   // Legacy support for .eslintrc.js
-  ...compat.config({
-    env: {
-      browser: true,
-      es6: true,
-    },
-    // plugins: ["react"],
-  }),
+  // ...compat.config({
+  //   env: {
+  //     browser: true,
+  //     es6: true,
+  //   },
+  //   plugins: ["react"],
+  // }),
 ];

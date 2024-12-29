@@ -1,8 +1,8 @@
 import React from 'react';
-import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import client from "../../client";
-import './Footer.css'
+import './Footer.css';
 
 const Footer = async () => {
     const sanityProps = await getInitialProps();

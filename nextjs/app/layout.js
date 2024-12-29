@@ -1,21 +1,21 @@
-import Cover from "./components/Cover"
+import Cover from "./components/Cover";
 import Footer from './components/Footer';
 import { isMobile, urlFor } from "./utils";
 import client from "../client";
 import { headers } from "next/headers";
 
-import './global.css'
+import './global.css';
 
 export const metadata = {
   title: 'Rafart Music',
   description: 'Website by Rafart Music Tech LLC',
-}
+};
 
 export default async function RootLayout({ children, deviceType }) {
   const sanityProps = await getInitialProps();
-  const hds = await headers()
+  const hds = await headers();
   const userAgent = hds.get("user-agent") || "";
-  const mobile = isMobile(userAgent)
+  const mobile = isMobile(userAgent);
 
   return (
     <html lang="en">
@@ -55,7 +55,7 @@ export default async function RootLayout({ children, deviceType }) {
           </main>
       </body>
     </html>
-  )
+  );
 }
 
 const getInitialProps = async () => {

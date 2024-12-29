@@ -9,7 +9,7 @@ const Home = async () => {
             <h1 className="text">News</h1>
             <Posts urlFor={urlFor} posts={posts} onlyLatest={false}/>
         </div>
-    ) 
-}
+    ); 
+};
 
 export default Home;
