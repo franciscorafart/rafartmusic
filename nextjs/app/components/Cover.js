@@ -68,7 +68,7 @@ const Cover = async ({ mobile }) => {
                             > 
                                 <div className={"introContainer"}>
                                     <img className={"logo"} src={urlFor(sanityProps.logo.mainImage.asset._ref)}/>
-                                    <span className={`${"text"} ${"subHeader"}`}>Chapman Stick and Electronic Rock</span>
+                                    <span className={`${"text"} ${"subHeader"}`}>Electronic Metal & Chapman Stick</span>
                                 </div>
                         </div>
                     </>:

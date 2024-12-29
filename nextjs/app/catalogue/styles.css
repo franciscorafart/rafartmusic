@@ -1,0 +1,42 @@
+th, td {
+    padding: 10px 0;
+}
+.catalogueContainer{
+    padding: 80px 0;
+    min-height: 500px;
+    background: #000c12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerText {
+    color: #c4ed21;
+    font-size: 1.5em;
+}
+.table-text {
+    text-align: left;
+}
+.text-catalogue{
+    font-size: 1.4em;
+}
+.logo{
+    max-width: 200px;
+    max-height: 60px;
+    margin-bottom: 50px;
+}
+
+.link:hover {
+    color: #c4ed21;   
+    cursor: pointer;
+}
+
+@media all and (max-width: 750px) {
+    .catalogueContainer {
+        padding: 20px 0;
+    }
+    .text-catalogue {
+        font-size: 0.2em;
+        text-align: left;
+    }
+}

@@ -15,7 +15,7 @@ const Albums = async () => {
                     <h2 className="text albumTitle">{`${a.title} - ${a.year || ''} ${a.releaseType}`}</h2>
                     <div className="albumInfo">
                         <div className="imageDiv">
-                            {urlFor && <img src={urlFor(a.cover.asset._ref)}/>}
+                            {urlFor && <img className='album-img' src={urlFor(a.cover.asset._ref)}/>}
                             {
                             a.bandcamp?
                                 <form action={a.bandcamp}>

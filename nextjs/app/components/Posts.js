@@ -35,7 +35,7 @@ const Posts = props => {
                         <h4 className="text text-posts centeredTitle">{date}</h4>
                         <div className="albumInfo">
                             <div className="imageDiv">
-                                <img src={props.urlFor(post.mainImage.asset._ref)}/>
+                                <img className='post-img' src={props.urlFor(post.mainImage.asset._ref)}/>
                             </div>
                             <div className="textDiv">
                                 {

@@ -1,12 +1,10 @@
-import client from '../../client';
-import { urlFor } from '../utils';
+import './styles.css';
 
 const makeRows = (rows) => rows.map(
     r => <tr>
-        <td>{r.title}</td>
+        <td><a className='link' href={r.link} target="_blank">{r.title}</a></td>
         <td>{r.year}</td>
         <td>{r.type}</td>
-        <td><a href={r.link} target="_blank">link</a></td>
     </tr>
 );
 
@@ -126,14 +124,14 @@ const Catalogue = async () => {
         ];
 
         return (
-            <div className="catalogueContainer text">
+            <div className="catalogueContainer text text-catalogue">
                 {/* <img className='logo' src={urlFor(logo.mainImage.asset._ref)}/> */}
+                <h1 className='Text'>Work Catalogue</h1>
                 <table>
-                    <tr className='firstTr'>
+                    <tr className='text table-text'>
                         <th>Title</th>
                         <th>Year</th>
                         <th>Type</th>
-                        <th>Link</th>
                     </tr>
                     <tbody>
 
