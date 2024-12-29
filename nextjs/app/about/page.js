@@ -12,14 +12,14 @@ const About = async () => {
     
     return(
             <div className="container">
-                <h1 className="text title">About</h1>
+                <h1 className="text-about title">About</h1>
                 <div className="aboutContainer">
                     <div className="imageDiv">
                         <img src={imageURL}/>
                     </div>
                     <div className="textDiv">
                         {sanityProps?.about?.paragraph?.map(p => {
-                            const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "text bold": "text";
+                            const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "text-about bold": "text-about";
                             return <p className={className}>{p.children[0]['text']}</p>;
                         })}
 

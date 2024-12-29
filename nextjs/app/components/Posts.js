@@ -20,7 +20,7 @@ const Posts = props => {
         <div className="background">
             { onlyLatest? <div></div>
                 :
-                    <div><h2 className="text bigText centeredTitle">Posts and News</h2></div>
+                    <div><h2 className="text text-posts bigText centeredTitle">Posts and News</h2></div>
             }
             <div className="container">
                 <div className="postsContainer">
@@ -31,8 +31,8 @@ const Posts = props => {
                     date = date && date.length > 0? date.substring(0,10).split('-').join('-'): '';
 
                     return <div className="album" key={post.slug}>
-                        <h3 className="text centeredTitle">{post.title}</h3>
-                        <h4 className="text centeredTitle">{date}</h4>
+                        <h3 className="text text-posts centeredTitle">{post.title}</h3>
+                        <h4 className="text text-posts centeredTitle">{date}</h4>
                         <div className="albumInfo">
                             <div className="imageDiv">
                                 <img src={props.urlFor(post.mainImage.asset._ref)}/>
@@ -40,7 +40,7 @@ const Posts = props => {
                             <div className="textDiv">
                                 {
                                     post.paragraph.map(p => {
-                                    const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "paragraph text bold": "paragraph text";
+                                    const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "paragraph text text-posts bold": "paragraph text text-posts";
                                     return <p key={p._key} className={className}>{p.children[0]['text']}</p>;
                                 })
                                 }
@@ -48,7 +48,7 @@ const Posts = props => {
                         </div>
                         {post.link? <div>
                             <form action={post.link}>
-                                <input className="callToAction text mediumText" type="submit" value="Check it out"/>
+                                <input className="callToAction text text-posts mediumText" type="submit" value="Check it out"/>
                             </form>
                         </div>: <div></div>}
                     </div>
@@ -56,7 +56,7 @@ const Posts = props => {
                 }
                 {
                     !onlyLatest && allPosts.length===0?
-                        <h4 className="text centeredTitle">No news right now</h4>
+                        <h4 className="text text-posts centeredTitle">No news right now</h4>
                     :
                         <div></div>
                 }

@@ -44,13 +44,6 @@
     display: none;
 }
 
-.text {
-    font-family: 'Encode Sans Expanded', sans-serif;
-    color: #d5dbde;
-    text-align: center;
-    text-decoration: none;
-}
-
 .subHeader {
     font-size: 2em;
 }
@@ -86,5 +79,19 @@
 
     .subHeader {
         font-size: 0.7em;
+    }
+
+    .menuBar {
+        flex-wrap: wrap;
+       
+    }
+
+    .menuText {
+        font-size: 0.7em;
+    }
+    
+    .mobileMenuItem {
+        text-align: center;
+        flex-basis: 33.33%;
     }
 }

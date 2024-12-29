@@ -1,4 +1,3 @@
-import {Children, isValidElement, cloneElement} from "react";
 import Cover from "./components/Cover"
 import Footer from './components/Footer';
 import { isMobile, urlFor } from "./utils";
@@ -17,13 +16,6 @@ export default async function RootLayout({ children, deviceType }) {
   const hds = await headers()
   const userAgent = hds.get("user-agent") || "";
   const mobile = isMobile(userAgent)
-
-  const childrenWithProps = Children.map(children, child => {
-    if (isValidElement(child)) {
-      return cloneElement(child, { mobile });
-    }
-    return child;
-  });
 
   return (
     <html lang="en">
@@ -58,7 +50,7 @@ export default async function RootLayout({ children, deviceType }) {
         
         <main>
           <Cover mobile={mobile}/>
-          {childrenWithProps}
+          {children}
           <Footer mobile={mobile} />
           </main>
       </body>

@@ -4,8 +4,13 @@ body {
     padding: 0;
     background-color: #000c12;
 }
+.text {
+    font-family: 'Encode Sans Expanded', sans-serif;
+    color: #d5dbde;
+    text-decoration: none;
+}
 
-/* Component-specific Styles */
-.website_div {
-    width: 100%;
+.text-cover {
+    font-size: 2em;
+    text-align: center;
 }

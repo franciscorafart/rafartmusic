@@ -1,9 +1,15 @@
 import YoutubeVideo from './YoutubeVideo';
+import { isMobile } from "../utils";
+import { headers } from "next/headers";
+
 import './Videos.css';
 
-const Videos = ({videos, mobile}) => {
+const Videos = async ({ videos }) => {
+    const hds = await headers()
+    const userAgent = hds.get("user-agent") || "";
+    const mobile = isMobile(userAgent)
     const smallVideo = mobile;
-
+    console.log('smallVideo', smallVideo)
     // NOTE: To change size of youtube videos, set both the .videoBox
     // and the YoutubeVideo props to the same width and height.
     const width = smallVideo? "355": "560";

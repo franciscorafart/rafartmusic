@@ -43,10 +43,8 @@ form {
     display: flex;
     justify-content: flex-end;
 }
-.text{
-    font-family: 'Encode Sans Expanded', sans-serif;
+.text-posts{
     line-height: 1.5;
-    color: #d5dbde;
 }
 .mediumText {
     font-size: 1em;

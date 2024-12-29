@@ -9,22 +9,22 @@ import { urlFor } from '../utils';
 const stringScrollScript =`
     let lastScrollTop = 0;
     const navbar = document.querySelector('.paper');
-    if (window != undefined){
+
         window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (navabar) {
+            
             if (scrollTop > lastScrollTop) {
                 navbar.classList.add('hidden');
-                } else {
-                    navbar.classList.remove('hidden');
-                }
+            } else {
+                navbar.classList.remove('hidden');
             }
+            
             lastScrollTop = scrollTop;
         });
-    }
+    
 `
 
-const Cover = async props => {
+const Cover = async ({ mobile }) => {
     const sanityProps = await getSanityProps()
 
     return(
@@ -33,7 +33,7 @@ const Cover = async props => {
                 {stringScrollScript}
             </Script>
             <section>
-                {!props.mobile && <div className={"menuBar"}>
+                {!mobile && <div className={"menuBar"}>
                         {
                             sanityProps.menu.filter(item => item.headerMenu).sort((a,b) => a.order > b.order ? 1 : -1).map(
                             (item, idx) => <div key={`${item.title}-${idx}`}>
@@ -48,7 +48,7 @@ const Cover = async props => {
                 {
                     sanityProps && sanityProps.coverImage ?
                     <>
-                        {props.mobile &&
+                        {mobile &&
                             <div 
                                 className='paper' 
                             >
