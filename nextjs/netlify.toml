@@ -8,4 +8,4 @@
 [build]
   base    = "nextjs"
   publish = ".next"
-  command = "npm run build"
+  command = "pnpm run build"
