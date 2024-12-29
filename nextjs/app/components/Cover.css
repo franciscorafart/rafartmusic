@@ -85,11 +85,11 @@
 
     .menuBar {
         flex-wrap: wrap;
-       
+        row-gap: 30px;
     }
 
     .menuText {
-        font-size: 0.7em;
+        font-size: 0.9em;
     }
     
     .mobileMenuItem {
