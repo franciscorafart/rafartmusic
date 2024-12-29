@@ -57,6 +57,11 @@ input[type="range"]::-webkit-slider-thumb {
   transform: translateX(0%);
   pointer-events: none;
 }
+
+.icon {
+  color: #dddddd;
+  cursor: pointer;
+}
 @media screen and (max-width: 768px) {
   .time-control {
     width: 90%;

@@ -14,9 +14,9 @@ function chillHop() {
     {
       name: "The War",
       cover:
-        "./images/rafart-thanatos.jpg",
+        "../images/rafart-thanatos.jpg",
       artist: "Rafart",
-      audio: "./audio/TheWar.mp3",
+      audio: "../audio/TheWar.mp3",
       color: ["#EF8EA9", "#ab417f"],
       id: uuidv4(),
       active: false,

@@ -1,13 +1,11 @@
 'use client'
 import { useRef, useState } from "react";
-import Player from "../components/AudioPlayer/Player";
-import Song from "../components/AudioPlayer/Song";
-import "../components/AudioPlayer/app.scss";
-
-//IMporting DATA
+import Player from "../../components/AudioPlayer/Player";
+import Song from "../../components/AudioPlayer/Song";
 import data from "./data";
-import Library from "../components/AudioPlayer/Library";
-import Nav from "../components/AudioPlayer/Nav";
+import Library from "../../components/AudioPlayer/Library";
+import Nav from "../../components/AudioPlayer/Nav";
+import "../../components/AudioPlayer/app.scss";
 
 function App() {
   const [songs, setSongs] = useState(data());

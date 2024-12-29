@@ -10,9 +10,9 @@
   transform: translateX(-100%);
   transition: all 0.2s ease;
   opacity: 0;
-  h2 {
-    padding: 2rem;
-  }
+  // h2 {
+  //   padding: 2rem;
+  // }
 }
 .library-song {
   display: flex;
@@ -52,6 +52,16 @@
 .active {
   transform: translateX(0%);
   opacity: 1;
+}
+.library-nav {
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon-library {
+  cursor: pointer;
+  color: gray;
 }
 @media screen and (max-width: 768px) {
   .library {
