@@ -1,8 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faClose
-} from "@fortawesome/free-solid-svg-icons";
 import LibrarySong from "./LibrarySong";
 
 const Library = ({
@@ -11,20 +7,9 @@ const Library = ({
   audioRef,
   isPlaying,
   setSongs,
-  setLibraryStatus,
-  libraryStatus,
 }) => {
   return (
-    <div className={`library ${libraryStatus ? "active" : ""}`}>
-      <div className="library-nav">
-        <h2>Library</h2>
-        <FontAwesomeIcon
-          onClick={() => setLibraryStatus(false)}
-          size="2x"
-          className="icon-library skip-forward"
-          icon={faClose}
-        />
-      </div>
+    <div className={`library`}>
       <div className="library-songs">
         {songs.map((song) => (
           <LibrarySong

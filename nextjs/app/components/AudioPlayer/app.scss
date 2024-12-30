@@ -9,6 +9,12 @@
   @import "./player";
   @import "./song";
   @import "./nav";
+
+  .album-player {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+  } 
   h1,
   h2,
   h3 {

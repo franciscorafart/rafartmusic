@@ -43,9 +43,7 @@ input {
     cursor: pointer;
 }
 .text{
-    font-family: 'Encode Sans Expanded', sans-serif;
     line-height: 1.5;
-    color: #d5dbde;
 }
 .albumTitle {
     text-align: center;
