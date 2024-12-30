@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useRef, useState } from "react";
 import Player from "../../components/AudioPlayer/Player";
 import Song from "../../components/AudioPlayer/Song";
