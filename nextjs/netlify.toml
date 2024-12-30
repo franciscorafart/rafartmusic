@@ -7,5 +7,5 @@
 
 [build]
   base    = "nextjs"
-  publish = "./"
+  publish = ".next"
   command = "pnpm run build"
