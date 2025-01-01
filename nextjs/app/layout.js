@@ -25,18 +25,17 @@ export default async function RootLayout({ children, deviceType }) {
           <meta name="description" content="Rafart Champan stick music"/>
           <meta name="keywords" content="Rafart,Chapman Stick,Electronic Rock,Progressive rock"/>
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-          <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script>
 
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-3F3QGZG209"></script>
+          {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-3F3QGZG209"></script>
           <script>{`
-            if (window != undefined) {
+            if (window !== undefined) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-3F3QGZG209');
             }
               `}
-          </script>
+          </script> */}
 
           <link href={`https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap`} rel="stylesheet"/>
           {sanityProps.favicon && <link rel="shortcut icon" type="image/png" href={`${urlFor(sanityProps.favicon.mainImage.asset._ref)}`}/>}

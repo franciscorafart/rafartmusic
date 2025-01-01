@@ -26,11 +26,10 @@ const Posts = props => {
                 <div className="postsContainer">
                 {
                     allPosts.map(post => {
-
                     let date = post.publishedAt;
                     date = date && date.length > 0? date.substring(0,10).split('-').join('-'): '';
 
-                    return <div className="album" key={post.slug}>
+                    return <div className="album" key={post.slug.current}>
                         <h3 className="text text-posts centeredTitle">{post.title}</h3>
                         <h4 className="text text-posts centeredTitle">{date}</h4>
                         <div className="albumInfo">

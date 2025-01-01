@@ -26,8 +26,12 @@
 }
 .textDiv {
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 .paragraph {
+    white-space: pre-line;
     padding: 0 2% 0 2%;
 }
 .imageDiv {
