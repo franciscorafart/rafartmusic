@@ -1,4 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
+const S3 = "https://franc-cloud.s3.us-east-2.amazonaws.com/Audio/"
+
 function AlbumData() {
   return {
     thanatos: {
@@ -7,9 +9,9 @@ function AlbumData() {
         year: 2022,  
         cover: "../../images/rafart-thanatos.jpg",
         tracks: [{
-            name: "The War",
+            name: "Thanatos",
             artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
+            audio: `${S3}Thanatos.mp3`,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
@@ -22,9 +24,9 @@ function AlbumData() {
         year: 2022,  
         cover: "../images/rafart-thanatos.jpg",
         tracks: [{
-            name: "The War",
+            name: "Zappateada II",
             artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
+            audio: `${S3}ZappateadaII.mp3`,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
@@ -40,17 +42,17 @@ function AlbumData() {
         year: 2022,
         cover: "../images/rafart-thanatos.jpg",
         tracks: [{
-            name: "The War",
+            name: "Roll the Dice",
             artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
+            audio: `${S3}RollTheDice.mp3`,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
         }, 
             {
-            name: "The War",
+            name: "Roll the Dice (Stick solo)",
             artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
+            audio: `${S3}RollTheDiceInstr.mp3`,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
@@ -69,9 +71,9 @@ function AlbumData() {
         year: 2021,
         cover: "../images/rafart-thanatos.jpg",
         tracks: [{
-            name: "The War",
+            name: "Andes Haze",
             artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
+            audio: `${S3}Andes.mp3`,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
@@ -86,9 +88,9 @@ function AlbumData() {
         year: 2015,
         cover: "../images/rafart-thanatos.jpg",
         tracks: [{
-            name: "The War",
+            name: "Caminito del Turia",
             artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
+            audio: `${S3}Caminito.mp3`,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
@@ -104,9 +106,9 @@ function AlbumData() {
         year: 2017,
         cover: "../images/rafart-thanatos.jpg",
         tracks: [{
-            name: "The War",
+            name: "Organized Sound",
             artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
+            audio: `${S3}OrganizedSound.mp3`,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
@@ -122,9 +124,9 @@ function AlbumData() {
         year: 2016,
         cover: "../images/rafart-thanatos.jpg",
         tracks: [{
-            name: "The War",
-            artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
+            name: "Magic Concepts",
+            artist: "Rafart, Ramya Simaravakrishnan, David Rios",
+            audio: `${S3}MagicConcepts.mp3`,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
@@ -151,14 +153,40 @@ function AlbumData() {
         type: 'EP',
         year: 2014,
         cover: "../images/rafart-thanatos.jpg",
-        tracks: [{
-            name: "The War",
-            artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
-            color: ["#EF8EA9", "#ab417f"],
-            id: uuidv4(),
-            active: false,
-        }],
+        tracks: [
+            {
+                name: "Remix of the Beast",
+                artist: "Rafart",
+                audio: "../audio/TheWar.mp3",
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Get in the Grid",
+                artist: "Rafart",
+                audio: "../audio/TheWar.mp3",
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "SanDa",
+                artist: "Rafart",
+                audio: "../audio/TheWar.mp3",
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Isochronic",
+                artist: "Rafart",
+                audio: "../audio/TheWar.mp3",
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            }
+        ],
         description: [
             "Get In the Grid 2015 is an Electronic EP that features the Chapman Stick as the main instrument. It is my first finished electronic production. The EP was recorded and produced in Berklee Valencia, Spain. All tracks feature the Chapman Stick and where created in Ableton Live 9. This EP was the final assignment for the Electronic Production Live Performance Class with professor Ben Cantil aka. Encanti.",
             "*Samples in “Remix of the beast” from Iron Maiden.",
@@ -169,14 +197,41 @@ function AlbumData() {
         type: 'EP',
         year: 2015,
         cover: "../images/rafart-thanatos.jpg",
-        tracks: [{
-        name: "The War",
-        artist: "Rafart",
-        audio: "../audio/TheWar.mp3",
-        color: ["#EF8EA9", "#ab417f"],
-        id: uuidv4(),
-        active: false,
-    }], 
+        tracks: [
+            {
+                name: "Descent",
+                artist: "Rafart",
+                audio: `${S3}Descent.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Awakening",
+                artist: "Rafart",
+                audio: `${S3}Awakening.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Vortex",
+                artist: "Rafart",
+                audio: `${S3}Vortex.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Union",
+                artist: "Rafart",
+                audio: `${S3}Union.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            
+        ], 
     description: [
         "The Dark Night of the Soul is a stylistic continuation of The Handbook of the Acid Rider. Every track in this album features a special guest musician: Pat Nuño in classical guitars, the jazz vibraphone player Mauricio Gallardo and the electric guitar virtuoso, winner of the Steve Vai Scholarship, Benjamín Lechuga.",
         "This album is inspired in the poem by Saint John of the Cross. In it, he describes the dark and meaningless period of life which individuals go through to achieve a union with god.",
@@ -188,70 +243,129 @@ function AlbumData() {
         type: "LP",
         year: 2013,
         cover: "../images/rafart-thanatos.jpg",
-        tracks: [{
-            name: "The War",
-            artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
-            color: ["#EF8EA9", "#ab417f"],
-            id: uuidv4(),
-            active: false,
-        },
-        {
-            name: "Godless Priest",
-            cover:
-            "../images/rafart-thanatos.jpg",
-            artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
-            color: ["#EF8EA9", "#ab417f"],
-            id: uuidv4(),
-            active: false,
-        },
-        {
-            name: "Human Resources",
-            cover:
-            "../images/rafart-thanatos.jpg",
-            artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
-            color: ["#EF8EA9", "#ab417f"],
-            id: uuidv4(),
-            active: false,
-        },{
-            name: "Machine Elves",
-            cover:
-            "../images/rafart-thanatos.jpg",
-            artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
-            color: ["#EF8EA9", "#ab417f"],
-            id: uuidv4(),
-            active: false,
-        },
-        {
-        name: "Always Alone",
-        cover:
-        "../images/rafart-thanatos.jpg",
-        artist: "Rafart",
-        audio: "../audio/TheWar.mp3",
-        color: ["#EF8EA9", "#ab417f"],
-        id: uuidv4(),
-        active: false,
-        },
-        {
-            name: "The Waba Chawaba",
-            cover:
-            "../images/rafart-thanatos.jpg",
-            artist: "Rafart",
-            audio: "../audio/TheWar.mp3",
-            color: ["#EF8EA9", "#ab417f"],
-            id: uuidv4(),
-            active: false,
-        },
-    //ADD MORE HERE
-    ],
-    description: [
-        "Rafart´s debut Chapman Stick album. 10 tracks of Stick, drums and guitar trio. A mix of progressive rock and electronic music, making the Chapman Stick an integral part of a band. Distributed by Mylodon Records and available for purchase in this website.",
-        "Released June 24, 2013 \n Recorded and mixed by Rodrigo Morel at Estudio Machete, Santiago de Chile, 2013. \n Drums recorded by Eduardo Demangel and Dante González at Alba Road Studios, Santiago, Chile. \n Mastered by Mike Tholen at Rax Trax Recording, Chicago, IL. \n Composition in 1, 5 & 7: Francisco Rafart & Pat Nuño \n Drums in 1, 5, 7 & 10: Pablo Martínez. \n Guitars in 1, 5 & 7: Fernando Daza \n Guitars in 2, 4 & 8: Rodrigo Morel & Francisco Rafart \n Stick & composition in all tracks: Francisco Rafart."
-    ]
-    }
+        tracks: [
+            {
+                name: "Axis Mundi",
+                artist: "Rafart & Nuño",
+                audio: `${S3}AxisMundi.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Drum n Space",
+                artist: "Rafart",
+                audio: `${S3}DrumNSpace.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Blauen",
+                artist: "Rafart",
+                audio: `${S3}Blauen.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Pepperoni Atmosphere",
+                artist: "Rafart & Nuño",
+                audio: `${S3}PepperoniAtmosphere.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Chironex Fleckeri",
+                artist: "Rafart",
+                audio: `${S3}Chironex.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Mozarella",
+                artist: "Rafart",
+                audio: `${S3}Mozarella.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Space Rat",
+                artist: "Rafart & Nuño",
+                audio: `${S3}SpaceRat.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Masacre",
+                artist: "Rafart",
+                audio: `${S3}Masacre.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Escombrock",
+                artist: "Rafart",
+                audio: `${S3}Escombrock.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Sake & Mote",
+                artist: "Rafart",
+                audio: `${S3}SakeMote.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Alpha",
+                artist: "Rafart",
+                audio: `${S3}Alpha.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+        ],
+        description: [
+            "Rafart´s debut Chapman Stick album. 10 tracks of Stick, drums and guitar trio. A mix of progressive rock and electronic music, making the Chapman Stick an integral part of a band. Distributed by Mylodon Records and available for purchase in this website.",
+            "Released June 24, 2013 \n Recorded and mixed by Rodrigo Morel at Estudio Machete, Santiago de Chile, 2013. \n Drums recorded by Eduardo Demangel and Dante González at Alba Road Studios, Santiago, Chile. \n Mastered by Mike Tholen at Rax Trax Recording, Chicago, IL. \n Composition in 1, 5 & 7: Francisco Rafart & Pat Nuño \n Drums in 1, 5, 7 & 10: Pablo Martínez. \n Guitars in 1, 5 & 7: Fernando Daza \n Guitars in 2, 4 & 8: Rodrigo Morel & Francisco Rafart \n Stick & composition in all tracks: Francisco Rafart."
+        ]
+    },
+    handbook: {
+        title: "Remixes",
+        type: "Singles",
+        year: 2013,
+        cover: "../images/rafart-thanatos.jpg",
+        tracks: [
+            {
+                name: "Demons of Pain",
+                artist: "Rafart",
+                audio: `${S3}AxisMundi.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Sunken Living Area",
+                artist: "Rafart",
+                audio: `${S3}DrumNSpace.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+        ],
+        description: [
+            "Rafart´s debut Chapman Stick album. 10 tracks of Stick, drums and guitar trio. A mix of progressive rock and electronic music, making the Chapman Stick an integral part of a band. Distributed by Mylodon Records and available for purchase in this website.",
+            "Released June 24, 2013 \n Recorded and mixed by Rodrigo Morel at Estudio Machete, Santiago de Chile, 2013. \n Drums recorded by Eduardo Demangel and Dante González at Alba Road Studios, Santiago, Chile. \n Mastered by Mike Tholen at Rax Trax Recording, Chicago, IL. \n Composition in 1, 5 & 7: Francisco Rafart & Pat Nuño \n Drums in 1, 5, 7 & 10: Pablo Martínez. \n Guitars in 1, 5 & 7: Fernando Daza \n Guitars in 2, 4 & 8: Rodrigo Morel & Francisco Rafart \n Stick & composition in all tracks: Francisco Rafart."
+        ]
+    },
     };
 }
 
