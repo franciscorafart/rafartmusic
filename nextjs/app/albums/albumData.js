@@ -188,20 +188,20 @@ function AlbumsData() {
             "https://youtu.be/emvUUIt9t6A?t=637"
         ]
     },
-    dasein: {
-        title: "Dasein",
-        type: 'EP',
-        year: 2019,
-        cover: `${S3Img}dasein.jpg`,
-        tracks: [
-            {
-        name: "The War",
-        artist: "Rafart",
-        audio: "../audio/TheWar.mp3",
-        color: ["#EF8EA9", "#ab417f"],
-        id: uuidv4(),
-        active: false,
-    }]},
+    // dasein: {
+    //     title: "Dasein",
+    //     type: 'EP',
+    //     year: 2019,
+    //     cover: `${S3Img}dasein.jpg`,
+    //     tracks: [
+    //         {
+    //     name: "The War",
+    //     artist: "Rafart",
+    //     audio: "../audio/TheWar.mp3",
+    //     color: ["#EF8EA9", "#ab417f"],
+    //     id: uuidv4(),
+    //     active: false,
+    // }]},
     thanatos: {
         title: "Thanatos",
         type: "Single",
@@ -299,50 +299,50 @@ function AlbumsData() {
             "Vocals by Aman Wadwha, Electric Guitar by Joaquin Bustamante, Chapman Stick by Francisco Rafart. Speech: Karlheinz Stockhausen."
         ]
     },
-    "get-in-the-grid": {
-        title: "Get in the Grid",
-        type: 'EP',
-        year: 2014,
-        cover: `${S3Img}grid.jpg`,
-        tracks: [
-            {
-                name: "Remix of the Beast",
-                artist: "Rafart",
-                audio: "../audio/TheWar.mp3",
-                color: ["#EF8EA9", "#ab417f"],
-                id: uuidv4(),
-                active: true,
-            },
-            {
-                name: "Get in the Grid",
-                artist: "Rafart",
-                audio: "../audio/TheWar.mp3",
-                color: ["#EF8EA9", "#ab417f"],
-                id: uuidv4(),
-                active: false,
-            },
-            {
-                name: "SanDa",
-                artist: "Rafart",
-                audio: "../audio/TheWar.mp3",
-                color: ["#EF8EA9", "#ab417f"],
-                id: uuidv4(),
-                active: false,
-            },
-            {
-                name: "Isochronic",
-                artist: "Rafart",
-                audio: "../audio/TheWar.mp3",
-                color: ["#EF8EA9", "#ab417f"],
-                id: uuidv4(),
-                active: false,
-            }
-        ],
-        description: [
-            "Get In the Grid 2015 is an Electronic EP that features the Chapman Stick as the main instrument. It is my first finished electronic production. The EP was recorded and produced in Berklee Valencia, Spain. All tracks feature the Chapman Stick and where created in Ableton Live 9. This EP was the final assignment for the Electronic Production Live Performance Class with professor Ben Cantil aka. Encanti.",
-            "*Samples in “Remix of the beast” from Iron Maiden.",
-        ]
-    },
+    // "get-in-the-grid": {
+    //     title: "Get in the Grid",
+    //     type: 'EP',
+    //     year: 2014,
+    //     cover: `${S3Img}grid.jpg`,
+    //     tracks: [
+    //         {
+    //             name: "Remix of the Beast",
+    //             artist: "Rafart",
+    //             audio: "../audio/TheWar.mp3",
+    //             color: ["#EF8EA9", "#ab417f"],
+    //             id: uuidv4(),
+    //             active: true,
+    //         },
+    //         {
+    //             name: "Get in the Grid",
+    //             artist: "Rafart",
+    //             audio: "../audio/TheWar.mp3",
+    //             color: ["#EF8EA9", "#ab417f"],
+    //             id: uuidv4(),
+    //             active: false,
+    //         },
+    //         {
+    //             name: "SanDa",
+    //             artist: "Rafart",
+    //             audio: "../audio/TheWar.mp3",
+    //             color: ["#EF8EA9", "#ab417f"],
+    //             id: uuidv4(),
+    //             active: false,
+    //         },
+    //         {
+    //             name: "Isochronic",
+    //             artist: "Rafart",
+    //             audio: "../audio/TheWar.mp3",
+    //             color: ["#EF8EA9", "#ab417f"],
+    //             id: uuidv4(),
+    //             active: false,
+    //         }
+    //     ],
+    //     description: [
+    //         "Get In the Grid 2015 is an Electronic EP that features the Chapman Stick as the main instrument. It is my first finished electronic production. The EP was recorded and produced in Berklee Valencia, Spain. All tracks feature the Chapman Stick and where created in Ableton Live 9. This EP was the final assignment for the Electronic Production Live Performance Class with professor Ben Cantil aka. Encanti.",
+    //         "*Samples in “Remix of the beast” from Iron Maiden.",
+    //     ]
+    // },
     remixes: {
         title: "Remixes",
         type: "Singles",
