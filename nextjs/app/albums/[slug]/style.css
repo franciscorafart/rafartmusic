@@ -22,15 +22,9 @@
     white-space: pre-line;
     padding: 0 2% 0 2%;
 }
-.imageDiv {
-    width: 40%;
-    margin-top: 10px;
-}
 
 .text{
     line-height: 1.5;
-}
-.albumTitle {
     text-align: center;
 }
 

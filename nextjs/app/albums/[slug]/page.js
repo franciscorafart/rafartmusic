@@ -13,14 +13,13 @@ const Album = () => {
     return (
         <div className="container">
             <div className="album" key={slug}>
-            <h1 className="text albumTitle">{albumData.title}</h1>
-                <h2 className="text albumTitle">{`${albumData.year || ''} - ${albumData.type}`}</h2>
+            <h1 className="text">{albumData.title}</h1>
+                <h2 className="text">{`${albumData.year || ''} - ${albumData.type}`}</h2>
                 <div className="albumInfo">
-                    <AudioPlayer data={albumData.tracks} /> 
+                    <AudioPlayer data={albumData} /> 
                     <div className="textDiv">
                         {
                             albumData.description?.map((p, idx) => {
-                            // const className = p.children[0]['marks'].length>0 && p.children[0]['marks'][0] === "strong"? "paragraph text bold": "paragraph text";
                             return <p key={`${slug}-paragraph-${idx}`} className="paragraph text">{p}</p>;
                         })
                         }

@@ -6,7 +6,7 @@ import Library from "./Library";
 import "./app.scss";
 
 function AudioPlayer({ data }) {
-  const [songs, setSongs] = useState(data);
+  const [songs, setSongs] = useState(data.tracks);
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
@@ -40,7 +40,7 @@ function AudioPlayer({ data }) {
   return (
     <div className="album-player">
       <div className="upper-container">
-        <Song currentSong={currentSong} />
+        <Song cover={data.cover} currentSong={currentSong} />
         <Library
           setSongs={setSongs}
           isPlaying={isPlaying}

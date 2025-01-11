@@ -22,6 +22,9 @@
     border-radius: 20px;
     justify-items: center;
 }
+.album-container .album:last-child:nth-child(3n) {
+    margin-right: auto; /* Align with flex-start for last row */
+}
 .title {
     margin-bottom: 40px;
 }

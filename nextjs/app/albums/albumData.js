@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 const S3 = "https://franc-cloud.s3.us-east-2.amazonaws.com/Audio/";
+const S3Img = "https://franc-cloud.s3.us-east-2.amazonaws.com/img/"
 
 function AlbumsData() {
   return {
@@ -7,7 +8,7 @@ function AlbumsData() {
         title: "Thanatos",
         type: "Single",
         year: 2022,  
-        cover: "../../images/rafart-thanatos.jpg",
+        cover: `${S3Img}thanatos.jpg`,
         tracks: [{
             name: "Thanatos",
             artist: "Rafart",
@@ -22,7 +23,7 @@ function AlbumsData() {
         title: "Zappateada II",
         type: 'Single',
         year: 2022,  
-        cover: "../images/rafart-thanatos.jpg",
+        cover: `${S3Img}zappa.png`,
         tracks: [{
             name: "Zappateada II",
             artist: "Rafart",
@@ -40,7 +41,7 @@ function AlbumsData() {
         title: "Roll the Dice",
         type: 'Single',
         year: 2022,
-        cover: "../images/rafart-thanatos.jpg",
+        cover: `${S3Img}rtd.png`,
         tracks: [{
             name: "Roll the Dice",
             artist: "Rafart",
@@ -69,7 +70,7 @@ function AlbumsData() {
         title: "Andes Haze",
         type: 'Single',
         year: 2021,
-        cover: "../images/rafart-thanatos.jpg",
+        cover: `${S3Img}andes.jpg`,
         tracks: [{
             name: "Andes Haze",
             artist: "Rafart",
@@ -86,7 +87,7 @@ function AlbumsData() {
         title: "Caminito del Turia",
         type: 'Single',
         year: 2015,
-        cover: "../images/rafart-thanatos.jpg",
+        cover: `${S3Img}caminito.jpg`,
         tracks: [{
             name: "Caminito del Turia",
             artist: "Rafart",
@@ -104,7 +105,7 @@ function AlbumsData() {
         title: "Organized Sound",
         type: 'Single',
         year: 2017,
-        cover: "../images/rafart-thanatos.jpg",
+        cover: `${S3Img}organized.jpg`,
         tracks: [{
             name: "Organized Sound",
             artist: "Rafart",
@@ -122,7 +123,7 @@ function AlbumsData() {
         title: "Magic Concepts",
         type: 'Single',
         year: 2016,
-        cover: "../images/rafart-thanatos.jpg",
+        cover: `${S3Img}magic.jpg`,
         tracks: [{
             name: "Magic Concepts",
             artist: "Rafart, Ramya Simaravakrishnan, David Rios",
@@ -141,7 +142,7 @@ function AlbumsData() {
     // dasein: {tracks: [{
     //     name: "The War",
     //     cover:
-    //         "../images/rafart-thanatos.jpg",
+    //         `${S3Img}dasein.jpg`,
     //     artist: "Rafart",
     //     audio: "../audio/TheWar.mp3",
     //     color: ["#EF8EA9", "#ab417f"],
@@ -152,7 +153,7 @@ function AlbumsData() {
         title: "Get in the Grid",
         type: 'EP',
         year: 2014,
-        cover: "../images/rafart-thanatos.jpg",
+        cover: `${S3Img}grid.jpg`,
         tracks: [
             {
                 name: "Remix of the Beast",
@@ -196,7 +197,7 @@ function AlbumsData() {
         title: "The Dark Night of the Soul",
         type: 'EP',
         year: 2015,
-        cover: "../images/rafart-thanatos.jpg",
+        cover: `${S3Img}dark.jpg`,
         tracks: [
             {
                 name: "Descent",
@@ -242,7 +243,7 @@ function AlbumsData() {
         title: "The Handbook of the Acid Rider",
         type: "LP",
         year: 2013,
-        cover: "../images/rafart-thanatos.jpg",
+        cover: `${S3Img}acid.jpg`,
         tracks: [
             {
                 name: "Axis Mundi",
@@ -338,11 +339,11 @@ function AlbumsData() {
             "Released June 24, 2013 \n Recorded and mixed by Rodrigo Morel at Estudio Machete, Santiago de Chile, 2013. \n Drums recorded by Eduardo Demangel and Dante González at Alba Road Studios, Santiago, Chile. \n Mastered by Mike Tholen at Rax Trax Recording, Chicago, IL. \n Composition in 1, 5 & 7: Francisco Rafart & Pat Nuño \n Drums in 1, 5, 7 & 10: Pablo Martínez. \n Guitars in 1, 5 & 7: Fernando Daza \n Guitars in 2, 4 & 8: Rodrigo Morel & Francisco Rafart \n Stick & composition in all tracks: Francisco Rafart."
         ]
     },
-    handbook: {
+    remixes: {
         title: "Remixes",
         type: "Singles",
         year: 2013,
-        cover: "../images/rafart-thanatos.jpg",
+        // cover: `${S3Img}acid.png`,
         tracks: [
             {
                 name: "Demons of Pain",
