@@ -1,14 +1,14 @@
-'use client'
+'use client';
 import albumsData from '../albumData';
-import { usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation';
 import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
 import './style.css';
 
 const Album = () => {
     const path = usePathname();
     const albums = albumsData();
-    const slug = path.split("/").at(-1)
-    const albumData = albums[slug]
+    const slug = path.split("/").at(-1);
+    const albumData = albums[slug];
 
     return (
         <div className="container">
