@@ -22,8 +22,9 @@
     border-radius: 20px;
     justify-items: center;
 }
+/* TODO: Fix last row flex */
 .album-container .album:last-child:nth-child(3n) {
-    margin-right: auto; /* Align with flex-start for last row */
+    justify-content: flex-start; /* Align with flex-start for last row */
 }
 .title {
     margin-bottom: 40px;
