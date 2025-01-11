@@ -7,11 +7,11 @@ const Albums = async () => {
 
     return (
         <div className="container">
-            <h1 className="text albumTitle">Releases</h1>
-            <div className="albumContainer">
+            <h1 className="text title">Releases</h1>
+            <div className="album-container">
             { Object.entries(albums).map(([slug, albumData]) => {
                 return <div className="album" key={slug}>
-                    <h2 className="text albumTitle">{`${albumData.title}`}</h2>
+                    <h2 className="text">{`${albumData.title}`}</h2>
                     <h3 className='text'>{`${albumData.year || ''} - ${albumData.type}`}</h3>
                     <img className='album-img' src={albumData.cover}/>
                     <div>

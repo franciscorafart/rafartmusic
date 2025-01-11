@@ -33,12 +33,7 @@
 .albumTitle {
     text-align: center;
 }
-.callToAction {
-    width: 80%;
-    height: 30px;
-    background-color: #519ead;
-    margin: 10px 0 10px 0;
-}
+
 @media all and (max-width: 750px) {
     .container {
         margin: 0;
