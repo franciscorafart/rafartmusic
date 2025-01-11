@@ -28,13 +28,18 @@
     text-align: center;
 }
 
+@media all and (max-width: 1100px) {
+    .album {
+        max-width: 80%;
+    }
+}
 @media all and (max-width: 750px) {
     .container {
         margin: 0;
         padding: 20px;
-        align-items: self-start;
     }
     .album {
+        max-width: none;
         width: 100%;
     }
 }

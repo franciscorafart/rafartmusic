@@ -9,9 +9,7 @@
   display: flex;
   align-items: center;
   padding: 1rem 2rem 1rem 2rem;
-  // img {
-  //   width: 100px;
-  // }
+
   &:hover {
     background: rgb(218, 235, 255);
   }
@@ -49,6 +47,15 @@
   color: gray;
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 1100px) {
+  .library {
+    max-height: 300px;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768) {
+  .library {
+    max-height: 300px;
+    width: 100%;
+  }
 }
