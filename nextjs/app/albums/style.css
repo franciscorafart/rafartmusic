@@ -3,19 +3,23 @@
     margin: 60px 0 40px 0;
 }
 .album-img {
-    width: 80%;
-    padding-left: 10%;
+    width: 300px;
+    height: 300px;
 }
 .albumContainer {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 0 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 60px;
 }
 .album {
-    padding: 10px 0;
+    flex: 1;
+    max-width: 320px;
+    padding: 10px;
     border: 1px solid gray;
+    gap: 10px;
     border-radius: 20px;
+    justify-items: center;
 }
 .albumInfo {
     /* width: 80%; */
@@ -33,10 +37,6 @@
 .paragraph {
     white-space: pre-line;
     padding: 0 2% 0 2%;
-}
-.imageDiv {
-    width: 40%;
-    margin-top: 10px;
 }
 
 input {

@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 import albumsData from './albumData';
 import './style.css';
 
@@ -11,11 +11,12 @@ const Albums = async () => {
             <div className="albumContainer">
             { Object.entries(albums).map(([slug, albumData]) => {
                 return <div className="album" key={slug}>
-                    <h2 className="text albumTitle">{`${albumData.title} - ${albumData.year || ''} ${albumData.type}`}</h2>
-    
-                        
-                        <Link href={`albums/${slug}`}>Listen</Link>
-                
+                    <h2 className="text albumTitle">{`${albumData.title}`}</h2>
+                    <h3 className='text'>{`${albumData.year || ''} - ${albumData.type}`}</h3>
+                    <img className='album-img' src={albumData.cover}/>
+                    <div>
+                        <Link className="callToAction text" href={`albums/${slug}`}>Listen</Link> 
+                    </div>
                 </div>;
             })}
             </div>

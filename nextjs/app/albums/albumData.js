@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-const S3 = "https://franc-cloud.s3.us-east-2.amazonaws.com/Audio/"
+const S3 = "https://franc-cloud.s3.us-east-2.amazonaws.com/Audio/";
 
 function AlbumsData() {
   return {

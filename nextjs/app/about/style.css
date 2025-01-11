@@ -18,23 +18,10 @@
     margin-top: 10px;
 }
 
-.imageDiv {
-    width: 30%;
-    margin-top: 10px;
-}
-
-.imageDiv img {
-    width: 100%;
-}
-
 .text-about {
     font-family: 'Encode Sans Expanded', sans-serif;
     line-height: 1.5;
     color: #d5dbde;
-}
-
-.bold {
-    font-size: 1.3em;
 }
 
 .title {
