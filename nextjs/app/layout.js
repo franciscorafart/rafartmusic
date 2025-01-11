@@ -11,7 +11,7 @@ export const metadata = {
   description: 'Website by Rafart Music Tech LLC',
 };
 
-export default async function RootLayout({ children, deviceType }) {
+export default async function RootLayout({ children }) {
   const sanityProps = await getInitialProps();
   const hds = await headers();
   const userAgent = hds.get("user-agent") || "";
