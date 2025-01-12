@@ -17,7 +17,7 @@ const stringScrollScript =`
                     navbar.classList.add('hidden');
                     } else {
                         navbar.classList.remove('hidden');
-                }
+                    }
             }
             
             lastScrollTop = scrollTop;
@@ -34,7 +34,7 @@ const Cover = async ({ mobile }) => {
                 {stringScrollScript}
             </Script>
             <section>
-                {!mobile && <div className={"menuBar"}>
+                {!mobile && <div className="menuBar">
                         {
                             sanityProps.menu.filter(item => item.headerMenu).sort((a,b) => a.order > b.order ? 1 : -1).map(
                             (item, idx) => <div key={`${item.title}-${idx}`}>
