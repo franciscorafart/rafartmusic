@@ -299,78 +299,94 @@ function AlbumsData() {
             "Vocals by Aman Wadwha, Electric Guitar by Joaquin Bustamante, Chapman Stick by Francisco Rafart. Speech: Karlheinz Stockhausen."
         ]
     },
-    // "get-in-the-grid": {
-    //     title: "Get in the Grid",
-    //     type: 'EP',
-    //     year: 2014,
-    //     cover: `${S3Img}grid.jpg`,
-    //     tracks: [
-    //         {
-    //             name: "Remix of the Beast",
-    //             artist: "Rafart",
-    //             audio: "../audio/TheWar.mp3",
-    //             color: ["#EF8EA9", "#ab417f"],
-    //             id: uuidv4(),
-    //             active: true,
-    //         },
-    //         {
-    //             name: "Get in the Grid",
-    //             artist: "Rafart",
-    //             audio: "../audio/TheWar.mp3",
-    //             color: ["#EF8EA9", "#ab417f"],
-    //             id: uuidv4(),
-    //             active: false,
-    //         },
-    //         {
-    //             name: "SanDa",
-    //             artist: "Rafart",
-    //             audio: "../audio/TheWar.mp3",
-    //             color: ["#EF8EA9", "#ab417f"],
-    //             id: uuidv4(),
-    //             active: false,
-    //         },
-    //         {
-    //             name: "Isochronic",
-    //             artist: "Rafart",
-    //             audio: "../audio/TheWar.mp3",
-    //             color: ["#EF8EA9", "#ab417f"],
-    //             id: uuidv4(),
-    //             active: false,
-    //         }
-    //     ],
-    //     description: [
-    //         "Get In the Grid 2015 is an Electronic EP that features the Chapman Stick as the main instrument. It is my first finished electronic production. The EP was recorded and produced in Berklee Valencia, Spain. All tracks feature the Chapman Stick and where created in Ableton Live 9. This EP was the final assignment for the Electronic Production Live Performance Class with professor Ben Cantil aka. Encanti.",
-    //         "*Samples in “Remix of the beast” from Iron Maiden.",
-    //     ]
-    // },
-    remixes: {
-        title: "Remixes",
-        type: "Singles",
-        year: 2013,
-        cover: `${S3Img}stickman.jpg`,
+    "get-in-the-grid": {
+        title: "Get in the Grid",
+        type: 'EP',
+        year: 2014,
+        cover: `${S3Img}grid.jpg`,
         tracks: [
             {
-                name: "Demons of Pain",
-                artist: "Infected Mushroom - Remixed by Rafart",
-                audio: `${S3}AxisMundi.mp3`,
+                name: "Remix of the Beast",
+                artist: "Rafart",
+                audio: "../audio/beast.mp3",
                 color: ["#EF8EA9", "#ab417f"],
                 id: uuidv4(),
                 active: true,
             },
             {
-                name: "Sunken Living Area",
-                artist: "Heathered Pearls - Remixed by Rafart",
-                audio: `${S3}DrumNSpace.mp3`,
+                name: "Get in the Grid",
+                artist: "Rafart",
+                audio: "../audio/grid.mp3",
                 color: ["#EF8EA9", "#ab417f"],
                 id: uuidv4(),
                 active: false,
             },
+            {
+                name: "SanDa",
+                artist: "Rafart",
+                audio: "../audio/sanda.mp3",
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Isochronic",
+                artist: "Rafart",
+                audio: "../audio/isochronic.mp3",
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            }
         ],
         description: [
-            "Rafart´s debut Chapman Stick album. 10 tracks of Stick, drums and guitar trio. A mix of progressive rock and electronic music, making the Chapman Stick an integral part of a band. Distributed by Mylodon Records and available for purchase in this website.",
-            "Released June 24, 2013 \n Recorded and mixed by Rodrigo Morel at Estudio Machete, Santiago de Chile, 2013. \n Drums recorded by Eduardo Demangel and Dante González at Alba Road Studios, Santiago, Chile. \n Mastered by Mike Tholen at Rax Trax Recording, Chicago, IL. \n Composition in 1, 5 & 7: Francisco Rafart & Pat Nuño \n Drums in 1, 5, 7 & 10: Pablo Martínez. \n Guitars in 1, 5 & 7: Fernando Daza \n Guitars in 2, 4 & 8: Rodrigo Morel & Francisco Rafart \n Stick & composition in all tracks: Francisco Rafart."
+            "Get In the Grid 2015 is an Electronic EP that features the Chapman Stick as the main instrument. It is my first finished electronic production. The EP was recorded and produced in Berklee Valencia, Spain. All tracks feature the Chapman Stick and where created in Ableton Live 9. This EP was the final assignment for the Electronic Production Live Performance Class with professor Ben Cantil aka. Encanti.",
+            "*Samples in “Remix of the beast” from Iron Maiden.",
         ]
     },
+    // remixes: {
+    //     title: "Remixes and rarities",
+    //     type: "Singles",
+    //     year: 2013,
+    //     cover: `${S3Img}stickman.jpg`,
+    //     tracks: [
+    //         {
+    //             name: "Demons of Pain",
+    //             artist: "Infected Mushroom - Remixed by Rafart",
+    //             audio: `${S3}AxisMundi.mp3`,
+    //             color: ["#EF8EA9", "#ab417f"],
+    //             id: uuidv4(),
+    //             active: true,
+    //         },
+    //         {
+    //             name: "Sunken Living Area",
+    //             artist: "Heathered Pearls - Remixed by Rafart",
+    //             audio: `${S3}DrumNSpace.mp3`,
+    //             color: ["#EF8EA9", "#ab417f"],
+    //             id: uuidv4(),
+    //             active: false,
+    //         },
+    //         {
+    //             name: "Livid Instruments Guitar Wing demo",
+    //             artist: "Rafart, David Rios",
+    //             audio: `${S3}AxisMundi.mp3`,
+    //             color: ["#EF8EA9", "#ab417f"],
+    //             id: uuidv4(),
+    //             active: true,
+    //         },
+    //         {
+    //             name: "TedX Berklee Valencia 2015 theme song",
+    //             artist: "Rafart, Felipe Saalfeld",
+    //             audio: `${S3}AxisMundi.mp3`,
+    //             color: ["#EF8EA9", "#ab417f"],
+    //             id: uuidv4(),
+    //             active: true,
+    //         },
+    //     ],
+    //     description: [
+    //         "Rafart´s debut Chapman Stick album. 10 tracks of Stick, drums and guitar trio. A mix of progressive rock and electronic music, making the Chapman Stick an integral part of a band. Distributed by Mylodon Records and available for purchase in this website.",
+    //         "Released June 24, 2013 \n Recorded and mixed by Rodrigo Morel at Estudio Machete, Santiago de Chile, 2013. \n Drums recorded by Eduardo Demangel and Dante González at Alba Road Studios, Santiago, Chile. \n Mastered by Mike Tholen at Rax Trax Recording, Chicago, IL. \n Composition in 1, 5 & 7: Francisco Rafart & Pat Nuño \n Drums in 1, 5, 7 & 10: Pablo Martínez. \n Guitars in 1, 5 & 7: Fernando Daza \n Guitars in 2, 4 & 8: Rodrigo Morel & Francisco Rafart \n Stick & composition in all tracks: Francisco Rafart."
+    //     ]
+    // },
     };
 }
 
