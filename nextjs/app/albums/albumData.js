@@ -196,7 +196,7 @@ function AlbumsData() {
         tracks: [{
             name: "Machine Elves",
             artist: "Rafart, Felipe Saalfeld (guitars), Pat Dalton (drums)",
-            audio: "../audio/machine.mp3",
+            audio: `${S3}machine.mp3`,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
@@ -204,7 +204,7 @@ function AlbumsData() {
         {
             name: "Always Alone",
             artist: "Rafart, Felipe Saalfeld (guitars), Pat Dalton (drums)",
-            audio: "../audio/alwaysalone.mp3",
+            audio: `${S3}alwaysalone.mp3`,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
@@ -212,7 +212,7 @@ function AlbumsData() {
         {
             name: "Jarmasti",
             artist: "Rafart, Pat Dalton (drums)",
-            audio: "../audio/jarmasti.mp3",
+            audio: `${S3}jarmasti.mp3`,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
@@ -220,7 +220,7 @@ function AlbumsData() {
         {
             name: "Always with You",
             artist: "Rafart, Pato Nuño (guitars), Pat Dalton (drums)",
-            audio: "../audio/alwaysyou.mp3",
+            audio: `${S3}alwaysyou.mp3`,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
@@ -228,7 +228,7 @@ function AlbumsData() {
         {
             name: "Soleá",
             artist: "Rafart (Stick)",
-            audio: "../audio/solea.mp3",
+            audio: `${S3}solea.mp3`,
             color: ["#EF8EA9", "#ab417f"],
             id: uuidv4(),
             active: false,
@@ -341,7 +341,7 @@ function AlbumsData() {
             {
                 name: "Remix of the Beast",
                 artist: "Rafart",
-                audio: "../audio/beast.mp3",
+                audio: `${S3}beast.mp3`,
                 color: ["#EF8EA9", "#ab417f"],
                 id: uuidv4(),
                 active: true,
@@ -349,7 +349,7 @@ function AlbumsData() {
             {
                 name: "Get in the Grid",
                 artist: "Rafart",
-                audio: "../audio/grid.mp3",
+                audio: `${S3}grid.mp3`,
                 color: ["#EF8EA9", "#ab417f"],
                 id: uuidv4(),
                 active: false,
@@ -357,7 +357,7 @@ function AlbumsData() {
             {
                 name: "SanDa",
                 artist: "Rafart",
-                audio: "../audio/sanda.mp3",
+                audio: `${S3}sanda.mp3`,
                 color: ["#EF8EA9", "#ab417f"],
                 id: uuidv4(),
                 active: false,
@@ -365,7 +365,7 @@ function AlbumsData() {
             {
                 name: "Isochronic",
                 artist: "Rafart",
-                audio: "../audio/isochronic.mp3",
+                audio: `${S3}isochronic.mp3`,
                 color: ["#EF8EA9", "#ab417f"],
                 id: uuidv4(),
                 active: false,

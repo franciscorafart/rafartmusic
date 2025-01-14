@@ -2,7 +2,7 @@ import './style.css';
 
 const Links = () => {
         const links = [
-            {url: 'https://rafartmusic.com/album', label: 'Albums and Releases'},
+            {url: 'https://rafartmusic.com/albums', label: 'Albums and Releases'},
             {url: '/', label: 'Rafart Website'},
             {url: 'https://www.youtube.com/franciscorafart', label: 'Youtube'},
             {url: 'https://app.rafartmusic.com/alienation-dance', label: 'Alienation Dance Web Song'},
