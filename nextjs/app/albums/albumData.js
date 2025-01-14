@@ -188,20 +188,53 @@ function AlbumsData() {
             "https://youtu.be/emvUUIt9t6A?t=637"
         ]
     },
-    // dasein: {
-    //     title: "Dasein",
-    //     type: 'EP',
-    //     year: 2019,
-    //     cover: `${S3Img}dasein.jpg`,
-    //     tracks: [
-    //         {
-    //     name: "The War",
-    //     artist: "Rafart",
-    //     audio: "../audio/TheWar.mp3",
-    //     color: ["#EF8EA9", "#ab417f"],
-    //     id: uuidv4(),
-    //     active: false,
-    // }]},
+    dasein: {
+        title: "Dasein",
+        type: 'EP',
+        year: 2019,
+        cover: `${S3Img}dasein.jpg`,
+        tracks: [{
+            name: "Machine Elves",
+            artist: "Rafart, Felipe Saalfeld (guitars), Pat Dalton (drums)",
+            audio: "../audio/machine.mp3",
+            color: ["#EF8EA9", "#ab417f"],
+            id: uuidv4(),
+            active: false,
+        },
+        {
+            name: "Always Alone",
+            artist: "Rafart, Felipe Saalfeld (guitars), Pat Dalton (drums)",
+            audio: "../audio/alwaysalone.mp3",
+            color: ["#EF8EA9", "#ab417f"],
+            id: uuidv4(),
+            active: false,
+        },
+        {
+            name: "Jarmasti",
+            artist: "Rafart, Pat Dalton (drums)",
+            audio: "../audio/jarmasti.mp3",
+            color: ["#EF8EA9", "#ab417f"],
+            id: uuidv4(),
+            active: false,
+        },
+        {
+            name: "Always with You",
+            artist: "Rafart, Pato Nuño (guitars), Pat Dalton (drums)",
+            audio: "../audio/alwaysyou.mp3",
+            color: ["#EF8EA9", "#ab417f"],
+            id: uuidv4(),
+            active: false,
+        },
+        {
+            name: "Soleá",
+            artist: "Rafart (Stick)",
+            audio: "../audio/solea.mp3",
+            color: ["#EF8EA9", "#ab417f"],
+            id: uuidv4(),
+            active: false,
+        },
+        ]
+    },
     thanatos: {
         title: "Thanatos",
         type: "Single",
