@@ -376,50 +376,50 @@ function AlbumsData() {
             "*Samples in “Remix of the beast” from Iron Maiden.",
         ]
     },
-    // remixes: {
-    //     title: "Remixes and rarities",
-    //     type: "Singles",
-    //     year: 2013,
-    //     cover: `${S3Img}stickman.jpg`,
-    //     tracks: [
-    //         {
-    //             name: "Demons of Pain",
-    //             artist: "Infected Mushroom - Remixed by Rafart",
-    //             audio: `${S3}AxisMundi.mp3`,
-    //             color: ["#EF8EA9", "#ab417f"],
-    //             id: uuidv4(),
-    //             active: true,
-    //         },
-    //         {
-    //             name: "Sunken Living Area",
-    //             artist: "Heathered Pearls - Remixed by Rafart",
-    //             audio: `${S3}DrumNSpace.mp3`,
-    //             color: ["#EF8EA9", "#ab417f"],
-    //             id: uuidv4(),
-    //             active: false,
-    //         },
-    //         {
-    //             name: "Livid Instruments Guitar Wing demo",
-    //             artist: "Rafart, David Rios",
-    //             audio: `${S3}AxisMundi.mp3`,
-    //             color: ["#EF8EA9", "#ab417f"],
-    //             id: uuidv4(),
-    //             active: true,
-    //         },
-    //         {
-    //             name: "TedX Berklee Valencia 2015 theme song",
-    //             artist: "Rafart, Felipe Saalfeld",
-    //             audio: `${S3}AxisMundi.mp3`,
-    //             color: ["#EF8EA9", "#ab417f"],
-    //             id: uuidv4(),
-    //             active: true,
-    //         },
-    //     ],
-    //     description: [
-    //         "Rafart´s debut Chapman Stick album. 10 tracks of Stick, drums and guitar trio. A mix of progressive rock and electronic music, making the Chapman Stick an integral part of a band. Distributed by Mylodon Records and available for purchase in this website.",
-    //         "Released June 24, 2013 \n Recorded and mixed by Rodrigo Morel at Estudio Machete, Santiago de Chile, 2013. \n Drums recorded by Eduardo Demangel and Dante González at Alba Road Studios, Santiago, Chile. \n Mastered by Mike Tholen at Rax Trax Recording, Chicago, IL. \n Composition in 1, 5 & 7: Francisco Rafart & Pat Nuño \n Drums in 1, 5, 7 & 10: Pablo Martínez. \n Guitars in 1, 5 & 7: Fernando Daza \n Guitars in 2, 4 & 8: Rodrigo Morel & Francisco Rafart \n Stick & composition in all tracks: Francisco Rafart."
-    //     ]
-    // },
+    remixes: {
+        title: "Remixes and rarities",
+        type: "Singles",
+        year: 2013,
+        cover: `${S3Img}stickman.jpg`,
+        tracks: [
+            {
+                name: "Demons of Pain",
+                artist: "Infected Mushroom - Remixed by Rafart",
+                audio: `${S3}demons.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: true,
+            },
+            {
+                name: "Sunken Living Area",
+                artist: "Heathered Pearls - Remixed by Rafart",
+                audio: `${S3}sunken.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Livid Instruments Guitar Wing demo",
+                artist: "Rafart (Stick), David Rios (Guitar)",
+                audio: `${S3}guitarwing.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            // {
+            //     name: "TedX Berklee Valencia 2015 theme song",
+            //     artist: "Rafart, Felipe Saalfeld",
+            //     audio: `${S3}AxisMundi.mp3`,
+            //     color: ["#EF8EA9", "#ab417f"],
+            //     id: uuidv4(),
+            //     active: false,
+            // },
+        ],
+        description: [
+            "Demons of Pain and Sunken Living Area are remixes I made for online contests by Splice, before it went bust. Didn't win the contests, but it was quite fun to make them.",
+            "The Livid Instruments Guitar Wing Midi controller demo is a track I made with guitarist David Rios while interning at Livid Instruments, a now defunct MIDI controller manufacturer in Austin, TX. In the track we control Ableton Live using the Guitar Wing. You can find the video of the performance in youtube."
+        ]
+    },
     };
 }
 
