@@ -4,6 +4,43 @@ const S3Img = "https://franc-cloud.s3.us-east-2.amazonaws.com/img/";
 
 function AlbumsData() {
   return {
+    "godless": {
+        title: "Godless Priest",
+        type: 'EP',
+        year: 2015,
+        cover: `${S3Img}godless-cover.png`,
+        tracks: [
+            {
+                name: "Godless Priest",
+                artist: "Rafart",
+                audio: `${S3}GodlessPriest(M)-low.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: true,
+            },
+            {
+                name: "The War",
+                artist: "Rafart",
+                audio: `${S3}TheWar(M)-low.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Human Resource",
+                artist: "Rafart",
+                audio: `${S3}HumanResource(M)-low.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },  
+        ],
+    description: [
+        "Godless Priest is a 3-song EP were I move away from prog and the Chapan Stick to explore a more straightforward electronic metal style. In this EP I blend 7-string guitar riffs with drum n bass beats, synths, and heavy metal vocals.",
+        "The songs are metal-themed, touching dark contemporary subjects like manipulative online Gurus (Godless Priest), the dehumanization and indignity of employment (Human Resource) and the indifference of the public to uncle Sam’s global war (The war).",
+        "Jamie Jordan: Vocals \n Andrés Rojas: Drums \n Francisco Rafart: Guitars, Stick, composition, mixing and mastering.\n Cover art: Diacinco"
+    ]
+    },
     handbook: {
         title: "The Handbook of the Acid Rider",
         type: "LP",
