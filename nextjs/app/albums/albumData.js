@@ -36,9 +36,9 @@ function AlbumsData() {
             },  
         ],
     description: [
-        "Godless Priest is a 3-song EP were I move away from prog and the Chapan Stick to explore a more straightforward electronic metal style. In this EP I blend 7-string guitar riffs with drum n bass beats, synths, and heavy metal vocals.",
-        "The songs are metal-themed, touching dark contemporary subjects like manipulative online Gurus (Godless Priest), the dehumanization and indignity of employment (Human Resource) and the indifference of the public to uncle Sam’s global war (The war).",
-        "Jamie Jordan: Vocals \n Andrés Rojas: Drums \n Francisco Rafart: Guitars, Stick, composition, mixing and mastering.\n Cover art: Diacinco"
+        "Godless Priest is a 3-song EP were I explore a more straightforward electronic metal style and move away from prog rock and the Chapman Stick as a main instrument. In this EP I blend 7-string guitar riffs, drum n bass beats, synths, and heavy metal vocals.",
+        "The songs touch contemporary subjects like online Gurus (Godless Priest), the dehumanization of employment (Human Resource) and the selective indifference of the public towards war (The War).",
+        "Jamie Jordan: Vocals \n Andrés Rojas: Drums \n Francisco Rafart: Guitars, Stick, \n composition, mixing and mastering.\n Cover art: Diacinco"
     ]
     },
     handbook: {
