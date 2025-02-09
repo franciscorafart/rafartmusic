@@ -33,10 +33,9 @@ function AudioPlayer({ data }) {
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
 
     setCurrentSong(songs[(currentIndex + 1) % songs.length]);
-
-    if (isPlaying) audioRef.current.play();
+    // if (isPlaying) await audioRef.current.play();
   };
-
+console.log('current song before render', currentSong)
   return (
     <div className="album-player">
       <div className="upper-container">
@@ -68,6 +67,7 @@ function AudioPlayer({ data }) {
         ref={audioRef}
         onEnded={songEndHandler}
         preload="none"
+        autoPlay={isPlaying}
       ></audio>
     </div>
   );
