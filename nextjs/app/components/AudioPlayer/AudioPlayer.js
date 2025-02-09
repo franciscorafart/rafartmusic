@@ -33,9 +33,8 @@ function AudioPlayer({ data }) {
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
 
     setCurrentSong(songs[(currentIndex + 1) % songs.length]);
-    // if (isPlaying) await audioRef.current.play();
+    // if (isPlaying) await audioRef.current.play(); # Not needed, handled in player
   };
-console.log('current song before render', currentSong)
   return (
     <div className="album-player">
       <div className="upper-container">
