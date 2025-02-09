@@ -2,6 +2,7 @@ import './style.css';
 
 const Links = () => {
         const links = [
+            {url: 'https://rafartmusic.com/albums/godless', label: 'Godless Priest EP'},
             {url: 'https://rafartmusic.com/albums', label: 'Albums and Releases'},
             {url: '/', label: 'Rafart Website'},
             {url: 'https://www.youtube.com/franciscorafart', label: 'Youtube'},

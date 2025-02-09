@@ -7,7 +7,7 @@ function AlbumsData() {
     "godless": {
         title: "Godless Priest",
         type: 'EP',
-        year: 2015,
+        year: 2025,
         cover: `${S3Img}godless-cover.png`,
         tracks: [
             {
