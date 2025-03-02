@@ -420,12 +420,20 @@ function AlbumsData() {
         cover: `${S3Img}stickman.jpg`,
         tracks: [
             {
-                name: "Demons of Pain",
+                name: "Demons of Pain (remix)",
                 artist: "Infected Mushroom - Remixed by Rafart",
                 audio: `${S3}demons.mp3`,
                 color: ["#EF8EA9", "#ab417f"],
                 id: uuidv4(),
                 active: true,
+            },
+            {
+                name: "Demons of Pain (cover)",
+                artist: "Infected Mushroom",
+                audio: `${S3}demons-cover.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
             },
             {
                 name: "Sunken Living Area",
@@ -436,7 +444,7 @@ function AlbumsData() {
                 active: false,
             },
             {
-                name: "Livid Instruments Guitar Wing demo",
+                name: "Barton Spring - Livid Instruments Guitar Wing demo",
                 artist: "Rafart (Stick), David Rios (Guitar)",
                 audio: `${S3}guitarwing.mp3`,
                 color: ["#EF8EA9", "#ab417f"],
@@ -446,11 +454,27 @@ function AlbumsData() {
             // {
             //     name: "TedX Berklee Valencia 2015 theme song",
             //     artist: "Rafart, Felipe Saalfeld",
-            //     audio: `${S3}AxisMundi.mp3`,
+            //     audio: `${S3}changingcurrents.mp3`,
             //     color: ["#EF8EA9", "#ab417f"],
             //     id: uuidv4(),
             //     active: false,
             // },
+            {
+                name: "Bulerías (Flamenco)",
+                artist: "Rafart",
+                audio: `${S3}bulerias.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
+            {
+                name: "Forever (cover)",
+                artist: "Stratovarius",
+                audio: `${S3}forever.mp3`,
+                color: ["#EF8EA9", "#ab417f"],
+                id: uuidv4(),
+                active: false,
+            },
         ],
         description: [
             "Demons of Pain and Sunken Living Area are remixes I made for online contests by Splice, before it went bust. Didn't win the contests, but it was quite fun to make them.",
