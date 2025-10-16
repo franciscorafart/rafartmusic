@@ -1,60 +1,108 @@
 function ArticlesData() {
   return [
     {
-      slug: "first-blog-post",
-      title: "My First Blog Post",
-      image: "https://via.placeholder.com/400x200",
-      date: "2024-01-15",
-      content: [
-        { tag: "h1", text: "Welcome to My Blog" },
-        { tag: "p", text: "This is my first blog post where I'll be sharing thoughts about music, technology, and creative processes." },
-        { tag: "h2", text: "What to Expect" },
-        { tag: "p", text: "In this blog, I'll be documenting my journey as a musician and developer. You can expect posts about:" },
-        { tag: "ul", text: "Music production techniques" },
-        { tag: "ul", text: "Chapman Stick performances" },
-        { tag: "ul", text: "Technology in music" },
-        { tag: "ul", text: "Creative collaborations" },
-        { tag: "p", text: "Stay tuned for more content coming soon!" }
-      ]
+        slug: "disrupting-subjectivity-tech-art-politics",
+        title: "Disrupting subjectivity — How tech, true art, and politics challenge social norms",
+        image: "",
+        date: "2018-04-02",
+        content: [
+            { tag: "h3", text: "The rise of social norms" },
+            { tag: "p", text: "Social norms are created to limit or promote certain behaviors and arise because of historical needs and circumstances. These norms define what is acceptable through prohibitions and encouragement, and by defining our individual role in enforcing these rules. For example, the prohibition to eat a product in a specific date, to discuss sensitive subjects, to use or alter our bodies in particular ways, or to change our states of consciousness with certain substances are all forms of social norms in the form of interdiction. Norms can also take a more action-oriented form and promote socially ‘desirable’ behaviors, like encouraging people to be polite, give money to charity, or serve their communities. Social norms also define our role in keeping the status quo. This means that they determine when we have the right and duty to call out others on their words and actions and when we’re supposed to remain quite and act indifferent." },
+            { tag: "p", text: "Justified or not, norms have a genealogy, a reason for coming into being. With time the original reasons dilute in memory and the norms become established in tradition. They might be passed down generations as religion, identity, or written as laws that are enforced by institutions." },
+            { tag: "p", text: "Here I’ll refer to social transformation as the process by which social norms appear or vanish from the public sphere. In particular I’ll focus on the process of disappearance of outdated social norms and how tech, art and politics interact and get feedback from each other to make this happen." },
+            { tag: "h3", text: "Disruption of subjectivity" },
+            { tag: "p", text: "There are many ways in which tech, art and politics can interact. For example, a technological breakthrough may introduce new techniques and tools for the arts. On the other hand the arts may introduce new concepts or ideas for tech to explore. Artists and new technologies also influence the political system, by re-defining what is socially acceptable. From all theses possibilities, I’d like to talk about one way in which the three social systems interact and contribute to the process of social change. Let’s call it the disruption of subjectivity model." },
+            { tag: "p", text: "It happens in three steps that can be simultaneous, but I’ll describe them sequentially here for the sake of simplicity. Briefly explained, this model works as follows. At first, when new technologies are introduced, they create new forms of communication and production that challenge established social norms. These challenges don’t displace the norms, but the new social practices emerged from the disruption create a cognitive dissonance that induces social tension. In a second stage, the arts become aware of these outdated social norms and, through critique, slowly push for a change of personal subjectivity in members of society. The third stage begins once a major change in subjectivity has occurred and the irrelevance of the outdated social practice becomes conscious to the general public. Here we enter the political realm, where interest groups take stances on the issue." },
+            { tag: "h4", text: "Stage 1: Tech disruption" },
+            { tag: "p", text: "The appearance of new technology modifies communication, exchange, production, consumption, relationships and other form of social activity. Think for example in the invention of major technology like the wheel, telephone, internet, or social media, and how these technologies changed their worlds. Technological breakthroughs open up spaces of unknown territory that may take the form of new economic opportunities, power balance shift, new possibilities to exercise power or dissent, methods of providing, fabricating, or exchanging products, or alternatives means of coordinating large groups of people. These open spaces change the dynamics of human interaction, which at the same time challenge established norms, making them less relevant and justified." },
+            { tag: "p", text: "The original reason norms appeared in the first place is challenged by the social effects of technological advance, leaving them as arbitrary rules without reason of being. This doesn’t mean that norms cease to exist immediately. On the contrary, they have a powerful inertia and an institutional system that backs them up. They continue to exist and may try to reinforce their prevalence through inquisitive backlashes aimed towards stopping the ideas that question what is socially acceptable. Nevertheless, this backlash doesn’t change the fact that the social norm has been contested and will eventually need to be either updated or eliminated." },
+            { tag: "h4", text: "Stage 2: True art and the change of subjectivity" },
+            { tag: "p", text: "The role art plays at this point is to shed light on these outdated social practices. With art I mean the broad spectrum of human creative expression, not any particular form of it. Social practices and norms are customs, and for this reason they don’t vanish immediately. Some artist will see the contradiction of these norms with their contemporary reality and criticize their practice and the hypocrisy of the institutions and officials who enforce them. At first these artists will be condemned as outcasts, decadent, obscene, and traitors in relation to the social institution they criticize. Nevertheless, this is only temporary, as they are merely the vanguard of a shift in social consciousness that’s unstoppable." },
+            { tag: "p", text: "Art is more effective than abstract ideas or theories in generating shifts in subjectivity. Art appeals to empathy and emotion, jumping over the monolithic wall of the rational mind that always finds a way to keep its original point of view. Art creates the identity in which the rational ideas are processed, through a slower but more profound process. In that sense, art has the power to frame the rational mind." },
+            { tag: "p", text: "Because of this power, the role that true art plays in social transformation, whatever its medium or style, is to challenge outdated norms and open the mind to new possibilities. At this point, due to their different motivations and effects, it’s important to make a distinction between true art and entertainment/institutional art. This last one doesn’t challenge outdated practices, but serves the contrary purpose — to perpetuate the established narratives, paradigms and ideologies. In that sense it’s Anti-Art. It doesn’t challenge the individuals to re-evaluate their beliefs, but helps them cope with alienation, forget the world and comply." },
+            { tag: "p", text: "As an example, entertainment is the movie we watch to relax on the weekend, the video game we play after a long day of work, the background music we listen while doing a boring task, the elitist concert we attend to show off on our social media, or anything that distracts us from our current condition. Institutionalized art, whether it’s commercial entertainment or academic elitism, has the ultimate intention of preserving things as they are." },
+            { tag: "p", text: "On the contrary, true art is the one that challenges your points of view. It is rebellious in nature and, even when pleasant on the surface, creates discomfort. True art sticks a finger up your ass, challenging your convictions beyond what you find pretty or ugly, and opening you up to new human possibilities. For these reasons true art doesn’t refer to a particular style, technique, group of artists, or aesthetic trend, but to the potential it carries to transform subjectivity and identity. It can exist in any form or style and it’s made true by its power and intention to transform us at our core." },
+            { tag: "p", text: "When the slow process of changing individual subjectivity has taken place, and the outcast artists have become more mainstream figures, then the process becomes political." },
+            { tag: "h4", text: "Stage 3: The political struggle" },
+            { tag: "p", text: "In the political realm, intellectuals, ideologists, and demagogues articulate collective subjectivity into public discourse and narratives. These ideas are adopted by established or new political organizations that transform them into political demands." },
+            { tag: "p", text: "These groups push their agenda to reform or erase the laws and institutions associated with the original outdated norm. Of course there will be groups that will rely on this norms to preserve their social position. This will create new backlashes that will appear to re-enforce the norms. These backlashes make the process non-linear and might at times give the impression that things move backwards. Nevertheless, in the big picture, once an outdated social norm is contested it is only a matter of time until it’s replaced." },
+            { tag: "p", text: "Just before being totally replaced, the defenders of the outdated social norm will do a last effort of survival. In its last breath of life, and without any legitimacy or moral authority left in it, they will turn into violence and repression as a last resource. Violence can be effective, but only temporarily. When violence ultimately fails to preserve control, as it always does, the old social norm dies and is replaced by an new one." }
+        ]
     },
     {
-      slug: "music-production-tips",
-      title: "5 Essential Music Production Tips",
-      image: "https://via.placeholder.com/400x200",
-      date: "2024-02-01",
-      content: [
-        { tag: "h1", text: "5 Essential Music Production Tips" },
-        { tag: "p", text: "After years of producing music, here are five tips that have significantly improved my workflow and sound quality." },
-        { tag: "h2", text: "1. Start with Good Recordings" },
-        { tag: "p", text: "The foundation of any great mix is a good recording. Spend time getting the right sound at the source rather than trying to fix it in post-production." },
-        { tag: "h2", text: "2. Use Reference Tracks" },
-        { tag: "p", text: "Always have reference tracks that represent the sound you're aiming for. This helps maintain perspective during long mixing sessions." },
-        { tag: "h2", text: "3. Trust Your Ears" },
-        { tag: "p", text: "While visual feedback from plugins is helpful, your ears are the ultimate judge. If it sounds good, it probably is good." },
-        { tag: "h2", text: "4. Less is More" },
-        { tag: "p", text: "Don't over-process your tracks. Sometimes the most powerful production choice is knowing when to leave something alone." },
-        { tag: "h2", text: "5. Take Breaks" },
-        { tag: "p", text: "Your ears get fatigued. Take regular breaks to maintain objectivity and come back to your mix with fresh perspective." }
-      ]
+        slug: "why-coders-musicians-part3",
+        title: "Why are so many coders musicians? Part 3",
+        image: "",
+        date: "2018-03-06",
+        content: [
+            { tag: "h3", text: "Part 3 of 3: Instrumentality, craft and community" },
+            { tag: "p", text: "In this series of post I’ve tried to explain why so many coders are musicians, a possible relationship I found when transitioning from being a musician to developer. In the two previous posts I briefly explained my personal experience, long-term commitment as a trait of both musicians and coders (Part 1), the role of of abstract concepts, and the idea of music and code as languages (Part 2)." },
+            { tag: "p", text: "In this final post I’ll go into the social and bodily dimensions of coding and music, to try to explain this relationship further." },
+            { tag: "h4", text: "Instrumental virtuosity" },
+            { tag: "p", text: "My first coding teacher said that when he hired developers, the first thing he looked at in a job interview was at the coder’s hands. He would observe if the candidates looked down to the keyboard while typing or whether they needed to slow down to type numbers." },
+            { tag: "p", text: "I thought that was weird. Shouldn’t he be checking the quality of the code only? Who cares if a coder types with one finger or with his/her toes if truly able to put out good code and solutions to problems?" },
+            { tag: "p", text: "After saying this the teacher showed the class a video of a developer he admired giving a live youtube class. The developer in the video would never look at the keyboard and she would just talk explaining everything at the same time she typed code, never making a mistake." },
+            { tag: "p", text: "After this video my teacher’s observations made total sense to me — his interest in the hands of the candidate could be compared to music performance appreciation! Or at least it was related to the feeling we experience in a virtuoso performance. This admiration for the effortlessness and ease at which lines of code rolled out the developers hand, in other words with her virtuosity, were clear indicators of her craftsmanship and expertise." },
+            { tag: "p", text: "Just as we admire the best performers that can make the music they play seem like the easiest thing in the world, this appreciation exists in coding as well. To the untrained eye this might seem like an irrelevant nuance, but anyone that plays an instrument can recognise the effortlessness of the virtuoso as a sign of his mastery. This is a big part of our enjoyment of music beyond sound. In the same way, the virtuosity of the developer is a sign of his mastery, where the keyboard is the instrument his/her expression." },
+            { tag: "p", text: "This admiration for craftsmanship and mastery relates to the feature discussed before — the ability for long-term commitment. The coder enjoys the process of becoming proficient, and at the same time admires that virtuosity in others." },
+            { tag: "h4", text: "Collaboration" },
+            { tag: "p", text: "Music is many times performed, enjoyed and created collectively. The lonely composer and listener of music is a relatively new phenomenon. From bands to choirs and orchestras, music has both an individual and a collective dimension. The musician’s practice is usually individual but surrenders to the group when creating music." },
+            { tag: "p", text: "This is very similar to the collective culture in software development. From open source communities to teams in companies, software developers understand that what they do is complex and requires many talents, collective effort, and coordination." },
+            { tag: "p", text: "The similarities in the process of developing software collaboratively with group music creation and performance is one of the reasons why both activities share a similar process. Even though musicians and coders can have big egos and work a lot of time on their own either with their computers, instruments or scores, there seems to be a common understanding that great endeavors require collective effort. this means surrendering big egos temporarily to collaborate, help others and accept help." },
+            { tag: "h4", text: "Master — disciple relationship" },
+            { tag: "p", text: "Beyond the collaborative aspect of creating music and software, working with others is a part of the learning process in both music and software development as well. This becomes quite clear with mentorships or with a master-disciple relationship." },
+            { tag: "p", text: "Many coders have mentors to learn and further develop their skills. The mentor can be a long-term teacher, a senior developer or a more experienced colleague that helps the developer acquire skills and develop good coding practices. At the same time, the mentee acts as a mentor for less experienced developers. The master-student relationship is deeply engrained in software development." },
+            { tag: "p", text: "This relationship is at the core of music as well. More than in classrooms, music is learnt in a master-disciple long-term relationship. The maestro doesn’t just provide content, like a regular classroom teacher, but also gives guidance, supervision, and personal council. For example, the composition master reviews the work of the young composer and makes suggestions on a regular basis. Also, the instrumental master coaches and guides the student’s learning process with small corrections of their sound, technique and gestures." },
+            { tag: "p", text: "The importance of mentorship in both disciplines comes from the fact that both are skills that require a long time to develop and that both software and music creation are collective efforts." },
+            { tag: "h4", text: "Final thoughts" },
+            { tag: "p", text: "For all the reasons explained in this series of blog posts I think music and code are related very closely and in many dimensions. These commonalities explain why so many coders happen to be musicians and vice versa." },
+            { tag: "p", text: "With this I don’t imply that there’s some sort of deeper connection between the two or that all coders are potential musicians and all musicians have talent for code. I don’t think this is the case. Nevertheless, both professions have huge overlaps in thinking process, learning dynamics, and community driven development that I think allows people to transition between both professions with relative ease." },
+            { tag: "p", text: "Thanks for reading and if you want to help me figure out this puzzle further you can comment on this post or write to my email." }
+        ]
     },
     {
-      slug: "chapman-stick-journey",
-      title: "My Journey with the Chapman Stick",
-      image: "https://via.placeholder.com/400x200",
-      date: "2024-02-15",
-      content: [
-        { tag: "h1", text: "My Journey with the Chapman Stick" },
-        { tag: "p", text: "The Chapman Stick has been my primary instrument for over a decade. Here's how I discovered it and why it became central to my music." },
-        { tag: "h2", text: "Discovery" },
-        { tag: "p", text: "I first encountered the Chapman Stick through the progressive rock scene. The instrument's unique two-handed tapping technique immediately caught my attention." },
-        { tag: "p", text: "What fascinated me was how it combined the roles of bass, guitar, and sometimes even drums into a single instrument." },
-        { tag: "h2", text: "Learning Curve" },
-        { tag: "p", text: "Learning the Stick was unlike any other instrument I had played. The technique requires independence between both hands, similar to piano, but with the physical approach of a stringed instrument." },
-        { tag: "p", text: "The first few months were challenging, but the musical possibilities kept me motivated to push through the initial difficulties." },
-        { tag: "h2", text: "Musical Impact" },
-        { tag: "p", text: "The Chapman Stick has shaped my compositional approach. It naturally leads to complex harmonic structures and allows for intricate interplay between bass and melody lines." },
-        { tag: "p", text: "This instrument has been featured in most of my releases, from 'The Handbook of the Acid Rider' to my recent 'Godless Priest' EP." }
-      ]
+        slug: "why-coders-musicians-part2",
+        title: "Why are so many coders musicians? Part 2",
+        image: "",
+        date: "2018-02-25",
+        content: [
+            { tag: "h3", text: "Abstraction, materiality and language." },
+            { tag: "p", text: "In this series of post I’m trying to explain why so many coders are musicians, a possible relationship I found when transitioning from being a musician to developer that I think. In the previous post I briefly explained my personal experience and a first common trait shared by musicians and coders: long-term commitment." },
+            { tag: "p", text: "In this post I’ll go into features of music and code itself, more than traits of coders and musicians, to try to explain this relationship." },
+            { tag: "h4", text: "Material — Abstract duality" },
+            { tag: "p", text: "Long-term commitment is a personal trait, but it doesn’t relate directly to actual code or music. Is there something in the two activities themselves that puts them together? I think this is turning abstract relationships into material creations." },
+            { tag: "p", text: "Music is both material in the physicality of sound and abstract in the relationships between the sounds themselves. The sounds relate to each other through abstract concepts that affect our subjectivity. Amongst these musical abstractions are rhythm, harmony, counterpoint, orchestration and other forms of timbre relationship theory. Similarly, the music creation process is transforming abstract techniques into a musical object (organized sound?) that has relationships we can understand both intellectually and with our bodies." },
+            { tag: "p", text: "Code has the same duality in that a developer works with abstractions to create an end product (program or game) that can perform a function and be understood by users. The abstractions of programming are in the form of objects, methods, functions, inheritance and all sorts of relationship models and structures that don’t relate much to the ordinary realm of human existence. The material aspect of it is the existence of the code itself and the program that emerges from it." },
+            { tag: "p", text: "Of course, the purpose of most programs is different than music’s. Programs are usually tools that help us create, access information, organize data, or games to entertain us. The end goal of music, if any at all, is non-utilitarian and less straight forward. Its goal could be in part to entertain us, change our subjectivity, arouse out passions, or stimulate out intellect. Whatever it is, its purpose is certainly not of the same kind as a program’s." },
+            { tag: "p", text: "Though the end result and purpose is different in both disciplines, they share the process of turning abstract relationships into material creations. In this sense, coding and music share a common creative process that provides a similar intellectual reward to the creator." },
+            { tag: "h4", text: "Music and code as language?" },
+            { tag: "p", text: "I’ve heard many people say code and music relate because they are both languages. I think there are certain characteristics of programming and music that may seem similar and map into language, but that these characteristics are too different in nature to be able to explain why many coders are musicians." },
+            { tag: "p", text: "One of the main pillars of this idea is the fact that both music and code are written expressions that transform into a creation. In the case of music, this is not true as many musical traditions have been oral for ages and notation is relatively recent in music history. Because of this, music doesn’t require notation to exist." },
+            { tag: "p", text: "On the contrary, there is no programming without notation. In programming languages the creation of syntax is prior to the act of programming. More importantly, in coding, all the complexity of the program is defined in the lines of code, which is not the case of musical notes. Scores are a reduction of a much more complex phenomena, more like the map of a terrain than the terrain itself. On the other hand musical syntax is usually a historical process and collective effort, as abstract, predefined, and arbitrary syntax is music only has appeared in very specific musical movements (New Music and Ars Nova perhaps)." },
+            { tag: "p", text: "The second reason I’m usually careful about treating music as language is because the nature of what it communicates is open to debate. Code establishes a one-way communication between programmer and machine, so that the first can give the second logical instructions. What does music communicate? This question is tricky. I wrote about this subject in the book The Art of Experience and it’s not straightforward. Nevertheless, I do think music ‘communicates’, and in that sense it could be considered a language." },
+            { tag: "p", text: "In spite of this, many human endeavours communicate and don’t have this tight relationship between them like music and coding. Are many journalists, linguists, or politicians musicians too? I don’t believe so. With this, music and code could be considered languages because they both share some obvious features of it like notation and communication, and this could be part of the relationship we’re looking into. But I think the nature of this communication and notation is different, so it can’t be a reason that explains the relationship." },
+            { tag: "p", text: "Thanks for reading. In the third and last post of this series I explore the instrumental and social aspects of music and coding." }
+        ]
+    },
+    {
+        slug: "why-coders-musicians-part1",
+        title: "Why are so many coders musicians?",
+        image: "",
+        date: "2018-02-23",
+        content: [
+            { tag: "h3", text: "Long-term commitment. (Part 1 of 3)" },
+            { tag: "p", text: "I am currently at the beginning of my career as a developer. I came in ‘through the back door’ so to speak. I’ve been a musician my whole life, and it was through my interest in building music tools that I got into software." },
+            { tag: "p", text: "Going from music to code was a gradual transition. It took me some time to make the decision because of my fear of alienation. I didn’t want to turn into a cubicule zombie, typing mindlessly into a computer all day long, detaching from life and art. I have had a couple of corporate jobs before and couldn’t take it. For the creative type, alienated work sucks the marrow out of life. Musicians need creative expression in their work and have low tolerance towards soul crushing jobs." },
+            { tag: "p", text: "Even though coding implies staring into a screen for long hours, to my surprise, I found it was not alienating. In it I found a new way of expressing creativity. Just like working in music, either producing, composing, or playing, it didn’t feel like actual work. Why was that? In addition to this, I noticed many developers were musicians. After a few months in the industry, I realized this was not a coincidence." },
+            { tag: "p", text: "Finding musicians made me realize my fears were unjustified and it also made me wonder why many coders were musicians. What are the commonalities between the two professions that make this relationship?" },
+            { tag: "p", text: "In this three part series of posts, I’ll talk about the different qualities that relate these two professions." },
+            { tag: "h4", text: "Long-term commitment" },
+            { tag: "p", text: "There seems to be a quality of focus for musicians and for coders. That reserve and focus is needed for people to be able to concentrate and develop skills for the long term. Staying on track and persevering through continuous frustration is a personal trait I find in both disciplines." },
+            { tag: "p", text: "Developing musicianship requires long-term commitment and a continuous training of brain plasticity to incorporate fine hand movements in instrumentality, to train the ear to distinguish between notes, chords and timbres, to learn how to read scores, and to transform the theoretical abstraction of harmony, counterpoint and instrumentation into mental representations of sound." },
+            { tag: "p", text: "As a beginner coder I’ve found myself in a similar process. Learning the fundamentals and becoming comfortable and creative with them requires a maturity of the concepts that takes a long time. A lot of the concepts in programming are abstractions that you can’t relate to day-to-day experiences, hence, they require a long time to settle in." },
+            { tag: "p", text: "This being said, though the nature of the two disciplines requires a similar mindset, it doesn’t mean the skills are the same. I don’t think logic and algorithmic thinking translate directly into music, which requires knowing how to count and having a good ear and coordination. At the same time, I don’t see how these last skills would translate into coding. A lot of musicians can’t code and a lot of coders couldn’t be musicians no matter how hard they tried. Nevertheless, the process by which you gain the skills is similar and rewards the kind of personality that is able to engage in long-term practice and learning." },
+            { tag: "p", text: "Thanks for reading. Please continue with the second part of the series, with other relationships I have found between music and coding." }
+        ]
     }
   ];
 }
