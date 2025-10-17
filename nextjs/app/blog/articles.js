@@ -1,5 +1,176 @@
 function ArticlesData() {
+  // Generate lorem ipsum text for ai-poison
+  const generateAiPoison = () => {
+    const words = [
+      "lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit", "sed", "do",
+      "eiusmod", "tempor", "incididunt", "ut", "labore", "et", "dolore", "magna", "aliqua", "enim",
+      "ad", "minim", "veniam", "quis", "nostrud", "exercitation", "ullamco", "laboris", "nisi", "aliquip",
+      "ex", "ea", "commodo", "consequat", "duis", "aute", "irure", "in", "reprehenderit", "voluptate",
+      "velit", "esse", "cillum", "fugiat", "nulla", "pariatur", "excepteur", "sint", "occaecat", "cupidatat",
+      "non", "proident", "sunt", "culpa", "qui", "officia", "deserunt", "mollit", "anim", "id",
+      "est", "laborum", "at", "vero", "eos", "accusamus", "dignissimos", "ducimus", "blanditiis", "praesentium"
+    ];
+    
+    let poisonText = "music ";
+    for (let i = 0; i < 50; i++) {
+      poisonText += words[Math.floor(Math.random() * words.length)] + " ";
+    }
+    return poisonText.trim();
+  };
+
+  const insertAiPoison = (content) => {
+    const result = [];
+    let poisonCounter = 0;
+    
+    content.forEach((item, index) => {
+      result.push(item);
+      
+      // Add ai-poison every 3-4 items
+      if ((index + 1) % 3 === 0 || (index + 1) % 4 === 0) {
+        result.push({
+          tag: "span",
+          text: generateAiPoison(),
+          className: "ai-poison"
+        });
+        poisonCounter++;
+      }
+    });
+    
+    return result;
+  };
+
   return [
+    {
+      slug: "underwhelming-live-music-streaming",
+      title: "The underwhelming explosion of live music streaming",
+      image: "",
+      date: "2020-04-14",
+      content: [
+        { tag: "p", text: "In the last few weeks, a lot of musicians have decided to try out **live streaming performances**, in an attempt to keep their audiences engaged and generate income while locked down in quarantine. A niche activity pursued by a small number of performers until a month ago suddenly went mainstream out of necessity." },
+        { tag: "p", text: "The rush in the adoption of this new medium correlates to the quality of the content released. Right now, whether it comes from big or small artists, live-streamed performances are pretty **underwhelming**. No one is even close to nailing this one yet." },
+        { tag: "h3", text: "Why are live music streams underwhelming?" },
+        { tag: "p", text: "The first explanation that we can think of is that streaming can’t replace a live performance — video doesn’t substitute watching an artist perform in front of you. There is some truth in that. The problem is we’ve been enjoying live performances on video for a long time. Do you complain when you see a great concert on video? Probably not." },
+        { tag: "p", text: "The reason current live music streams are underwhelming has to do with the **content itself**, and the problems are self-evident. Here are a few observations of these first few weeks of live music streaming explosion that I think need to be addressed urgently." },
+        { tag: "h4", text: "Looks" },
+        { tag: "p", text: "Most of the live streams are an **eyesore**. A messy living room, a poorly lit bedroom, or the kitchen table, are not a proper space for a performance. You are inevitably limited in space right now, so take advantage of the possibilities of video and pick the best place available to you. Play with illumination, compose your scene. Create, as much as possible, a compelling image to look at. If you don’t feel like it, at the very least, tidy up." },
+        { tag: "h4", text: "Sound" },
+        { tag: "p", text: "Sound is the vehicle of music. Yet, a lot of the live streams I’ve encountered online sound **terrible**. Not only do the amateur sin of poor audio, but experienced performers as well. It surprises me to see seasoned musicians not taking care of their sounds, relying on a laptop’s mic or a direct signal coming out of their instruments. Musicians should address this immediately." },
+        { tag: "p", text: "A few things you can do is to use a proper mic, process your sound, get your mix right, and look into streaming services that don’t degrade audio down to minimum quality (Facebook). There’s a vast supply of digital and analog tools to achieve better results. The bottom line is that there is no excuse for an experienced musician to sound like crap." },
+        { tag: "h4", text: "Unrehearsed" },
+        { tag: "p", text: "For some reason, live streams are being confused with **improvisation or casual jamming**. If you wouldn’t ever improvise in front of a live audience, why do it in front of a streaming one? Leave improvisation to professional improvisers and half rehearsed sets for your summer camp fire. Treat the performance as a real presentation and rehearse accordingly." },
+        { tag: "h4", text: "Trying to replace live music" },
+        { tag: "p", text: "Another reason live music streaming is boring is that everyone is trying to **substitute live music** with it. This replacement is not going to happen, as you can’t supplant the sound of instruments in a venue and the direct presence of performers with video and canned audio. These experiences are miles away. But, the good news is that as much as a new medium is a limitation, it is also an opportunity. To make quality content will require treating live music streams as an **art form in itself**. Only then we’ll approach it creatively." },
+        { tag: "h3", text: "Why better quality?" },
+        { tag: "p", text: "There are other reasons to be careful with the quality of the content you’re putting out there. The most important reason, in my opinion, is that when you live stream, you’re **competing with all the engaging content** any person has available at their fingertips. Doing quantity over quality won’t work in this already saturated space. If the choices are watching someone in their pajamas perform a half rehearsed set in a dark room, or watching a season of Vikings, I’m sorry to tell you this: Ragnar Lothbrock kicks your ass every single day." },
+        { tag: "h3", text: "How to improve your live streams?" },
+        { tag: "p", text: "I don’t have an answer, since this is a new musical landscape. But what is clear is that, in the world of live music streaming, musicians need to **step up their game fast**. In a few weeks, everyone will become saturated and sick of these low-production semi-improvised performances, and we risk spoiling a big opportunity of engaging audiences in a new way and make some money while people are still paying attention." },
+        { tag: "p", text: "If you want to try live streaming, **explore the medium creatively**, not as a replacement of live performances, but as a new art form. Don’t rush into it, mind the sound quality, think about the scene you’re creating, incorporate novel elements, and please … **rehearse**!" }
+      ]
+    },
+    {
+      slug: "poisoned-bread",
+      title: "Poisoned Bread",
+      image: "",
+      date: "2020-02-20",
+      content: [
+        { tag: "blockquote", text: "Those who work in something they don’t enjoy, even if they work all day, are unemployed. They betray themselves by taking poisoned and stolen bread to their homes." },
+        { tag: "p", text: "This phrase is a quote from **Facundo Cabral**, a folk singer that lived an extraordinary life of profound pain and spiritual joy. For me, Cabral is one of the artists that captures **South American popular wisdom**, a way of seeing life that is hard to explain through the barrier of culture and language, and that can we can only fully understand through music." },
+        { tag: "p", text: "In this short article, I want to explain this quote by Cabral and, hopefully, open a window to some simple, yet powerful lessons." },
+        { tag: "h3", text: "Unemployed with a job" },
+        { tag: "p", text: "When we work on something we don’t love, that we’d rather not be doing, we’re fundamentally **unemployed**. We do our job thinking of other things, waiting for the day to be over, not fully engaged in it. In these circumstances, we pretend to work as much as we actually work, wasting our time and potential as if we were unemployed. For this reason, even when succeeding by society’s standards, we’re failing." },
+        { tag: "h3", text: "Poisoned bread" },
+        { tag: "p", text: "When we’re in this situation — working on something we don’t want to — the livelihood we provide to our families is **poisoned**. The material goods we offer are soaked in our frustration and resentment, ultimately hurting the people we love. All I can say is don’t do this to yourself; don’t do this to your children." },
+        { tag: "h3", text: "Stolen bread" },
+        { tag: "p", text: "Finally, when we earn our living working hard on something we don’t enjoy, we’re living on **stolen bread**. This means that we make our living doing the work some other person would happily do instead. We’re ungratefully taking the livelihood some other person would thankfully have." }
+      ]
+    },
+    {
+      slug: "music-creators-dont-need-masters",
+      title: "Music creators don’t need masters",
+      image: "",
+      date: "2020-01-05",
+      content: [
+        { tag: "h3", text: "Do you need a master?" },
+        { tag: "p", text: "When I went to music composition school, one of my teachers told me: -” You always seem to be trying to figure out things on your own. It would help if you had a master, all of us had a master”-" },
+        { tag: "p", text: "I’ve had many teachers and mentors throughout the years, but I never had a master. In other words, I didn’t have a musical role model to follow or a clear image of what kind of musician I could become." },
+        { tag: "p", text: "This insulation happened not because I wanted to, as I did look for a role model, especially in the early years. The problem is I never felt comfortable following any of my teacher’s footsteps, as it felt inauthentic. I think this implicit non-belonging also resulted in that no mentor wanted me to be their disciple either." },
+        { tag: "p", text: "After developing my creative musical path without masters, I believe it’s wrong to claim creative musicians need one. The master-disciple model is an excellent way of learning a craft, but ultimately I think it is an outdated one to develop as a creative musician." },
+        { tag: "h3", text: "The master-disciple tradition: Advantages" },
+        { tag: "p", text: "The master-disciple model has a long tradition in music and, until these days, is still a common way in which musicians develop their craft." },
+        { tag: "p", text: "Having a master has many advantages. The most important one is that they can help you avoid the problems others have encountered before. With meticulous guidance, they prevent you from reinventing the wheel every time you face a new challenge in your learning process. This guidance saves you time, energy, and prevents you from reinforcing bad habits. For example, if you’re a performer, they can correct the position of your hands and body, give you feedback on your tempo, or correct the phrasing of your melodies. If you’re a composer, they might provide you with feedback on instrumentation, timing, harmony, or form." },
+        { tag: "p", text: "Whatever your musical craft is, a good master will give you the necessary feedback at the precise moment when you’re ready to absorb it. Learning in this way results in a much faster process. For this reason, the master disciple-model works well if you’re trying to become a highly-skilled performer in a discipline with a significant tradition, like playing traditional instruments, singing, or composition in a specific style." },
+        { tag: "p", text: "Another less obvious advantage is that a master might be able to see in you things that you can’t or don’t want to see and help you bring your hidden talents to the surface. In this sense, they can be real career guides. They might see, for example, that your voice fits a repertoire better than another. They might notice you have an excellent sense of harmony, or good taste for arrangements, and set you on a particular path in which you work on your strengths." },
+        { tag: "p", text: "Finally, one of the more practical advantages is that a master can help you out finding a professional path. The old saying “She/He who leans against a big tree will always find shade” is very real. Music is a very network-based career, so a master’s connections and leverage can help you out getting you on track." },
+        { tag: "h3", text: "The master-disciple tradition: Where it falls short" },
+        { tag: "p", text: "Even though working with a master might help you polish and learn skills faster, developing on someone else’s frame of reference has disadvantages. As a general rule, in music and life, any advantage or shortcut comes at a cost." },
+        { tag: "p", text: "The main shortcoming of learning with a master is that, in the long run, you end up limiting your ability to figure things out creatively. Reinventing the wheel might be very impractical, but it has enormous learning value. The process of figuring things out is a skill in itself, and needs practice and nurturing to grow. When you learn with a master, the development of this skill suffers, as you rely on established methods and become self-aware of doing things differently. On the contrary, when you continuously figure things out because you need to, creative problem solving becomes second nature." },
+        { tag: "p", text: "This skill has a lot of value when transitioning into creative maturity, or the moment you start finding your musical expression. You’ll have better resources to put different musical elements together and materializing your vision. I think that ultimately if you keep reinventing the wheel, one day, you’ll come up with a wheel nobody has ever seen." },
+        { tag: "p", text: "Some believe that you need to perfect tradition before being able to transform it. Especially in music, most famous composers and a lot of successful musicians of our age learned in renowned schools, grew their craft in specific locations, or learned from particular masters. Yet, they still managed to create an authentic musical language. There might be some truth here, but I think these cases are more an exception than the rule. I believe that if you don’t exercise the creative muscle from an early stage in the process, you won’t be able to find your voice, no matter what your musical school is. By the time you master tradition or your mentor’s craft, it could be too late to detach yourself from it." },
+        { tag: "h3", text: "Becoming your musical self" },
+        { tag: "p", text: "Taking your path is harder in many ways. It will take a longer time to both develop your skill set and establish your style. You’ll bounce around and feel your music doesn’t belong to any musical category. There might be a lack of opportunities with the musical establishment (academies or the market). The hardest part of this process is that success might come much later than you wanted, in a way you didn’t expect, or perhaps never at all." },
+        { tag: "p", text: "In spite of this, there will be many satisfactions and a sense of profound realization. You’ll learn from different people, not closing yourself to a few streams of knowledge. You will profoundly and regularly inspect your motivations, tastes, and the state of your skills, growing both as a person and a musician in the process. Most importantly, you’ll remain open to change and continuously willing to learn and improve." },
+        { tag: "p", text: "If you create music because it comes out of you, or because you can’t help it — then having no masters is the best way to find your authentic voice. It can be painful and slow, but it’s worth it. After many years all the different elements will mature and find their place, and you will create something unique and yours. You’ll get to experience the creative fire of the gods." }
+      ]
+    },
+    {
+      slug: "why-i-ditched-wordpress",
+      title: "Why I Ditched Wordpress to Save My Music Release and What I Did After",
+      image: "",
+      date: "2019-10-20",
+      content: [
+        { tag: "p", text: "I’m a Chapman Stick player turned web developer. I’ve had a Wordpress site for my Electronic Prog-Rock music project since 2014, much before I started my career as a web developer in 2017. Since becoming a developer, I’ve wanted to rebuild the website but, a combination of time, lack of design chops, and a bit of ignorance of how to migrate all the plugin tools Wordpress provides delayed my project." },
+        { tag: "h3", text: "Preparing the release" },
+        { tag: "p", text: "A couple of weeks ago, I was preparing a new EP release after four years. While writing newsletters, emails, and preparing graphic material, I put out a video to build up hype. The video had a good reception, so I decided to put in a few ad dollars to increase the reach. Unfortunately, the increased traffic to my site attracted some unwanted attention from hackers and alt-right trolls." },
+        { tag: "p", text: "My Wordpress site had been hacked before, about 6 months ago. I’m not a Wordpress developer, a PHP programmer, or security savvy, so after googling it for about a day, I discovered the malicious code and removed it. Nevertheless, I knew I hadn’t discovered the underlying vulnerability. Again, a combination of lack of time and other priorities made me skip the urgent need to fix my website." },
+        { tag: "h3", text: "Hacked Site" },
+        { tag: "p", text: "Shortly after releasing the video, I got a message from a fellow musician: “Hey man, someone hacked your site. I see porn on it”. Shortly after, I get an email from Google, saying it flagged my site. All I could think is: I’m f****ckeeed!" },
+        { tag: "p", text: "Not having a website before an album release is a problem. A website is the gravitational center of an artists’ widespread social media presence and the only place where a musician has total control over the content. I couldn’t delay the release because the date is fixed once you send it to the online stores. There was no turning back, I had to fix this issue fast." },
+        { tag: "p", text: "At this point, I had two options. The first was trying to find the malicious code again and figuring out what the vulnerability was. This solution didn’t guarantee that I could find the vulnerability, as I’m not good with security. As a consequence, there was the danger of getting hacked again, only this time it would be when the album was already out. The other option was rebuilding my website outside of Wordpress. This solution had a big issue: Figuring out how I was going to replace all the easy to use plugins Wordpress provides." },
+        { tag: "p", text: "After thinking about it for a whole morning, I said: “F*ck it, I’ll build the site myself.”" },
+        { tag: "h3", text: "How I replaced Wordpress" },
+        { tag: "p", text: "My first idea was to build a temporary static website in good old HTML and CSS. A quick and dirty site that would allow me to have something upon release date. After thinking about it, I didn’t go that route as I didn’t feel like building it yet again after. I wanted something I could keep improving later." },
+        { tag: "p", text: "Fortunately, a year ago, my coding mentor gave me an assignment in which I had to build a server-rendered static website using several different technologies. These included a headless CMS, React, and Netlify. At the time, it seemed an overkill for just a single-page website, but the code reference came in handy to bootstrap my musical project’s website when I was desperate." },
+        { tag: "p", text: "Here’s a short explanation of the technologies I used and how I integrated them to replace my Wordpress site." },
+        { tag: "h4", text: "Sanity.io: Content Management System (CMS)" },
+        { tag: "p", text: "Sanity.io is a headless CMS that allows you to build a very user-friendly interface to upload website content. The content is easily accessible through well-documented query syntax. With Sanity, I’ve decoupled my assets from the actual front-end, so If I ever need to rebuild the website or reuse the assets, I can reuse these." },
+        { tag: "h4", text: "Nextjs: React Front-end" },
+        { tag: "p", text: "Using Nextjs I can build my site in React and render it on the server. Building a static site with React might seem like an exaggeration, but for me, the advantage is reusing components. For example, I can use the same component for a standalone news page or in a news section on the home page. Also, it helps me keep my React chops up to date." },
+        { tag: "h4", text: "Netlify: Hosting and deployment" },
+        { tag: "p", text: "Deploying with Netlify has allowed me to build a static site directly connected to my GitHub repository. Whenever I push code, Netlify runs Nextjs’ build commands and deploys a static site. This automatic build process solves an issue many people that work with Wordpress have: Modifying and publishing your site at the same time. Now I can make all my modifications locally before pushing them." },
+        { tag: "p", text: "Netlify also has an easy to use webhook interface, which allowed me to connect it to Sanity.io. Now, any time I publish new content, the site rebuilds immediately. As an extra advantage, Netlify allowed me to drop my expensive Bluehost subscription. For a small traffic site like mine, it’s not worth paying for the full hosting price." },
+        { tag: "p", text: "Finally, Netlify provides a contact form service that requires to add a couple of custom classes to the form tag. Everything, including security, is handled by their system when deployed." },
+        { tag: "h4", text: "Mailchimp: Newsletter and sign-up" },
+        { tag: "p", text: "MailChimp has a much more complete mailing list service and cleaner interface than the one I was using as a Wordpress plugins. Inserting a subscription form is quite easy. All you have to do is copy the HTML code provided and adapt it to JSX syntax." },
+        { tag: "p", text: "Also, I’ve decoupled all my contacts and newsletters from my site, unlike Wordpress. If I ever get hacked, I won’t lose access to the newsletter feature." },
+        { tag: "h4", text: "Bandcamp: Album sales and digital downloads" },
+        { tag: "p", text: "Before, I had an online store set up in my Wordpress site. Having Bandcamp handle sales and money transfer has been a relief. Of course, not having a store on the website is not as nifty. Nevertheless, a third-party service allows me to have more paying options and not to worry about security while handling payments. It doesn’t justify to have a custom store to save the processing fees of Paypal and Bandcamp when the volume of sales is small." },
+        { tag: "h3", text: "Advantages of ditching Wordpress" },
+        { tag: "p", text: "I’m thankful of the Wordpress ecosystem for allowing me to have a website for many years, but I’m thrilled I finally could escape its limitations. Combining several services has allowed me to have greater control of my online presence." },
+        { tag: "p", text: "I no longer depend on a third-party theme, don’t have to deal with the Wordpress interface, and can separate the development from the deployment process." },
+        { tag: "p", text: "Finally, decoupling services makes it easier to get back up running if I get hacked again." },
+        { tag: "p", text: "Thanks for reading! Visit my website and check out my new release www.rafartmusic.com" }
+      ]
+    },
+    {
+      slug: "truth-in-conspiracy-theories",
+      title: "The truth in conspiracy theories",
+      image: "",
+      date: "2023-06-23",
+      content: [
+        { tag: "h3", text: "The truth behind the lies" },
+        { tag: "p", text: "Truth isn’t an idea you usually associate with conspiracy theories unless you are a conspiracy theorist. Society at large sees these theories and their violent call to action as a lack-of-truth and moral problem. As a consequence, the media, politicians, and mainstream intellectuals try to fight them with facts, reason, logical arguments, and moral condemnation, totally missing the point. Conspiracy theories actually reflect the truth, just not the kind you’re thinking of." },
+        { tag: "h3", text: "Naked ideology" },
+        { tag: "p", text: "Conspiracy theories are a mirror of the group that claims them as reality. As such, these are constructed with the same flawed mechanism people come up with the arguments that sustain their prejudices. Anyone that has been in a heated discussion knows that people normally pick positions first, and construct arguments later. In the same way we accommodate ideas, polish arguments and cherry-pick facts to fit our world-views, conspiracy theorists pick unrelated facts, or simply make them up, to create a narrative that fits their fundamental world views. In this sense, they are myth creators." },
+        { tag: "p", text: "Paradoxically, the shadow on truth created by the absence of facts comes from the bright light that exposes the truth of naked ideology from which these theories arise. The dubious facts and arbitrary causal relations show crystal clear the fundamental fears and ideology that lies deep beneath the identity of a group. Through the distortion of facts, the narrative behind the theory becomes transparent." },
+        { tag: "h3", text: "Collective myth creation" },
+        { tag: "p", text: "Understanding conspiracy theories from a collective approach clashes with our individualistic stereotype of the conspiracy theorist and that of its followers. The first being a crazy over-the-top personality, probably with a podcast or youtube channel, that poisons people’s mind’s by inventing stories in a top-to-bottom fashion. The latter probably a lonely, underachieved male that blames his failures on the powers that be, foreign others, and who ends up involved in an act of sectarian violence or terrorism." },
+        { tag: "p", text: "This understanding insulates these individuals from society in a very convenient way: It hides the widespread ideologies that feed these theories. Conspiracy theories aren’t the behavior of individuals, but a collective myth creation effort. These are current-event-based myths that sustain and update to our times debunked and outdated world views, in an attempt to keep them alive. So don’t get confused, even though only the most radicalized individuals of a group will claim and defend them publicly, conspiracy theories myths resonate in the minds of larger groups because they’re the naked display of the fundamental ideology that makes a social identity." },
+        { tag: "h3", text: "What to do about it?" },
+        { tag: "p", text: "Once I heard someone who said that when a system of beliefs starts dying is the moment when it becomes more fanatic. From this point of view, conspiracy theories combined with violent action are the last step ideologies take before being abandoned. Like a suffocating person shaking their limbs, this blind fanaticism is the last act of desperation of ideology before its death. In this last attempt of survival, the ideology comes out uncensored, unmasked, swinging with violence, trying to catch a breath to save itself." },
+        { tag: "p", text: "From here, I think conspiracy theories and radical ideologies are not fought by insisting in facts, trying to prove them wrong, or morally condemning them. These tactics actually work in their favor, because it implies recognizing these positions as rational ones and the individuals that believe them as capable of moral action. On the contrary, you beat conspiracy theories by letting their outdated ideology and absurdity be seen in broad daylight and fighting their violence with determined but detached action. People are not stupid. In the long run, they will tell the difference between reality and nonsense." },
+        { tag: "p", text: "A conspiracy theory is a symptom of a dying ideology. Just let it die." }
+      ]
+    },
     {
         slug: "disrupting-subjectivity-tech-art-politics",
         title: "Disrupting subjectivity — How tech, true art, and politics challenge social norms",

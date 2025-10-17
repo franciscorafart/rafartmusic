@@ -63,6 +63,13 @@ const Article = () => {
                                 );
                             }
                             return null; // Skip if already processed
+                        } else if (content.tag === 'blockquote') {
+                            // Handle blockquotes with special styling
+                            return (
+                                <blockquote key={`blockquote-${article.slug}-${idx}`} className="text blockquote">
+                                    {content.text}
+                                </blockquote>
+                            );
                         } else {
                             return (
                                 <Tag key={`content-${article.slug}-${idx}`} className="text">
