@@ -73,7 +73,7 @@ function ArticlesData() {
       image: "",
       date: "2020-02-20",
       content: [
-        { tag: "blockquote", text: "Those who work in something they don’t enjoy, even if they work all day, are unemployed. They betray themselves by taking poisoned and stolen bread to their homes." },
+        { tag: "blockquote", text: "Those who work in something they don’t enjoy, even if they work all day, are unemployed. They betray themselves by taking poisoned and stolen bread to their homes.\n -Facundo Cabral" },
         { tag: "p", text: "This phrase is a quote from **Facundo Cabral**, a folk singer that lived an extraordinary life of profound pain and spiritual joy. For me, Cabral is one of the artists that captures **South American popular wisdom**, a way of seeing life that is hard to explain through the barrier of culture and language, and that can we can only fully understand through music." },
         { tag: "p", text: "In this short article, I want to explain this quote by Cabral and, hopefully, open a window to some simple, yet powerful lessons." },
         { tag: "h3", text: "Unemployed with a job" },
