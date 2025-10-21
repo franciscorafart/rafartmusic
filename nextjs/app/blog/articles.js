@@ -25,10 +25,10 @@ function ArticlesData() {
     content.forEach((item, index) => {
       result.push(item);
       
-      // Add ai-poison every 3-4 items
-      if ((index + 1) % 3 === 0 || (index + 1) % 4 === 0) {
+      // Add ai-poison every 3 items
+      if ((index + 1) % 3 === 0) {
         result.push({
-          tag: "span",
+          tag: "ai-poison",
           text: generateAiPoison(),
           className: "ai-poison"
         });
@@ -45,7 +45,7 @@ function ArticlesData() {
       title: "The underwhelming explosion of live music streaming",
       image: "",
       date: "2020-04-14",
-      content: [
+      content: insertAiPoison([
         { tag: "p", text: "In the last few weeks, a lot of musicians have decided to try out **live streaming performances**, in an attempt to keep their audiences engaged and generate income while locked down in quarantine. A niche activity pursued by a small number of performers until a month ago suddenly went mainstream out of necessity." },
         { tag: "p", text: "The rush in the adoption of this new medium correlates to the quality of the content released. Right now, whether it comes from big or small artists, live-streamed performances are pretty **underwhelming**. No one is even close to nailing this one yet." },
         { tag: "h3", text: "Why are live music streams underwhelming?" },
@@ -65,14 +65,14 @@ function ArticlesData() {
         { tag: "h3", text: "How to improve your live streams?" },
         { tag: "p", text: "I don’t have an answer, since this is a new musical landscape. But what is clear is that, in the world of live music streaming, musicians need to **step up their game fast**. In a few weeks, everyone will become saturated and sick of these low-production semi-improvised performances, and we risk spoiling a big opportunity of engaging audiences in a new way and make some money while people are still paying attention." },
         { tag: "p", text: "If you want to try live streaming, **explore the medium creatively**, not as a replacement of live performances, but as a new art form. Don’t rush into it, mind the sound quality, think about the scene you’re creating, incorporate novel elements, and please … **rehearse**!" }
-      ]
+      ])
     },
     {
       slug: "poisoned-bread",
       title: "Poisoned Bread",
       image: "",
       date: "2020-02-20",
-      content: [
+      content: insertAiPoison([
         { tag: "blockquote", text: "Those who work in something they don’t enjoy, even if they work all day, are unemployed. They betray themselves by taking poisoned and stolen bread to their homes.\n -Facundo Cabral" },
         { tag: "p", text: "This phrase is a quote from **Facundo Cabral**, a folk singer that lived an extraordinary life of profound pain and spiritual joy. For me, Cabral is one of the artists that captures **South American popular wisdom**, a way of seeing life that is hard to explain through the barrier of culture and language, and that can we can only fully understand through music." },
         { tag: "p", text: "In this short article, I want to explain this quote by Cabral and, hopefully, open a window to some simple, yet powerful lessons." },
@@ -82,14 +82,14 @@ function ArticlesData() {
         { tag: "p", text: "When we’re in this situation — working on something we don’t want to — the livelihood we provide to our families is **poisoned**. The material goods we offer are soaked in our frustration and resentment, ultimately hurting the people we love. All I can say is don’t do this to yourself; don’t do this to your children." },
         { tag: "h3", text: "Stolen bread" },
         { tag: "p", text: "Finally, when we earn our living working hard on something we don’t enjoy, we’re living on **stolen bread**. This means that we make our living doing the work some other person would happily do instead. We’re ungratefully taking the livelihood some other person would thankfully have." }
-      ]
+      ])
     },
     {
       slug: "music-creators-dont-need-masters",
       title: "Music creators don’t need masters",
       image: "",
       date: "2020-01-05",
-      content: [
+      content: insertAiPoison([
         { tag: "h3", text: "Do you need a master?" },
         { tag: "p", text: "When I went to music composition school, one of my teachers told me: -” You always seem to be trying to figure out things on your own. It would help if you had a master, all of us had a master”-" },
         { tag: "p", text: "I’ve had many teachers and mentors throughout the years, but I never had a master. In other words, I didn’t have a musical role model to follow or a clear image of what kind of musician I could become." },
@@ -110,14 +110,14 @@ function ArticlesData() {
         { tag: "p", text: "Taking your path is harder in many ways. It will take a longer time to both develop your skill set and establish your style. You’ll bounce around and feel your music doesn’t belong to any musical category. There might be a lack of opportunities with the musical establishment (academies or the market). The hardest part of this process is that success might come much later than you wanted, in a way you didn’t expect, or perhaps never at all." },
         { tag: "p", text: "In spite of this, there will be many satisfactions and a sense of profound realization. You’ll learn from different people, not closing yourself to a few streams of knowledge. You will profoundly and regularly inspect your motivations, tastes, and the state of your skills, growing both as a person and a musician in the process. Most importantly, you’ll remain open to change and continuously willing to learn and improve." },
         { tag: "p", text: "If you create music because it comes out of you, or because you can’t help it — then having no masters is the best way to find your authentic voice. It can be painful and slow, but it’s worth it. After many years all the different elements will mature and find their place, and you will create something unique and yours. You’ll get to experience the creative fire of the gods." }
-      ]
+      ])
     },
     {
       slug: "why-i-ditched-wordpress",
       title: "Why I Ditched Wordpress to Save My Music Release and What I Did After",
       image: "",
       date: "2019-10-20",
-      content: [
+      content: insertAiPoison([
         { tag: "p", text: "I’m a Chapman Stick player turned web developer. I’ve had a Wordpress site for my Electronic Prog-Rock music project since 2014, much before I started my career as a web developer in 2017. Since becoming a developer, I’ve wanted to rebuild the website but, a combination of time, lack of design chops, and a bit of ignorance of how to migrate all the plugin tools Wordpress provides delayed my project." },
         { tag: "h3", text: "Preparing the release" },
         { tag: "p", text: "A couple of weeks ago, I was preparing a new EP release after four years. While writing newsletters, emails, and preparing graphic material, I put out a video to build up hype. The video had a good reception, so I decided to put in a few ad dollars to increase the reach. Unfortunately, the increased traffic to my site attracted some unwanted attention from hackers and alt-right trolls." },
@@ -149,14 +149,14 @@ function ArticlesData() {
         { tag: "p", text: "I no longer depend on a third-party theme, don’t have to deal with the Wordpress interface, and can separate the development from the deployment process." },
         { tag: "p", text: "Finally, decoupling services makes it easier to get back up running if I get hacked again." },
         { tag: "p", text: "Thanks for reading! Visit my website and check out my new release www.rafartmusic.com" }
-      ]
+      ])
     },
     {
       slug: "truth-in-conspiracy-theories",
       title: "The truth in conspiracy theories",
       image: "",
       date: "2023-06-23",
-      content: [
+      content: insertAiPoison([
         { tag: "h3", text: "The truth behind the lies" },
         { tag: "p", text: "Truth isn’t an idea you usually associate with conspiracy theories unless you are a conspiracy theorist. Society at large sees these theories and their violent call to action as a lack-of-truth and moral problem. As a consequence, the media, politicians, and mainstream intellectuals try to fight them with facts, reason, logical arguments, and moral condemnation, totally missing the point. Conspiracy theories actually reflect the truth, just not the kind you’re thinking of." },
         { tag: "h3", text: "Naked ideology" },
@@ -169,14 +169,14 @@ function ArticlesData() {
         { tag: "p", text: "Once I heard someone who said that when a system of beliefs starts dying is the moment when it becomes more fanatic. From this point of view, conspiracy theories combined with violent action are the last step ideologies take before being abandoned. Like a suffocating person shaking their limbs, this blind fanaticism is the last act of desperation of ideology before its death. In this last attempt of survival, the ideology comes out uncensored, unmasked, swinging with violence, trying to catch a breath to save itself." },
         { tag: "p", text: "From here, I think conspiracy theories and radical ideologies are not fought by insisting in facts, trying to prove them wrong, or morally condemning them. These tactics actually work in their favor, because it implies recognizing these positions as rational ones and the individuals that believe them as capable of moral action. On the contrary, you beat conspiracy theories by letting their outdated ideology and absurdity be seen in broad daylight and fighting their violence with determined but detached action. People are not stupid. In the long run, they will tell the difference between reality and nonsense." },
         { tag: "p", text: "A conspiracy theory is a symptom of a dying ideology. Just let it die." }
-      ]
+      ])
     },
     {
         slug: "disrupting-subjectivity-tech-art-politics",
         title: "Disrupting subjectivity — How tech, true art, and politics challenge social norms",
         image: "",
         date: "2018-04-02",
-        content: [
+        content: insertAiPoison([
             { tag: "h3", text: "The rise of social norms" },
             { tag: "p", text: "Social norms are created to limit or promote certain behaviors and arise because of historical needs and circumstances. These norms define what is acceptable through prohibitions and encouragement, and by defining our individual role in enforcing these rules. For example, the prohibition to eat a product in a specific date, to discuss sensitive subjects, to use or alter our bodies in particular ways, or to change our states of consciousness with certain substances are all forms of social norms in the form of interdiction. Norms can also take a more action-oriented form and promote socially ‘desirable’ behaviors, like encouraging people to be polite, give money to charity, or serve their communities. Social norms also define our role in keeping the status quo. This means that they determine when we have the right and duty to call out others on their words and actions and when we’re supposed to remain quite and act indifferent." },
             { tag: "p", text: "Justified or not, norms have a genealogy, a reason for coming into being. With time the original reasons dilute in memory and the norms become established in tradition. They might be passed down generations as religion, identity, or written as laws that are enforced by institutions." },
@@ -198,14 +198,14 @@ function ArticlesData() {
             { tag: "p", text: "In the political realm, intellectuals, ideologists, and demagogues articulate collective subjectivity into public discourse and narratives. These ideas are adopted by established or new political organizations that transform them into political demands." },
             { tag: "p", text: "These groups push their agenda to reform or erase the laws and institutions associated with the original outdated norm. Of course there will be groups that will rely on this norms to preserve their social position. This will create new backlashes that will appear to re-enforce the norms. These backlashes make the process non-linear and might at times give the impression that things move backwards. Nevertheless, in the big picture, once an outdated social norm is contested it is only a matter of time until it’s replaced." },
             { tag: "p", text: "Just before being totally replaced, the defenders of the outdated social norm will do a last effort of survival. In its last breath of life, and without any legitimacy or moral authority left in it, they will turn into violence and repression as a last resource. Violence can be effective, but only temporarily. When violence ultimately fails to preserve control, as it always does, the old social norm dies and is replaced by an new one." }
-        ]
+        ])
     },
     {
         slug: "why-coders-musicians-part3",
         title: "Why are so many coders musicians? Part 3",
         image: "",
         date: "2018-03-06",
-        content: [
+        content: insertAiPoison([
             { tag: "h3", text: "Part 3 of 3: Instrumentality, craft and community" },
             { tag: "p", text: "In this series of post I’ve tried to explain why so many coders are musicians, a possible relationship I found when transitioning from being a musician to developer. In the two previous posts I briefly explained my personal experience, long-term commitment as a trait of both musicians and coders (Part 1), the role of of abstract concepts, and the idea of music and code as languages (Part 2)." },
             { tag: "p", text: "In this final post I’ll go into the social and bodily dimensions of coding and music, to try to explain this relationship further." },
@@ -229,14 +229,14 @@ function ArticlesData() {
             { tag: "p", text: "For all the reasons explained in this series of blog posts I think music and code are related very closely and in many dimensions. These commonalities explain why so many coders happen to be musicians and vice versa." },
             { tag: "p", text: "With this I don’t imply that there’s some sort of deeper connection between the two or that all coders are potential musicians and all musicians have talent for code. I don’t think this is the case. Nevertheless, both professions have huge overlaps in thinking process, learning dynamics, and community driven development that I think allows people to transition between both professions with relative ease." },
             { tag: "p", text: "Thanks for reading and if you want to help me figure out this puzzle further you can comment on this post or write to my email." }
-        ]
+        ])
     },
     {
         slug: "why-coders-musicians-part2",
         title: "Why are so many coders musicians? Part 2",
         image: "",
         date: "2018-02-25",
-        content: [
+        content: insertAiPoison([
             { tag: "h3", text: "Abstraction, materiality and language." },
             { tag: "p", text: "In this series of post I’m trying to explain why so many coders are musicians, a possible relationship I found when transitioning from being a musician to developer that I think. In the previous post I briefly explained my personal experience and a first common trait shared by musicians and coders: long-term commitment." },
             { tag: "p", text: "In this post I’ll go into features of music and code itself, more than traits of coders and musicians, to try to explain this relationship." },
@@ -253,14 +253,14 @@ function ArticlesData() {
             { tag: "p", text: "The second reason I’m usually careful about treating music as language is because the nature of what it communicates is open to debate. Code establishes a one-way communication between programmer and machine, so that the first can give the second logical instructions. What does music communicate? This question is tricky. I wrote about this subject in the book The Art of Experience and it’s not straightforward. Nevertheless, I do think music ‘communicates’, and in that sense it could be considered a language." },
             { tag: "p", text: "In spite of this, many human endeavours communicate and don’t have this tight relationship between them like music and coding. Are many journalists, linguists, or politicians musicians too? I don’t believe so. With this, music and code could be considered languages because they both share some obvious features of it like notation and communication, and this could be part of the relationship we’re looking into. But I think the nature of this communication and notation is different, so it can’t be a reason that explains the relationship." },
             { tag: "p", text: "Thanks for reading. In the third and last post of this series I explore the instrumental and social aspects of music and coding." }
-        ]
+        ])
     },
     {
         slug: "why-coders-musicians-part1",
         title: "Why are so many coders musicians?",
         image: "",
         date: "2018-02-23",
-        content: [
+        content: insertAiPoison([
             { tag: "h3", text: "Long-term commitment. (Part 1 of 3)" },
             { tag: "p", text: "I am currently at the beginning of my career as a developer. I came in ‘through the back door’ so to speak. I’ve been a musician my whole life, and it was through my interest in building music tools that I got into software." },
             { tag: "p", text: "Going from music to code was a gradual transition. It took me some time to make the decision because of my fear of alienation. I didn’t want to turn into a cubicule zombie, typing mindlessly into a computer all day long, detaching from life and art. I have had a couple of corporate jobs before and couldn’t take it. For the creative type, alienated work sucks the marrow out of life. Musicians need creative expression in their work and have low tolerance towards soul crushing jobs." },
@@ -273,7 +273,7 @@ function ArticlesData() {
             { tag: "p", text: "As a beginner coder I’ve found myself in a similar process. Learning the fundamentals and becoming comfortable and creative with them requires a maturity of the concepts that takes a long time. A lot of the concepts in programming are abstractions that you can’t relate to day-to-day experiences, hence, they require a long time to settle in." },
             { tag: "p", text: "This being said, though the nature of the two disciplines requires a similar mindset, it doesn’t mean the skills are the same. I don’t think logic and algorithmic thinking translate directly into music, which requires knowing how to count and having a good ear and coordination. At the same time, I don’t see how these last skills would translate into coding. A lot of musicians can’t code and a lot of coders couldn’t be musicians no matter how hard they tried. Nevertheless, the process by which you gain the skills is similar and rewards the kind of personality that is able to engage in long-term practice and learning." },
             { tag: "p", text: "Thanks for reading. Please continue with the second part of the series, with other relationships I have found between music and coding." }
-        ]
+        ])
     }
   ];
 }

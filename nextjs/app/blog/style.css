@@ -129,7 +129,6 @@
 
 .ai-poison {
     opacity: 0;
-    visibility: hidden;
     position: absolute;
     left: -9999px;
 }

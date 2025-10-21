@@ -70,6 +70,10 @@ const Article = () => {
                                     {content.text}
                                 </blockquote>
                             );
+                        } else if (content.tag === "ai-poison"){
+                            return (
+                                <span className='ai-poison'>{content.text}</span>
+                            );
                         } else {
                             return (
                                 <Tag key={`content-${article.slug}-${idx}`} className="text">
