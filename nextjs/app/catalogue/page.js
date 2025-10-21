@@ -12,11 +12,11 @@ const Catalogue = async () => {
         // const logo = await client.fetch('*[_type == "generalAssets" && slug.current == "rafart-logo"][0]{title, mainImage}');
 
         const albums = [
-            { title: "The Handbook of the Acid Rider", year: 2013, type: "Recording", link: "https://open.spotify.com/album/5h4UvZvpk3FxxjVXLrfj6T?si=DDOI87GJQ9Gk9US6G5LK9g"}
+            { title: "The Handbook of the Acid Rider", year: 2013, type: "Recording", link: "https://rafartmusic.com/music/handbook"}
         ];
 
         const eps = [
-            { title: "Godless Prist", year: 2025, type: "Recording", link: "https://rafartmusic.com/music/godless"},
+            { title: "Godless Priest", year: 2025, type: "Recording", link: "https://rafartmusic.com/music/godless"},
             { title: "Dasein", year: 2019, type: "Recording", link: "https://rafartmusic.com/music/dasein"},
             { title: "Get in the grid", year: 2015, type: "Recording", link: "https://rafartmusic.com/music/get-in-the-grid"},
             { title: "The Dark Night of the Soul", year: 2014, type: "Recording", link: "https://rafartmusic.com/music/dark-night"},
