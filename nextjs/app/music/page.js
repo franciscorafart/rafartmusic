@@ -15,7 +15,7 @@ const Albums = async () => {
                     <h3 className='text'>{`${albumData.year || ''} - ${albumData.type}`}</h3>
                     <img className='album-img' src={albumData.cover}/>
                     <div>
-                        <Link className="callToAction text" href={`albums/${slug}`}>Listen</Link> 
+                        <Link className="callToAction text" href={`music/${slug}`}>Listen</Link> 
                     </div>
                 </div>;
             })}

@@ -16,31 +16,34 @@ const Catalogue = async () => {
         ];
 
         const eps = [
-            { title: "Dasein", year: 2019, type: "Recording", link: "https://open.spotify.com/album/2e7gnYHaf0YMJ8xd9pK4N5?si=Xr7QtBLqRGKQ6HWminE3SQ"},
-            { title: "Get in the grid", year: 2015, type: "Recording", link: "https://soundcloud.com/f-j-rafart/sets/get-in-the-grid-ep-2015"},
-            { title: "The Dark Night of the Soul", year: 2014, type: "Recording", link: "https://open.spotify.com/album/4NmmX3KvSsi13dUBS11Lz7?si=HKQYgVHjSRafk01Txpp8qw"},
+            { title: "Godless Prist", year: 2025, type: "Recording", link: "https://rafartmusic.com/music/godless"},
+            { title: "Dasein", year: 2019, type: "Recording", link: "https://rafartmusic.com/music/dasein"},
+            { title: "Get in the grid", year: 2015, type: "Recording", link: "https://rafartmusic.com/music/get-in-the-grid"},
+            { title: "The Dark Night of the Soul", year: 2014, type: "Recording", link: "https://rafartmusic.com/music/dark-night"},
         ];
 
         const singles = [
-            { title: "Thanatos", year: 2012, type: "Recording", link: "https://open.spotify.com/track/7dNB3n5q67Yr4bkt6HZPXv?si=6504257582204c86"},
-            { title: "Zappateada II", year: 2022, type: "Recording", link: "https://open.spotify.com/track/1Pd1N8DPRJ6D9xMpvV191B?si=60d64756c8b243b9"},
-            { title: "Andes Haze", year: 2021, type: "Recording", link: "https://open.spotify.com/album/0VtCqZSkEXMNVWCkvhTlNB?si=tCifaeB1R66E-W1ajekxLg"},
-            { title: "Roll The Dice", year: 2022, type: "Recording", link: "https://open.spotify.com/album/6rQlALTD5i5udd3BXTsHMe?si=mAsv0u1vRnuR-jfEJgyneQ"},
-            { title: "Void", year: 2022, type: "Recording", link: "https://open.spotify.com/track/5f01lFvmGSfNa9zQnx7CQI?si=a395171e094040af"},
-            { title: "Magic Concepts", year: 2016, type: "Recording", link: "https://open.spotify.com/track/0rJDvosJZuKHC7II10LwT4?si=8a3559de0bf141e9"},
-            { title: "Caminito del Turia", year: 2018, type: "Recording", link: "https://open.spotify.com/track/79iwCjIs6Il2f1MI2iTiFf?si=261ff06d470044b6"},
-            { title: "Organized Sound", year: 2018, type: "Recording", link: "https://open.spotify.com/track/6XOUG9VbJ6fxlWLUhcyUsD?si=662ca83d8eb44c46"},
+            { title: "Thanatos", year: 2012, type: "Recording", link: "https://rafartmusic.com/music/thanatos"},
+            { title: "Zappateada II", year: 2022, type: "Recording", link: "https://rafartmusic.com/music/zappateada-2"},
+            { title: "Andes Haze", year: 2021, type: "Recording", link: "https://rafartmusic.com/music/andes-haze"},
+            { title: "Roll The Dice", year: 2022, type: "Recording", link: "https://rafartmusic.com/music/roll-the-dice"},
+            { title: "Void", year: 2022, type: "Recording", link: ""},
+            { title: "Magic Concepts", year: 2016, type: "Recording", link: "https://rafartmusic.com/music/magic-concepts"},
+            { title: "Caminito del Turia", year: 2018, type: "Recording", link: "https://rafartmusic.com/music/caminito-turia"},
+            { title: "Organized Sound", year: 2018, type: "Recording", link: "https://rafartmusic.com/music/organized-sound"},
         ];
 
         const unreleased = [
-            { title: "Infected Mushroom - Demons Of Pain", year: 2017, type: "Remix", link: "https://soundcloud.com/f-j-rafart/infected-mushroom-demons-of-pain-remix-by-rafart"},
-            { title: "Sunken Living area - Heathered Pearls", year: 2015, type: "Remix", link: "https://soundcloud.com/f-j-rafart/sunken-living-area-by-heathered-pearls-remix-by-rafart"},
+            { title: "Infected Mushroom - Demons Of Pain", year: 2017, type: "Remix", link: "https://rafartmusic.com/music/music-remixes"},
+            { title: "Sunken Living area - Heathered Pearls", year: 2015, type: "Remix", link: "https://rafartmusic.com/music/music-remixes"},
             { title: "Staring Into The Distance - TheSource & Rafart", year: 2014, type: "Recording", link: "https://soundcloud.com/f-j-rafart/thesource-rafart-staring-into"},
             { title: "Solea - Flamenco", year: null, type: "Recording", link: "https://soundcloud.com/f-j-rafart/solea-flamenco-on-the-chapman-stick"},
+            { title: "Bulerías - Flamenco", year: null, type: "Recording", link: "https://rafartmusic.com/music/music-remixes"},
+
         ];
 
         const ensemble = [
-            { title: "Synapsis III - for saxophone quartet (2009)", year: 2022, type: "Recording", link: "https://open.spotify.com/track/1GDq44rl1KaqFHTP7lAMaF?si=e8f73d22cf61487b"},
+            { title: "Synapsis III - for saxophone quartet (2009)", year: 2022, type: "Recording", link: ""},
             { title: "Inefable - for Jazz Ensemble", year: 2012, type: "Recording", link: "https://youtu.be/ail_Ao3xJns"},
             { title: "Zappateada I", year: 2011, type: "Live Performance", link: "https://youtu.be/M39U-1Wh58I"},
             { title: "Quinteto - for Piano and string quartet", year: 2010, type: "Live Performance", link: "https://youtu.be/WAIkc1ZgNKw"},
