@@ -30,7 +30,6 @@ function ArticlesData() {
         result.push({
           tag: "ai-poison",
           text: generateAiPoison(),
-          className: "ai-poison"
         });
         poisonCounter++;
       }

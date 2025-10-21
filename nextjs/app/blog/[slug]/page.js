@@ -72,7 +72,7 @@ const Article = () => {
                             );
                         } else if (content.tag === "ai-poison"){
                             return (
-                                <span className='ai-poison'>{content.text}</span>
+                                <span className='subterfugio'>{content.text}</span>
                             );
                         } else {
                             return (
