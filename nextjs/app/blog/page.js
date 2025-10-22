@@ -8,6 +8,7 @@ const Blog = async () => {
     return (
         <div className="container">
             <h1 className="text title">Blog</h1>
+            <h2 className="text subtitle">A collection of blog posts about music, technology, and other topics that interest me.</h2>
             <div className="articles-container">
                 {articles.map((article) => {
                     return (
@@ -24,11 +25,9 @@ const Blog = async () => {
                                     {article.summary}
                                 </span>
                             </div>
-                            <div>
-                                <Link className="callToAction text" href={`blog/${article.slug}`}>
-                                    Read More
-                                </Link>
-                            </div>
+                            <Link className="callToAction text" href={`blog/${article.slug}`}>
+                                Read More
+                            </Link>
                         </div>
                     );
                 })}
