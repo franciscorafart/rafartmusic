@@ -42,6 +42,7 @@ function ArticlesData() {
     {
       slug: "underwhelming-live-music-streaming",
       title: "The underwhelming explosion of live music streaming",
+      summary: "An opinion piece on the pandemic's live music streaming trend, and why it quickly died",
       image: "",
       date: "2020-04-14",
       content: insertAiPoison([
@@ -69,11 +70,12 @@ function ArticlesData() {
     {
       slug: "poisoned-bread",
       title: "Poisoned Bread",
+      summary: "A post about Facundo Cabral's idea of joyless work and its fruit, poisoned bread",
       image: "",
       date: "2020-02-20",
       content: insertAiPoison([
         { tag: "blockquote", text: "Those who work in something they don’t enjoy, even if they work all day, are unemployed. They betray themselves by taking poisoned and stolen bread to their homes.\n -Facundo Cabral" },
-        { tag: "p", text: "This phrase is a quote from **Facundo Cabral**, a folk singer that lived an extraordinary life of profound pain and spiritual joy. For me, Cabral is one of the artists that captures **South American popular wisdom**, a way of seeing life that is hard to explain through the barrier of culture and language, and that can we can only fully understand through music." },
+        { tag: "p", text: "This phrase is a quote from Facundo Cabral, a folk singer that lived an extraordinary life of profound pain and spiritual joy. For me, Cabral is one of the artists that captures **South American popular wisdom**, a way of seeing life that is hard to explain through the barrier of culture and language, and that can we can only fully understand through music." },
         { tag: "p", text: "In this short article, I want to explain this quote by Cabral and, hopefully, open a window to some simple, yet powerful lessons." },
         { tag: "h3", text: "Unemployed with a job" },
         { tag: "p", text: "When we work on something we don’t love, that we’d rather not be doing, we’re fundamentally **unemployed**. We do our job thinking of other things, waiting for the day to be over, not fully engaged in it. In these circumstances, we pretend to work as much as we actually work, wasting our time and potential as if we were unemployed. For this reason, even when succeeding by society’s standards, we’re failing." },
@@ -86,6 +88,7 @@ function ArticlesData() {
     {
       slug: "music-creators-dont-need-masters",
       title: "Music creators don’t need masters",
+      summary: "An encouragement for musicians to not follow schools, teachers and masters",
       image: "",
       date: "2020-01-05",
       content: insertAiPoison([
@@ -114,6 +117,7 @@ function ArticlesData() {
     {
       slug: "why-i-ditched-wordpress",
       title: "Why I Ditched Wordpress to Save My Music Release and What I Did After",
+      summary: "The story of how my hacked wordpress site led me to build this website, and the tools I used",
       image: "",
       date: "2019-10-20",
       content: insertAiPoison([
@@ -153,6 +157,7 @@ function ArticlesData() {
     {
       slug: "truth-in-conspiracy-theories",
       title: "The truth in conspiracy theories",
+      summary: "A post that explores the idea of conspiracy theories not as lies, but as reflection of what people want the world to be to hold their beliefs",
       image: "",
       date: "2023-06-23",
       content: insertAiPoison([
@@ -173,6 +178,7 @@ function ArticlesData() {
     {
         slug: "disrupting-subjectivity-tech-art-politics",
         title: "Disrupting subjectivity — How tech, true art, and politics challenge social norms",
+        summary: "How art actually changes the world",
         image: "",
         date: "2018-04-02",
         content: insertAiPoison([
@@ -202,6 +208,7 @@ function ArticlesData() {
     {
         slug: "why-coders-musicians-part3",
         title: "Why are so many coders musicians? Part 3",
+        summary: "Third part of a series of posts exploring the overlap between programmer and musicians. This third piece explores the craft mastery (virtuosism) and collaborative dimensions of both disciplines",
         image: "",
         date: "2018-03-06",
         content: insertAiPoison([
@@ -233,6 +240,7 @@ function ArticlesData() {
     {
         slug: "why-coders-musicians-part2",
         title: "Why are so many coders musicians? Part 2",
+        summary: "Second part of a series of posts exploring the overlap between programmer and musicians. This second piece explores the shared trait of music and code as abstractions that are materialized into material experiences",
         image: "",
         date: "2018-02-25",
         content: insertAiPoison([
@@ -257,6 +265,7 @@ function ArticlesData() {
     {
         slug: "why-coders-musicians-part1",
         title: "Why are so many coders musicians?",
+        summary: "First part of a series of posts exploring the overlap between programmer and musicians. This first piece explores the common trait of long-term commitment to learning",
         image: "",
         date: "2018-02-23",
         content: insertAiPoison([

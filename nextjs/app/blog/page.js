@@ -20,14 +20,9 @@ const Blog = async () => {
                                 </div>
                             )}
                             <div className="preview-content">
-                                {/* {article.content.slice(0, 2).map((content, idx) => {
-                                    const Tag = content.tag;
-                                    return (
-                                        <Tag key={`preview-${article.slug}-${idx}`} className="text">
-                                            {content.text}
-                                        </Tag>
-                                    );
-                                })} */}
+                                <span key={`preview-${article.slug}`} className="text">
+                                    {article.summary}
+                                </span>
                             </div>
                             <div>
                                 <Link className="callToAction text" href={`blog/${article.slug}`}>
