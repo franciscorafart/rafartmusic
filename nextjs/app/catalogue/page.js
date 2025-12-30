@@ -72,7 +72,7 @@ const Catalogue = async () => {
             { title: "The Great Refusal - Dorchester Arts Project", year: 2020, type: "Live Performance", link: "https://youtu.be/zkDYKirV4LU"},
             { title: "Eros - Live looping", year: 2020, type: "Live Perfomance", link: "https://youtu.be/kIdGkHos1pk"},
             { title: "Buleria - Flamenco", year: 2020, type: "Live Performance", link: "https://youtu.be/YlIayXUN0eI"},
-            { title: "Jarmasti", year: 2019, type: "Palythrough", link: "https://youtu.be/xj5Ts2a7Ohk"},
+            { title: "Jarmasti", year: 2019, type: "Playthrough", link: "https://youtu.be/xj5Ts2a7Ohk"},
             { title: "Roll the Dice", year: 2016, type: "Live Performance", link: "https://youtu.be/4vSrFJOo668"},
             { title: "Solea - Flamenco", year: 2016, type: "Recording", link: "https://youtu.be/JRXdL8ifLPk"},
             { title: "Roll the Dice", year: 2016, type: "Playthrough", link: "https://youtu.be/oGYiFY5h5Lg"},
@@ -101,6 +101,7 @@ const Catalogue = async () => {
         ];
 
         const coverVideos = [
+            { title: "Flying in a Blue Dream (Joe Satriani)", year: 2025, type: "Cover", link: "https://youtu.be/M3fFjJy-p9c"},
             { title: "Hurt (Reznor / Cash)", year: 2021, type: "Cover video", link: "https://youtu.be/kXI_0Ca2l3E"},
             { title: "Two Become One - Spice Girls", year: 2021, type: "Cover video", link: "https://youtu.be/18VMobBvvWg"},
             { title: "Tu Nombre Sobre Mi Nombre - Spinetta", year: 2021, type: "Cover video", link: "https://youtu.be/TMHYHvFAf9o"},
