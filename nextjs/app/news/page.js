@@ -1,9 +1,8 @@
 import Posts from '../components/Posts';
-import client from '../../client';
 import { urlFor } from '../utils';
+import { posts } from '../homeContent';
 
 const Home = async () => {
-    const posts = await client.fetch('*[_type == "post"]{title, slug, mainImage, publishedAt, paragraph, link, visible}');
     return (
         <div>
             <h1 className="text">News</h1>
