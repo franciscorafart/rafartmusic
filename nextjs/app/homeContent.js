@@ -897,7 +897,7 @@ export const posts = [
     "visible": true
   },
   {
-    "link": "https://rafartmusic.com/albums/godless",
+    "link": "https://rafartmusic.com/music/godless",
     "mainImage": {
       "_type": "image",
       "asset": {
